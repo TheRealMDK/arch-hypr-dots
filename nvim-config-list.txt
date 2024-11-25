@@ -37,3 +37,8 @@ Main List (Recommended Install Order)
   theprimeagen/harpoon
   theprimeagen/refactoring.nvim
 
+Dependency Plugins
+
+    nvim-lua/plenary.nvim
+    nvim-tree/nvim-web-devicons
+    MunifTanjim/nui.nvim
