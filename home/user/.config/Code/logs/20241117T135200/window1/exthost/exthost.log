@@ -1,0 +1,39 @@
+2024-11-17 13:52:02.835 [info] Extension host with pid 51939 started
+2024-11-17 13:52:02.924 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-11-17 13:52:02.981 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-11-17 13:52:03.066 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-11-17 13:52:03.192 [info] Eager extensions activated
+2024-11-17 13:52:03.230 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-11-17 13:52:03.235 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-11-17 13:52:04.427 [info] Extension host terminating: renderer closed the MessagePort
+2024-11-17 13:52:04.470 [error] ProxyResolver#addCertificatesV1 Canceled: Canceled
+	at new tT (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:31:108738)
+	at py.U (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:31:113348)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:31:110842)
+	at L0.loadCertificates (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:109:54125)
+	at Object.loadAdditionalCertificates (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:2086)
+	at /opt/visual-studio-code/resources/app/node_modules/@vscode/proxy-agent/out/index.js:499:53
+	at Generator.next (<anonymous>)
+	at /opt/visual-studio-code/resources/app/node_modules/@vscode/proxy-agent/out/index.js:35:71
+	at new Promise (<anonymous>)
+	at __awaiter (/opt/visual-studio-code/resources/app/node_modules/@vscode/proxy-agent/out/index.js:31:12)
+	at /opt/visual-studio-code/resources/app/node_modules/@vscode/proxy-agent/out/index.js:498:43
+	at /opt/visual-studio-code/resources/app/node_modules/@vscode/proxy-agent/out/index.js:500:16
+	at Generator.next (<anonymous>)
+	at /opt/visual-studio-code/resources/app/node_modules/@vscode/proxy-agent/out/index.js:35:71
+	at new Promise (<anonymous>)
+	at __awaiter (/opt/visual-studio-code/resources/app/node_modules/@vscode/proxy-agent/out/index.js:31:12)
+	at getOrLoadAdditionalCertificates (/opt/visual-studio-code/resources/app/node_modules/@vscode/proxy-agent/out/index.js:496:12)
+	at addCertificatesV1 (/opt/visual-studio-code/resources/app/node_modules/@vscode/proxy-agent/out/index.js:480:9)
+	at resolveProxy (/opt/visual-studio-code/resources/app/node_modules/@vscode/proxy-agent/out/index.js:113:9)
+	at /opt/visual-studio-code/resources/app/node_modules/@vscode/proxy-agent/out/index.js:325:77
+	at new Promise (<anonymous>)
+	at _PacProxyAgent.resolveP [as resolver] (/opt/visual-studio-code/resources/app/node_modules/@vscode/proxy-agent/out/index.js:325:54)
+	at _PacProxyAgent.<anonymous> (/opt/visual-studio-code/resources/app/node_modules/@vscode/proxy-agent/out/agent.js:70:37)
+	at Generator.next (<anonymous>)
+	at /opt/visual-studio-code/resources/app/node_modules/@vscode/proxy-agent/out/agent.js:8:71
+	at new Promise (<anonymous>)
+	at __awaiter (/opt/visual-studio-code/resources/app/node_modules/@vscode/proxy-agent/out/agent.js:4:12)
+	at _PacProxyAgent.connect (/opt/visual-studio-code/resources/app/node_modules/@vscode/proxy-agent/out/agent.js:52:16)
+	at /opt/visual-studio-code/resources/app/node_modules/agent-base/dist/index.js:132:30
+2024-11-17 13:52:04.470 [info] Extension host with pid 51939 exiting with code 0

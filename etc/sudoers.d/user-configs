@@ -1,0 +1,4 @@
+clinton ALL=(ALL:ALL) ALL
+%wheel ALL=(ALL:ALL) ALL
+Defaults pwfeedback
+Defaults insults

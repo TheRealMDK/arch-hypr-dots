@@ -1,0 +1,6 @@
+2024-11-12 21:30:02.163 [info] Started local extension host with pid 20358.
+2024-11-12 21:30:02.252 [info] Started initializing default profile extensions in extensions installation folder. file:///home/clinton/.vscode/extensions
+2024-11-12 21:30:02.826 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/clinton/.vscode/extensions
+2024-11-12 21:30:03.016 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-12 21:30:03.016 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-12 21:30:05.285 [info] [perf] Render performance baseline is 32ms

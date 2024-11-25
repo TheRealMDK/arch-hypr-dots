@@ -1,0 +1,39 @@
+Main List (Recommended Install Order)
+
+  stevearc/oil.nvim
+  lewis6991/gitsigns.nvim
+  neovim/nvim-lspconfig
+  williamboman/mason.nvim
+  williamboman/mason-lspconfig.nvim
+  hrsh7th/nvim-cmp
+  hrsh7th/cmp-nvim-lsp
+  hrsh7th/cmp-buffer
+  hrsh7th/cmp-path
+  hrsh7th/cmp-cmdline
+  saadparwaiz1/cmp_luasnip
+  L3MON4D3/LuaSnip
+  rafamadriz/friendly-snippets
+  nvim-treesitter/nvim-treesitter-textobjects
+  windwp/nvim-ts-autotag
+  nvim-treesitter/nvim-treesitter-context
+  stevearc/conform.nvim
+  mfussenegger/nvim-dap
+  rcarriga/nvim-dap-ui
+  jay-babu/mason-nvim-dap.nvim
+  tpope/vim-fugitive
+  TimUntersberger/neogit
+  akinsho/toggleterm.nvim
+  ahmedkhalf/project.nvim
+  folke/which-key.nvim
+  rcarriga/nvim-notify
+  folke/trouble.nvim
+  folke/todo-comments.nvim
+  folke/persistence.nvim
+  numToStr/Comment.nvim
+  windwp/nvim-autopairs
+  folke/zen-mode.nvim
+  ggandor/leap.nvim
+  lukas-reineke/indent-blankline.nvim
+  theprimeagen/harpoon
+  theprimeagen/refactoring.nvim
+
