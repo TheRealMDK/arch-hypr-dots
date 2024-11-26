@@ -1,0 +1,4 @@
+for config in $HOME/arch-hypr-dots/home/user/.bashrc.d/pkgs.d/pkgs/*; do
+  [ -f "$config" ] && source "$config"
+done
+

@@ -1,0 +1,109 @@
+installOfficialFromList() {
+  sudo pacman -S --needed - < "$1"
+}
+
+installAurFromList() {
+  yay -S --needed - < "$1"
+}
+
+workon() {
+  source "$1/bin/activate"
+}
+
+extract() {
+
+  if [ -f "$1" ]; then
+    case "$1" in
+      *.tar.bz2)   tar xjf "$1" ;;
+      *.tar.gz)    tar xzf "$1" ;;
+      *.tar.xz)    tar xJf "$1" ;;
+      *.bz2)       bunzip2 "$1" ;;
+      *.rar)       unrar x "$1" ;;
+      *.gz)        gunzip "$1" ;;
+      *.tar)       tar xf "$1" ;;
+      *.tbz2)      tar xjf "$1" ;;
+      *.tgz)       tar xzf "$1" ;;
+      *.zip)       unzip "$1" ;;
+      *.7z)        7z x "$1" ;;
+      *)           echo "'$1' cannot be extracted via extract()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+
+}
+
+makeDiff() {
+
+  local current_version="$1"
+  local new_version="$2"
+  local output_filename="$3"
+
+  if [[ -z "$current_version" || -z "$new_version" || -z "$output_filename" ]]; then
+    echo "Usage: makeDiff <current_version> <new_version> <output_filename>"
+    return 1
+  fi
+
+  if [[ ! -f "$current_version" ]]; then
+    echo "Error: <current_version> file '$current_version' does not exist."
+    return 1
+  fi
+
+  if [[ ! -f "$new_version" ]]; then
+    echo "Error: <new_version> file '$new_version' does not exist."
+    return 1
+  fi
+
+  sudo diff -u "$current_version" "$new_version" > "$HOME/Downloads/${output_filename}.patch"
+
+  local diff_exit_code=$?
+
+  if [[ $diff_exit_code -eq 0 ]]; then
+    echo "No differences found between files. No patch created."
+    rm -f "$HOME/Downloads/${output_filename}.patch"  # Clean up empty file
+    return 0
+  elif [[ $diff_exit_code -eq 1 ]]; then
+    echo "Patch file created: $HOME/Downloads/${output_filename}.patch"
+    return 0
+  else
+    echo "Error: Failed to create patch file."
+    return 1
+  fi
+
+}
+
+patchDiff() {
+
+  local original_file="$1"
+  local diff_file="$2"
+
+  if [[ -z "$original_file" || -z "$diff_file" ]]; then
+    echo "Usage: patchDiff <original_file> <diff_file>"
+    return 1
+  fi
+
+  if [[ ! -f "$original_file" ]]; then
+    echo "Error: Original file '$original_file' does not exist."
+    return 1
+  fi
+
+  if [[ ! -f "$diff_file" ]]; then
+    echo "Error: Diff file '$diff_file' does not exist."
+    return 1
+  fi
+
+  if sudo patch --dry-run "$original_file" < "$diff_file"; then
+    if sudo patch "$original_file" < "$diff_file"; then
+      echo "Successfully patched diffs to '$original_file'."
+      return 0
+    else
+      echo "Error: Unexpected failure while applying the patch."
+      return 1
+    fi
+  else
+    echo "Error: Patch would fail or partially apply. No changes made."
+    return 1
+  fi
+
+}
+
