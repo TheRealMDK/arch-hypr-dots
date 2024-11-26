@@ -1,8 +1,11 @@
 [Default Applications]
 image/svg+xml-compressed=firefox-developer-edition.desktop
 application/x-zerosize=geany.desktop
+application/octet-stream=geany.desktop
 
 [Added Associations]
 image/svg+xml-compressed=firefox-developer-edition.desktop;
 application/x-zerosize=geany.desktop;
 application/schema+json=geany.desktop;
+application/octet-stream=geany.desktop;
+application/json=geany.desktop;
