@@ -8,7 +8,7 @@ autocmd('TextYankPost', {
   end,
 })
 
-autocmd({"BufWritePre"}, {
-    pattern = "*",
-    command = [[%s/\s\+$//e]],
-})
+--autocmd({"BufWritePre"}, {
+--    pattern = "*",
+--    command = [[%s/\s\+$//e]],
+--})

@@ -37,7 +37,6 @@ alias egrep="ugrep -E --color=auto"
 alias hw="hwinfo --short"                          # Hardware Info
 alias gitPkg="pacman -Q | grep -i '\-git' | wc -l" # List amount of -git packages
 alias ip="ip -color"
-alias cleanup="sudo pacman -Rns $(pacman -Qtdq)"
 alias jctl="journalctl -p 3 -xb"
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 alias aurUpdates="yay -Qua"
@@ -58,6 +57,7 @@ alias symlink="ln -s"
 alias cfg="cd $CONFDIR"
 alias cat='bat --style header --style snip --style changes --style header'
 alias tb='nc termbin.com 9999'
+#alias cleanPkgs="sudo pacman -Rns $(pacman -Qtdq)"
 
 #alias timeshift-gtk="sudo -E timeshift-launcher"
 #tarnow="tar -acf "
@@ -68,3 +68,4 @@ alias tb='nc termbin.com 9999'
 #alias virtual='hyprctl output create headless VIRTUAL-1'
 #alias convirtual='wayvnc -o VIRTUAL-1 192.168.0.213 5900 -Ldebug'
 #alias convirtual1='wayvnc -o VIRTUAL-1 192.168.137.32 5900 -Ldebug'
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'

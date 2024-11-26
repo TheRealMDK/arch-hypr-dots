@@ -7,5 +7,6 @@ application/octet-stream=geany.desktop
 image/svg+xml-compressed=firefox-developer-edition.desktop;
 application/x-zerosize=geany.desktop;
 application/schema+json=geany.desktop;
-application/octet-stream=geany.desktop;
+application/octet-stream=firefox-developer-edition.desktop;geany.desktop;
 application/json=geany.desktop;
+application/xml=geany.desktop;
