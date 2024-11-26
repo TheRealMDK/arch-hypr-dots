@@ -1,0 +1,287 @@
+2024-11-26 16:13:47.133 [info] Getting Manifest... batisteo.vscode-django
+2024-11-26 16:13:47.133 [info] Getting Manifest... electreefrying.auto-import
+2024-11-26 16:13:47.133 [info] Getting Manifest... bourhaouta.tailwindshades
+2024-11-26 16:13:47.133 [info] Getting Manifest... electreefrying.drag-import-relative-path
+2024-11-26 16:13:47.133 [info] Getting Manifest... christian-kohler.path-intellisense
+2024-11-26 16:13:47.133 [info] Getting Manifest... jakob101.relativepath
+2024-11-26 16:13:47.134 [info] Getting Manifest... zhuangtongfa.material-theme
+2024-11-26 16:13:47.134 [info] Getting Manifest... esbenp.prettier-vscode
+2024-11-26 16:13:47.134 [info] Getting Manifest... formulahendry.auto-rename-tag
+2024-11-26 16:13:47.135 [info] Getting Manifest... njpwerner.autodocstring
+2024-11-26 16:13:47.135 [info] Getting Manifest... donjayamanne.python-environment-manager
+2024-11-26 16:13:47.135 [info] Getting Manifest... visualstudioexptteam.vscodeintellicode
+2024-11-26 16:13:47.136 [info] Getting Manifest... wholroyd.jinja
+2024-11-26 16:13:47.136 [info] Getting Manifest... johnpapa.vscode-peacock
+2024-11-26 16:13:47.136 [info] Getting Manifest... donjayamanne.python-extension-pack
+2024-11-26 16:13:47.136 [info] Getting Manifest... ritwickdey.liveserver
+2024-11-26 16:13:47.136 [info] Getting Manifest... aaron-bond.better-comments
+2024-11-26 16:13:47.136 [info] Getting Manifest... christian-kohler.npm-intellisense
+2024-11-26 16:13:47.136 [info] Getting Manifest... visualstudioexptteam.intellicode-api-usage-examples
+2024-11-26 16:13:47.137 [info] Getting Manifest... stivo.tailwind-fold
+2024-11-26 16:13:47.137 [info] Getting Manifest... ionic.ionic
+2024-11-26 16:13:47.137 [info] Getting Manifest... heybourn.headwind
+2024-11-26 16:13:47.137 [info] Getting Manifest... pkief.material-icon-theme
+2024-11-26 16:13:47.137 [info] Getting Manifest... kevinrose.vsc-python-indent
+2024-11-26 16:13:47.137 [info] Getting Manifest... bradlc.vscode-tailwindcss
+2024-11-26 16:13:47.137 [info] Getting Manifest... ms-python.vscode-pylance
+2024-11-26 16:13:47.137 [info] Getting Manifest... codeium.codeium
+2024-11-26 16:13:47.137 [info] Getting Manifest... ms-python.debugpy
+2024-11-26 16:13:47.138 [info] Getting Manifest... eamodio.gitlens
+2024-11-26 16:13:47.138 [info] Getting Manifest... ms-python.python
+2024-11-26 16:13:47.537 [info] Installing extension: christian-kohler.path-intellisense {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.537 [info] Installing extension: christian-kohler.npm-intellisense {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.537 [info] Installing extension: esbenp.prettier-vscode {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.537 [info] Installing extension: ms-python.debugpy {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.537 [info] Installing extension: ms-python.python {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.538 [info] Installing extension: codeium.codeium {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.538 [info] Installing extension: ms-python.vscode-pylance {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.538 [info] Installing extension: batisteo.vscode-django {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.538 [info] Installing extension: donjayamanne.python-environment-manager {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.539 [info] Installing extension: donjayamanne.python-extension-pack {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.540 [info] Installing extension: electreefrying.auto-import {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.540 [info] Installing extension: electreefrying.drag-import-relative-path {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.540 [info] Installing extension: eamodio.gitlens {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.540 [info] Installing extension: visualstudioexptteam.vscodeintellicode {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.541 [info] Installing extension: visualstudioexptteam.intellicode-api-usage-examples {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.541 [info] Installing extension: bourhaouta.tailwindshades {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.541 [info] Installing extension: zhuangtongfa.material-theme {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.541 [info] Installing extension: wholroyd.jinja {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.541 [info] Installing extension: pkief.material-icon-theme {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.541 [info] Installing extension: aaron-bond.better-comments {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.541 [info] Installing extension: stivo.tailwind-fold {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.541 [info] Installing extension: ritwickdey.liveserver {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.542 [info] Installing extension: heybourn.headwind {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.542 [info] Installing extension: johnpapa.vscode-peacock {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.542 [info] Installing extension: formulahendry.auto-rename-tag {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.543 [info] Installing extension: bradlc.vscode-tailwindcss {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.543 [info] Installing extension: ionic.ionic {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.543 [info] Installing extension: kevinrose.vsc-python-indent {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.543 [info] Installing extension: jakob101.relativepath {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.543 [info] Installing extension: njpwerner.autodocstring {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/clinton/.vscode/extensions/extensions.json","path":"/home/clinton/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-11-26 16:13:47.543 [info] Installing the extension without checking dependencies and pack christian-kohler.path-intellisense
+2024-11-26 16:13:47.543 [info] Installing the extension without checking dependencies and pack christian-kohler.npm-intellisense
+2024-11-26 16:13:47.543 [info] Installing the extension without checking dependencies and pack esbenp.prettier-vscode
+2024-11-26 16:13:47.544 [info] Installing the extension without checking dependencies and pack ms-python.debugpy
+2024-11-26 16:13:47.544 [info] Installing the extension without checking dependencies and pack ms-python.python
+2024-11-26 16:13:47.544 [info] Installing the extension without checking dependencies and pack codeium.codeium
+2024-11-26 16:13:47.544 [info] Installing the extension without checking dependencies and pack ms-python.vscode-pylance
+2024-11-26 16:13:47.544 [info] Installing the extension without checking dependencies and pack batisteo.vscode-django
+2024-11-26 16:13:47.545 [info] Installing the extension without checking dependencies and pack donjayamanne.python-environment-manager
+2024-11-26 16:13:47.545 [info] Installing the extension without checking dependencies and pack donjayamanne.python-extension-pack
+2024-11-26 16:13:47.546 [info] Installing the extension without checking dependencies and pack electreefrying.auto-import
+2024-11-26 16:13:47.546 [info] Installing the extension without checking dependencies and pack electreefrying.drag-import-relative-path
+2024-11-26 16:13:47.546 [info] Installing the extension without checking dependencies and pack eamodio.gitlens
+2024-11-26 16:13:47.546 [info] Installing the extension without checking dependencies and pack visualstudioexptteam.vscodeintellicode
+2024-11-26 16:13:47.546 [info] Installing the extension without checking dependencies and pack visualstudioexptteam.intellicode-api-usage-examples
+2024-11-26 16:13:47.547 [info] Installing the extension without checking dependencies and pack bourhaouta.tailwindshades
+2024-11-26 16:13:47.547 [info] Installing the extension without checking dependencies and pack zhuangtongfa.material-theme
+2024-11-26 16:13:47.547 [info] Installing the extension without checking dependencies and pack wholroyd.jinja
+2024-11-26 16:13:47.547 [info] Installing the extension without checking dependencies and pack pkief.material-icon-theme
+2024-11-26 16:13:47.547 [info] Installing the extension without checking dependencies and pack aaron-bond.better-comments
+2024-11-26 16:13:47.548 [info] Installing the extension without checking dependencies and pack stivo.tailwind-fold
+2024-11-26 16:13:47.548 [info] Installing the extension without checking dependencies and pack ritwickdey.liveserver
+2024-11-26 16:13:47.548 [info] Installing the extension without checking dependencies and pack heybourn.headwind
+2024-11-26 16:13:47.548 [info] Installing the extension without checking dependencies and pack johnpapa.vscode-peacock
+2024-11-26 16:13:47.548 [info] Installing the extension without checking dependencies and pack formulahendry.auto-rename-tag
+2024-11-26 16:13:47.548 [info] Installing the extension without checking dependencies and pack bradlc.vscode-tailwindcss
+2024-11-26 16:13:47.548 [info] Installing the extension without checking dependencies and pack ionic.ionic
+2024-11-26 16:13:47.548 [info] Installing the extension without checking dependencies and pack kevinrose.vsc-python-indent
+2024-11-26 16:13:47.549 [info] Installing the extension without checking dependencies and pack jakob101.relativepath
+2024-11-26 16:13:47.549 [info] Installing the extension without checking dependencies and pack njpwerner.autodocstring
+2024-11-26 16:13:48.671 [info] Extension signature verification result for christian-kohler.npm-intellisense: UnknownError. Executed: true. Duration: 34ms.
+2024-11-26 16:13:48.725 [info] Extension signature verification result for christian-kohler.path-intellisense: UnknownError. Executed: true. Duration: 11ms.
+2024-11-26 16:13:48.884 [info] Extension signature verification result for batisteo.vscode-django: UnknownError. Executed: true. Duration: 9ms.
+2024-11-26 16:13:48.896 [info] Extension signature verification result for bourhaouta.tailwindshades: UnknownError. Executed: true. Duration: 10ms.
+2024-11-26 16:13:48.936 [info] Extension signature verification result for codeium.codeium: UnknownError. Executed: true. Duration: 9ms.
+2024-11-26 16:13:48.961 [info] Extension signature verification result for bradlc.vscode-tailwindcss: UnknownError. Executed: true. Duration: 9ms.
+2024-11-26 16:13:48.982 [info] Extension signature verification result for johnpapa.vscode-peacock: UnknownError. Executed: true. Duration: 12ms.
+2024-11-26 16:13:48.984 [info] Extension signature verification result for formulahendry.auto-rename-tag: UnknownError. Executed: true. Duration: 10ms.
+2024-11-26 16:13:48.997 [info] Extension signature verification result for aaron-bond.better-comments: UnknownError. Executed: true. Duration: 9ms.
+2024-11-26 16:13:49.012 [info] Extension signature verification result for pkief.material-icon-theme: UnknownError. Executed: true. Duration: 10ms.
+2024-11-26 16:13:49.023 [info] Extension signature verification result for heybourn.headwind: UnknownError. Executed: true. Duration: 9ms.
+2024-11-26 16:13:49.127 [info] Extension signature verification result for zhuangtongfa.material-theme: UnknownError. Executed: true. Duration: 10ms.
+2024-11-26 16:13:49.167 [info] Extracted extension to file:///home/clinton/.vscode/extensions/christian-kohler.npm-intellisense-1.4.5: christian-kohler.npm-intellisense
+2024-11-26 16:13:49.307 [info] Renamed to /home/clinton/.vscode/extensions/christian-kohler.npm-intellisense-1.4.5
+2024-11-26 16:13:49.308 [info] Extracted extension to file:///home/clinton/.vscode/extensions/johnpapa.vscode-peacock-4.2.2: johnpapa.vscode-peacock
+2024-11-26 16:13:49.358 [info] Renamed to /home/clinton/.vscode/extensions/johnpapa.vscode-peacock-4.2.2
+2024-11-26 16:13:49.382 [info] Extension signature verification result for donjayamanne.python-extension-pack: UnknownError. Executed: true. Duration: 16ms.
+2024-11-26 16:13:49.383 [info] Extension signature verification result for njpwerner.autodocstring: UnknownError. Executed: true. Duration: 23ms.
+2024-11-26 16:13:49.384 [info] Extension signature verification result for electreefrying.auto-import: UnknownError. Executed: true. Duration: 37ms.
+2024-11-26 16:13:49.463 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp'
+    at hm.create (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39254)
+    at Es (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39361)
+    at Fr.ib (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22677)
+    at Fr.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:16010)
+    at async Zl.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84491)
+    at async Jl.yb (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66605)
+2024-11-26 16:13:49.704 [info] Extension signature verification result for wholroyd.jinja: UnknownError. Executed: true. Duration: 15ms.
+2024-11-26 16:13:49.733 [info] Extension signature verification result for stivo.tailwind-fold: UnknownError. Executed: true. Duration: 24ms.
+2024-11-26 16:13:49.742 [info] Extension signature verification result for jakob101.relativepath: UnknownError. Executed: true. Duration: 20ms.
+2024-11-26 16:13:49.791 [info] Extracted extension to file:///home/clinton/.vscode/extensions/donjayamanne.python-extension-pack-1.7.0: donjayamanne.python-extension-pack
+2024-11-26 16:13:49.829 [info] Renamed to /home/clinton/.vscode/extensions/donjayamanne.python-extension-pack-1.7.0
+2024-11-26 16:13:49.846 [info] Extracted extension to file:///home/clinton/.vscode/extensions/electreefrying.auto-import-0.5.4: electreefrying.auto-import
+2024-11-26 16:13:49.966 [info] Renamed to /home/clinton/.vscode/extensions/electreefrying.auto-import-0.5.4
+2024-11-26 16:13:50.062 [info] Extension signature verification result for kevinrose.vsc-python-indent: UnknownError. Executed: true. Duration: 50ms.
+2024-11-26 16:13:50.095 [info] Extension signature verification result for ritwickdey.liveserver: UnknownError. Executed: true. Duration: 49ms.
+2024-11-26 16:13:50.117 [info] Extension signature verification result for esbenp.prettier-vscode: UnknownError. Executed: true. Duration: 39ms.
+2024-11-26 16:13:50.123 [info] Extension signature verification result for ms-python.debugpy: UnknownError. Executed: true. Duration: 19ms.
+2024-11-26 16:13:50.141 [info] Extension signature verification result for eamodio.gitlens: UnknownError. Executed: true. Duration: 14ms.
+2024-11-26 16:13:50.163 [info] Extracted extension to file:///home/clinton/.vscode/extensions/formulahendry.auto-rename-tag-0.1.10: formulahendry.auto-rename-tag
+2024-11-26 16:13:50.183 [info] Extracted extension to file:///home/clinton/.vscode/extensions/aaron-bond.better-comments-3.0.2: aaron-bond.better-comments
+2024-11-26 16:13:50.192 [info] Renamed to /home/clinton/.vscode/extensions/formulahendry.auto-rename-tag-0.1.10
+2024-11-26 16:13:50.207 [info] Renamed to /home/clinton/.vscode/extensions/aaron-bond.better-comments-3.0.2
+2024-11-26 16:13:50.242 [info] Extension signature verification result for donjayamanne.python-environment-manager: UnknownError. Executed: true. Duration: 14ms.
+2024-11-26 16:13:50.272 [info] Extension signature verification result for electreefrying.drag-import-relative-path: UnknownError. Executed: true. Duration: 12ms.
+2024-11-26 16:13:50.289 [info] Extracted extension to file:///home/clinton/.vscode/extensions/wholroyd.jinja-0.0.8: wholroyd.jinja
+2024-11-26 16:13:50.326 [info] Extension signature verification result for ms-python.python: UnknownError. Executed: true. Duration: 16ms.
+2024-11-26 16:13:50.331 [info] Renamed to /home/clinton/.vscode/extensions/wholroyd.jinja-0.0.8
+2024-11-26 16:13:50.363 [info] Extracted extension to file:///home/clinton/.vscode/extensions/christian-kohler.path-intellisense-2.9.0: christian-kohler.path-intellisense
+2024-11-26 16:13:50.389 [info] Renamed to /home/clinton/.vscode/extensions/christian-kohler.path-intellisense-2.9.0
+2024-11-26 16:13:50.707 [info] Extracted extension to file:///home/clinton/.vscode/extensions/kevinrose.vsc-python-indent-1.18.0: kevinrose.vsc-python-indent
+2024-11-26 16:13:50.719 [info] Extracted extension to file:///home/clinton/.vscode/extensions/bradlc.vscode-tailwindcss-0.12.15: bradlc.vscode-tailwindcss
+2024-11-26 16:13:50.735 [info] Extension signature verification result for visualstudioexptteam.intellicode-api-usage-examples: UnknownError. Executed: true. Duration: 13ms.
+2024-11-26 16:13:50.736 [info] Renamed to /home/clinton/.vscode/extensions/kevinrose.vsc-python-indent-1.18.0
+2024-11-26 16:13:50.752 [info] Renamed to /home/clinton/.vscode/extensions/bradlc.vscode-tailwindcss-0.12.15
+2024-11-26 16:13:50.819 [info] Extracted extension to file:///home/clinton/.vscode/extensions/bourhaouta.tailwindshades-0.0.5: bourhaouta.tailwindshades
+2024-11-26 16:13:50.835 [info] Renamed to /home/clinton/.vscode/extensions/bourhaouta.tailwindshades-0.0.5
+2024-11-26 16:13:50.848 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp'
+    at hm.create (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39254)
+    at Es (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39361)
+    at Fr.ib (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22677)
+    at Fr.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:16010)
+    at async Zl.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84491)
+    at async Jl.yb (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66605)
+2024-11-26 16:13:50.915 [info] Extracted extension to file:///home/clinton/.vscode/extensions/heybourn.headwind-1.7.0: heybourn.headwind
+2024-11-26 16:13:50.935 [info] Renamed to /home/clinton/.vscode/extensions/heybourn.headwind-1.7.0
+2024-11-26 16:13:51.061 [info] Extracted extension to file:///home/clinton/.vscode/extensions/njpwerner.autodocstring-0.6.1: njpwerner.autodocstring
+2024-11-26 16:13:51.079 [info] Extracted extension to file:///home/clinton/.vscode/extensions/batisteo.vscode-django-1.15.0: batisteo.vscode-django
+2024-11-26 16:13:51.086 [info] Renamed to /home/clinton/.vscode/extensions/njpwerner.autodocstring-0.6.1
+2024-11-26 16:13:51.092 [info] Renamed to /home/clinton/.vscode/extensions/batisteo.vscode-django-1.15.0
+2024-11-26 16:13:51.095 [info] Extracted extension to file:///home/clinton/.vscode/extensions/zhuangtongfa.material-theme-3.17.6: zhuangtongfa.material-theme
+2024-11-26 16:13:51.109 [info] Renamed to /home/clinton/.vscode/extensions/zhuangtongfa.material-theme-3.17.6
+2024-11-26 16:13:51.277 [info] Extracted extension to file:///home/clinton/.vscode/extensions/codeium.codeium-1.24.8: codeium.codeium
+2024-11-26 16:13:51.290 [info] Renamed to /home/clinton/.vscode/extensions/codeium.codeium-1.24.8
+2024-11-26 16:13:51.290 [info] Extracted extension to file:///home/clinton/.vscode/extensions/jakob101.relativepath-1.5.0: jakob101.relativepath
+2024-11-26 16:13:51.300 [info] Renamed to /home/clinton/.vscode/extensions/jakob101.relativepath-1.5.0
+2024-11-26 16:13:51.349 [info] Extracted extension to file:///home/clinton/.vscode/extensions/esbenp.prettier-vscode-11.0.0: esbenp.prettier-vscode
+2024-11-26 16:13:51.363 [info] Renamed to /home/clinton/.vscode/extensions/esbenp.prettier-vscode-11.0.0
+2024-11-26 16:13:51.365 [info] Extracted extension to file:///home/clinton/.vscode/extensions/stivo.tailwind-fold-0.2.0: stivo.tailwind-fold
+2024-11-26 16:13:51.376 [info] Renamed to /home/clinton/.vscode/extensions/stivo.tailwind-fold-0.2.0
+2024-11-26 16:13:51.431 [info] Extracted extension to file:///home/clinton/.vscode/extensions/electreefrying.drag-import-relative-path-0.2.5: electreefrying.drag-import-relative-path
+2024-11-26 16:13:51.442 [info] Renamed to /home/clinton/.vscode/extensions/electreefrying.drag-import-relative-path-0.2.5
+2024-11-26 16:13:51.803 [info] Extracted extension to file:///home/clinton/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.9: visualstudioexptteam.intellicode-api-usage-examples
+2024-11-26 16:13:51.813 [info] Renamed to /home/clinton/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.9
+2024-11-26 16:13:51.903 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp'
+    at hm.create (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39254)
+    at Es (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39361)
+    at Fr.ib (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22677)
+    at Fr.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:16010)
+    at async Zl.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84491)
+    at async Jl.yb (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66605)
+2024-11-26 16:13:52.011 [info] Extracted extension to file:///home/clinton/.vscode/extensions/donjayamanne.python-environment-manager-1.2.4: donjayamanne.python-environment-manager
+2024-11-26 16:13:52.019 [info] Renamed to /home/clinton/.vscode/extensions/donjayamanne.python-environment-manager-1.2.4
+2024-11-26 16:13:52.107 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp'
+    at hm.create (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39254)
+    at Es (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39361)
+    at Fr.ib (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22677)
+    at Fr.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:16010)
+    at async Zl.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84491)
+    at async Jl.yb (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66605)
+2024-11-26 16:13:52.601 [info] Extracted extension to file:///home/clinton/.vscode/extensions/eamodio.gitlens-16.0.4: eamodio.gitlens
+2024-11-26 16:13:52.628 [info] Renamed to /home/clinton/.vscode/extensions/eamodio.gitlens-16.0.4
+2024-11-26 16:13:52.729 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp'
+    at hm.create (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39254)
+    at Es (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39361)
+    at Fr.ib (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22677)
+    at Fr.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:16010)
+    at async Zl.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84491)
+    at async Jl.yb (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66605)
+2024-11-26 16:13:52.829 [info] Extracted extension to file:///home/clinton/.vscode/extensions/ms-python.debugpy-2024.12.0-linux-x64: ms-python.debugpy
+2024-11-26 16:13:52.837 [info] Renamed to /home/clinton/.vscode/extensions/ms-python.debugpy-2024.12.0-linux-x64
+2024-11-26 16:13:52.919 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp'
+    at hm.create (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39254)
+    at Es (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39361)
+    at Fr.ib (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22677)
+    at Fr.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:16010)
+    at async Zl.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84491)
+    at async Jl.yb (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66605)
+2024-11-26 16:13:53.258 [info] Extracted extension to file:///home/clinton/.vscode/extensions/pkief.material-icon-theme-5.14.1: pkief.material-icon-theme
+2024-11-26 16:13:53.359 [info] Renamed to /home/clinton/.vscode/extensions/pkief.material-icon-theme-5.14.1
+2024-11-26 16:13:53.822 [info] Extension signature verification result for ionic.ionic: UnknownError. Executed: true. Duration: 10ms.
+2024-11-26 16:13:54.298 [info] Extension signature verification result for ms-python.vscode-pylance: UnknownError. Executed: true. Duration: 10ms.
+2024-11-26 16:13:55.420 [info] Extracted extension to file:///home/clinton/.vscode/extensions/ms-python.python-2024.20.0-linux-x64: ms-python.python
+2024-11-26 16:13:55.440 [info] Renamed to /home/clinton/.vscode/extensions/ms-python.python-2024.20.0-linux-x64
+2024-11-26 16:13:55.442 [info] Extension signature verification result for visualstudioexptteam.vscodeintellicode: UnknownError. Executed: true. Duration: 7ms.
+2024-11-26 16:13:55.531 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp'
+    at hm.create (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39254)
+    at Es (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39361)
+    at Fr.ib (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22677)
+    at Fr.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:16010)
+    at async Zl.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84491)
+    at async Jl.yb (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66605)
+2024-11-26 16:13:57.035 [info] Extracted extension to file:///home/clinton/.vscode/extensions/visualstudioexptteam.vscodeintellicode-1.3.2: visualstudioexptteam.vscodeintellicode
+2024-11-26 16:13:57.049 [info] Renamed to /home/clinton/.vscode/extensions/visualstudioexptteam.vscodeintellicode-1.3.2
+2024-11-26 16:13:57.132 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp'
+    at hm.create (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39254)
+    at Es (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39361)
+    at Fr.ib (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22677)
+    at Fr.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:16010)
+    at async Zl.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84491)
+    at async Jl.yb (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66605)
+2024-11-26 16:13:58.745 [info] Extracted extension to file:///home/clinton/.vscode/extensions/ritwickdey.liveserver-5.7.9: ritwickdey.liveserver
+2024-11-26 16:13:58.773 [info] Renamed to /home/clinton/.vscode/extensions/ritwickdey.liveserver-5.7.9
+2024-11-26 16:13:58.863 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp'
+    at hm.create (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39254)
+    at Es (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39361)
+    at Fr.ib (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22677)
+    at Fr.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:16010)
+    at async Zl.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84491)
+    at async Jl.yb (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66605)
+2024-11-26 16:13:59.585 [info] Extracted extension to file:///home/clinton/.vscode/extensions/ionic.ionic-1.98.0: ionic.ionic
+2024-11-26 16:13:59.592 [info] Renamed to /home/clinton/.vscode/extensions/ionic.ionic-1.98.0
+2024-11-26 16:13:59.672 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp'
+    at hm.create (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39254)
+    at Es (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39361)
+    at Fr.ib (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22677)
+    at Fr.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:16010)
+    at async Zl.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84491)
+    at async Jl.yb (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66605)
+2024-11-26 16:14:02.121 [info] Extracted extension to file:///home/clinton/.vscode/extensions/ms-python.vscode-pylance-2024.11.3: ms-python.vscode-pylance
+2024-11-26 16:14:02.133 [info] Renamed to /home/clinton/.vscode/extensions/ms-python.vscode-pylance-2024.11.3
+2024-11-26 16:14:02.252 [info] Extension installed successfully: christian-kohler.npm-intellisense vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.252 [info] Extension installed successfully: johnpapa.vscode-peacock vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.252 [info] Extension installed successfully: donjayamanne.python-extension-pack vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.252 [info] Extension installed successfully: electreefrying.auto-import vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.253 [info] Extension installed successfully: formulahendry.auto-rename-tag vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.253 [info] Extension installed successfully: aaron-bond.better-comments vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.253 [info] Extension installed successfully: wholroyd.jinja vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.253 [info] Extension installed successfully: christian-kohler.path-intellisense vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.254 [info] Extension installed successfully: kevinrose.vsc-python-indent vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.254 [info] Extension installed successfully: bradlc.vscode-tailwindcss vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.254 [info] Extension installed successfully: bourhaouta.tailwindshades vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.254 [info] Extension installed successfully: heybourn.headwind vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.254 [info] Extension installed successfully: njpwerner.autodocstring vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.254 [info] Extension installed successfully: batisteo.vscode-django vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.255 [info] Extension installed successfully: zhuangtongfa.material-theme vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.255 [info] Extension installed successfully: codeium.codeium vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.255 [info] Extension installed successfully: jakob101.relativepath vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.255 [info] Extension installed successfully: esbenp.prettier-vscode vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.255 [info] Extension installed successfully: stivo.tailwind-fold vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.256 [info] Extension installed successfully: electreefrying.drag-import-relative-path vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.256 [info] Extension installed successfully: visualstudioexptteam.intellicode-api-usage-examples vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.256 [info] Extension installed successfully: donjayamanne.python-environment-manager vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.256 [info] Extension installed successfully: eamodio.gitlens vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.256 [info] Extension installed successfully: ms-python.debugpy vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.256 [info] Extension installed successfully: pkief.material-icon-theme vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.256 [info] Extension installed successfully: ms-python.python vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.256 [info] Extension installed successfully: visualstudioexptteam.vscodeintellicode vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.256 [info] Extension installed successfully: ritwickdey.liveserver vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.256 [info] Extension installed successfully: ionic.ionic vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.257 [info] Extension installed successfully: ms-python.vscode-pylance vscode-userdata:/home/clinton/.vscode/extensions/extensions.json
+2024-11-26 16:14:02.275 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/clinton/.vscode/extensions/extensions.json.vsctmp'
+    at hm.create (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39254)
+    at Es (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39361)
+    at Fr.ib (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22677)
+    at Fr.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:16010)
+    at async Zl.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84491)
+    at async Jl.yb (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66605)
