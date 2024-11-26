@@ -1,1 +1,0 @@
-{"ref":"40cbb373-37ec-4d1e-b309-f1922f665116","syncData":{"version":2,"machineId":"c2accb6b-b7a9-4f56-a640-47bbb057b5f2","content":"{\"linux\":\"// Place your key bindings in this file to override the defaults\\n[\\n  {\\n    \\\"key\\\": \\\"ctrl+w ctrl+a\\\",\\n    \\\"command\\\": \\\"editor.emmet.action.wrapWithAbbreviation\\\"\\n  }\\n]\"}"}}
