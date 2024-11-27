@@ -11,8 +11,14 @@ return {
     config = function()
       require("neo-tree").setup({
         window = {
-          --position = "right",
-          position = "float",
+          position = "right",
+          --position = "float",
+        },
+
+        filesystem = {
+          filtered_items = {
+            visible = true, -- Show hidden files by default
+          },
         },
       })
 
@@ -33,9 +39,18 @@ return {
       vim.keymap.set(
         'n',
         '<leader>gd',
+        '<cmd>lua require("neo-tree").toggle("float", { reveal_file = vim.fn.expand("<cfile>"), reveal_force_cwd = true })<CR>',
+        { desc = 'Open Neo-tree float and reveal file under cursor' }
+      )
+
+      --[[
+      vim.keymap.set(
+        'n',
+        '<leader>gd',
         '<cmd>Neotree float reveal_file=<cfile> reveal_force_cwd<CR>',
         { desc = 'Open Neo-tree float and reveal file under cursor' }
       )
+      --]]
 
       vim.keymap.set(
         'n',

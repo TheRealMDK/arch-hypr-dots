@@ -1,6 +1,5 @@
 Main List (Recommended Install Order)
 
-  stevearc/oil.nvim
   lewis6991/gitsigns.nvim
   neovim/nvim-lspconfig
   williamboman/mason.nvim
