@@ -11,6 +11,7 @@ return {
           telescope = true,
           treesitter = true,
           fzflua = true,
+          gitsigns = true,
         }
       })
     end,

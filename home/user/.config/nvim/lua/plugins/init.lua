@@ -17,4 +17,5 @@ require('lazy').setup({
   require 'plugins/telescope',
   require 'plugins/treesitter',
   require 'plugins/oil',
+  require 'plugins/git-signs',
 })
