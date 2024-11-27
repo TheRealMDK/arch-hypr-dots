@@ -18,4 +18,5 @@ require('lazy').setup({
   require 'plugins/treesitter',
   require 'plugins/oil',
   require 'plugins/git-signs',
+  require 'plugins/lsp',
 })
