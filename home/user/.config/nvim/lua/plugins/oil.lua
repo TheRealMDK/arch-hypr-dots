@@ -37,7 +37,7 @@ return {
         "n",
         "<leader>o",
         "<CMD>Oil --float<CR>",
-        { desc = "Open Oil.nvim in float mode" }
+        { desc = "Open Oil in float mode" }
       )
     end,
   }

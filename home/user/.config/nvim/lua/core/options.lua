@@ -29,5 +29,5 @@ vim.opt.backup = false
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.isfname:append('@-@')
+vim.opt.timeoutlen = 300
 
--- vim: ts=2 sts=2 sw=2 et

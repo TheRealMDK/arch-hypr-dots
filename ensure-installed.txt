@@ -1,0 +1,20 @@
+autopep8
+bash-language-server bashls
+beautysh
+black
+css-lsp cssls
+css-variables-language-server css_variables
+cssmodules-language-server cssmodules_ls
+emmet-language-server emmet_language_server
+emmet-ls emmet_ls
+html-lsp html
+hyprls
+json-lsp jsonls
+lua-language-server lua_ls
+prettier
+pyright
+python-lsp-server pylsp
+stylua
+tailwindcss-language-server tailwindcss
+typescript-language-server ts_ls
+Django jinja_lsp

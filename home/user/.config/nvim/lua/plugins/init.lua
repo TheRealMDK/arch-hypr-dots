@@ -19,4 +19,5 @@ require('lazy').setup({
   require 'plugins/oil',
   require 'plugins/git-signs',
   require 'plugins/lsp',
+  require 'plugins/which-key',
 })
