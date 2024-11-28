@@ -42,7 +42,7 @@ return {
 
           -- *** Define custom settings fo individual servers here:
 
-          -- Fix Undefined global 'vim' in lua-ls
+          -- Fix Undefined global "vim" in lua-ls
           ["lua_ls"] = function()
             require("lspconfig").lua_ls.setup {
               capabilities = capabilities,

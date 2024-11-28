@@ -1,7 +1,7 @@
 return {
   {
-    'stevearc/oil.nvim',
-    ---@module 'oil'
+    "stevearc/oil.nvim",
+    ---@module "oil"
     ---@type oil.SetupOpts
     opts = {},
     dependencies = {
@@ -30,15 +30,7 @@ return {
             { "name", "asc" },
           },
         },
-
       })
-
-      vim.keymap.set(
-        "n",
-        "<leader>o",
-        "<CMD>Oil --float<CR>",
-        { desc = "Open Oil in float mode" }
-      )
     end,
   }
 }

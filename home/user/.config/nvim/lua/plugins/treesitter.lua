@@ -2,15 +2,12 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    main = 'nvim-treesitter.configs',
+    main = "nvim-treesitter.configs",
 
     config = function ()
 
-      local configs = require("nvim-treesitter.configs")
-
-      configs.setup({
+      require("nvim-treesitter.configs").setup({
           ensure_installed = {
-            "awk",
             "bash",
             "comment",
             "css",
