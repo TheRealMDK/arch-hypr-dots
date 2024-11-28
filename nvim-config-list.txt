@@ -21,4 +21,6 @@ Main List (Recommended Install Order)
   lukas-reineke/indent-blankline.nvim
   theprimeagen/harpoon
   theprimeagen/refactoring.nvim
+  olrtg/nvim-emmet
+  folke/lazydev
 
