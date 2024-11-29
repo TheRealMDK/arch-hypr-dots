@@ -15,7 +15,7 @@ return {
           diagnostics = "nvim_lsp",
           sort_by = "tabs", --"insert_after_current" |"insert_at_end" | "id" | "extension" | "relative_directory" | "directory" | "tabs"
           indicator = {
-            --icon = '▎', -- this should be omitted if indicator style is not 'icon'
+            --icon = "▎", -- this should be omitted if indicator style is not "icon"
             style = "icon", --"icon" | "underline" | "none"
           },
         },
