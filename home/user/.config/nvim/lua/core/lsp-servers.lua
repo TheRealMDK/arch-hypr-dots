@@ -11,7 +11,7 @@ return {
   "hyprls", --Hyprland
   "biome", --Javascript
   "eslint", --Javascript
-  "harper_ls", --Javascript
+  --"harper_ls", --Javascript
   "quick_lint_js", --Javascript
   "ts_ls", --Javascript
   "jsonls", --Json

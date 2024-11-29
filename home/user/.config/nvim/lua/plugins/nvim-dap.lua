@@ -4,7 +4,8 @@ return {
     config = function()
       local dap = require("dap")
 
---[[ Example configurations
+--[[
+      *** Example configurations ***
 
       -- Python adapter
       dap.adapters.python = {
@@ -49,8 +50,8 @@ return {
       keymap("n", "<F10>", dap.step_over, { desc = "Step Over" })
       keymap("n", "<F11>", dap.step_into, { desc = "Step Into" })
       keymap("n", "<F12>", dap.step_out, { desc = "Step Out" })
-      keymap("n", "<Leader>b", dap.toggle_breakpoint, { desc = "Toggle Breakpoint" })
-      keymap("n", "<Leader>B", function()
+      keymap("n", "<Leader>db", dap.toggle_breakpoint, { desc = "Toggle Breakpoint" })
+      keymap("n", "<Leader>DB", function()
         dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
       end, { desc = "Set Conditional Breakpoint" })
     end,

@@ -11,6 +11,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   require "plugins.bufferline",
   require "plugins.cmp",
+  require "plugins.dap-ui",
+  require "plugins.dashboard",
   require "plugins.fidget",
   require "plugins.git-signs",
   require "plugins.lsp",

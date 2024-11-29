@@ -22,5 +22,5 @@ Main List (Recommended Install Order)
   theprimeagen/harpoon
   theprimeagen/refactoring.nvim
   olrtg/nvim-emmet
-  folke/lazydev
+  
 
