@@ -18,6 +18,7 @@ require("lazy").setup({
   require "plugins.luarocks",
   require "plugins.mason",
   require "plugins.neo-tree",
+  require "plugins.nvim-dap",
   require "plugins.oil",
   require "plugins.telescope",
   require "plugins.theme",
