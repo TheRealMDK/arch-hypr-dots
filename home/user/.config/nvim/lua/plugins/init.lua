@@ -15,6 +15,7 @@ require("lazy").setup({
   require "plugins.dashboard",
   require "plugins.fidget",
   require "plugins.friendly-snippets",
+  require "plugins.fugitive",
   require "plugins.git-signs",
   require "plugins.lsp",
   require "plugins.lualine",
@@ -27,5 +28,7 @@ require("lazy").setup({
   require "plugins.theme",
   require "plugins.toggleterm",
   require "plugins.treesitter",
+  require "plugins.treesitter-context",
+  require "plugins.treesitter-textobjects",
   require "plugins.which-key",
 })

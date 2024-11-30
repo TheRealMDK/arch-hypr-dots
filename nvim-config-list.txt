@@ -1,13 +1,9 @@
 Main List (Recommended Install Order)
 
-  *** ALL NVIM-LSPCONFIG DEPENDENCIES ***
-  nvim-treesitter/nvim-treesitter-textobjects
-  nvim-treesitter/nvim-treesitter-context
+  aymericbeaumet/vim-symlink
   windwp/nvim-ts-autotag
   windwp/nvim-autopairs
   stevearc/conform.nvim
-  tpope/vim-fugitive
-  TimUntersberger/neogit
   ahmedkhalf/project.nvim
   rcarriga/nvim-notify
   folke/trouble.nvim
@@ -20,5 +16,7 @@ Main List (Recommended Install Order)
   theprimeagen/harpoon
   theprimeagen/refactoring.nvim
   olrtg/nvim-emmet
-  
 
+  *** ALL NVIM-LSPCONFIG DEPENDENCIES ***
+
+  consider TimUntersberger/neogit to replace tpope/vim-fugitive

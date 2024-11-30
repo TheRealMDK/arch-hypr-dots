@@ -243,7 +243,35 @@ vim.keymap.set(
   { desc = "Toggle Terminal in New Tab" }
 )
 
--- ***  ***--
+-- *** GIT ***--
+
+vim.keymap.set(
+  "n",
+  "<Leader>gs",
+  "<cmd>Git<CR>",
+  { desc = "Git Status" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>gl",
+  "<cmd>Git log<CR>",
+  { desc = "Git Log" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>gb",
+  "<cmd>Git blame<CR>",
+  { desc = "Git Blame" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>gd",
+  "<cmd>Gvdiffsplit<CR>",
+  { desc = "Git Diff" }
+)
 -- ***  ***--
 -- ***  ***--
 -- ***  ***--
