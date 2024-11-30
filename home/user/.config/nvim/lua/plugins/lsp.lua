@@ -31,10 +31,24 @@ return {
         lua_ls = {
           settings = {
             Lua = {
-              diagnostics = { globals = { "vim" } },
+              diagnostics = {
+                globals = {
+                  "vim",
+                }
+              },
             },
           },
         },
+        harper_ls = {
+          settings = {
+            ["harper-ls"] = {
+              linters = {
+                spell_check = false,
+                sentence_capitalization = false,
+              }
+            }
+          }
+        }
       }
       -- Apply setup for all servers
       for _, server in ipairs(servers) do

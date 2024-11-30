@@ -14,6 +14,7 @@ require("lazy").setup({
   require "plugins.dap-ui",
   require "plugins.dashboard",
   require "plugins.fidget",
+  require "plugins.friendly-snippets",
   require "plugins.git-signs",
   require "plugins.lsp",
   require "plugins.lualine",
@@ -24,6 +25,7 @@ require("lazy").setup({
   require "plugins.oil",
   require "plugins.telescope",
   require "plugins.theme",
+  require "plugins.toggleterm",
   require "plugins.treesitter",
   require "plugins.which-key",
 })

@@ -220,7 +220,29 @@ vim.keymap.set("n",
   { desc = "Telescope help tags" }
 )
 
--- ***  ***--
+-- *** TOGGLETERM ***--
+
+vim.keymap.set(
+  "n",
+  "<leader>Tv",
+  "<cmd>ToggleTerm direction=vertical<cr>",
+  { desc = "Toggle Vertical Terminal" }
+)
+
+vim.keymap.set(
+  "n",
+  "<leader>Th",
+  "<cmd>ToggleTerm direction=horizontal<cr>",
+  { desc = "Toggle Horizontal Terminal" }
+)
+
+vim.keymap.set(
+  "n",
+  "<leader>Tt",
+  "<cmd>ToggleTerm direction=tab<cr>",
+  { desc = "Toggle Terminal in New Tab" }
+)
+
 -- ***  ***--
 -- ***  ***--
 -- ***  ***--
