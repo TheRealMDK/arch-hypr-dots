@@ -24,6 +24,7 @@ require("lazy").setup({
   require "plugins.neo-tree",
   require "plugins.nvim-dap",
   require "plugins.oil",
+  require "plugins.symlink",
   require "plugins.telescope",
   require "plugins.theme",
   require "plugins.toggleterm",
