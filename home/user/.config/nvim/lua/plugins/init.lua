@@ -17,6 +17,8 @@ require("lazy").setup({
   require "plugins.friendly-snippets",
   require "plugins.fugitive",
   require "plugins.git-signs",
+  require "plugins.harpoon",
+  require "plugins.indent-blanklines",
   require "plugins.lsp",
   require "plugins.lualine",
   require "plugins.luarocks",
@@ -24,6 +26,7 @@ require("lazy").setup({
   require "plugins.neo-tree",
   require "plugins.nvim-dap",
   require "plugins.oil",
+  require "plugins.rainbow-delimiters",
   require "plugins.symlink",
   require "plugins.telescope",
   require "plugins.theme",
@@ -31,5 +34,6 @@ require("lazy").setup({
   require "plugins.treesitter",
   require "plugins.treesitter-context",
   require "plugins.treesitter-textobjects",
+  require "plugins.trouble",
   require "plugins.which-key",
 })

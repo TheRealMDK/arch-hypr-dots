@@ -11,8 +11,16 @@ return {
     config = function()
       require("neo-tree").setup({
         window = {
-          position = "right",
-          --position = "float",
+          --position = "right",
+          position = "float",
+--          popup = {
+--            size = {
+--              height = "75%",
+--              width = "50%",
+--            },
+--            position = "50%",
+--            border = "rounded",
+--          },
         },
 
         filesystem = {

@@ -135,12 +135,19 @@ vim.keymap.set(
   { desc = "Close tab" }
 )
 
+vim.keymap.set(
+  "n",
+  "<leader>ts",
+  "<cmd>tab split<CR> <cmd>bnext<CR>",
+  { desc = "Split to new tab" }
+)
+
 -- *** NEO-TREE ***--
 
 vim.keymap.set(
   "n",
   "<leader>/",
-  "<cmd>Neotree toggle current reveal_force_cwd right<CR>",
+  "<cmd>Neotree toggle current reveal_force_cwd float<CR>",
   { desc = "Toggle Neo-tree and reveal current directory" }
 )
 
@@ -272,10 +279,96 @@ vim.keymap.set(
   "<cmd>Gvdiffsplit<CR>",
   { desc = "Git Diff" }
 )
--- ***  ***--
--- ***  ***--
--- ***  ***--
+-- *** TROUBLE ***--
+
+vim.keymap.set(
+  "n",
+  "<Leader>xb",
+  "<cmd>Trouble diagnostics toggle focus=false win = { type = 'split', position='right'} filter.buf=0<CR>",
+  { desc = "Buffer Diagnostics (Trouble)" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>xx",
+  "<cmd>Trouble diagnostics toggle focus=false win = { type = 'split', position='right'}<CR>",
+  { desc = "Diagnostics (Trouble)" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>xs",
+  "<cmd>Trouble symbols toggle focus=false win = { type = 'split', position='right'}<CR>",
+  { desc = "Symbols (Trouble)" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>xl",
+  "<cmd>Trouble lsp toggle focus=false win = { type = 'split', position='right'}<CR>",
+  { desc = "LSP Definitions / references / ... (Trouble)" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>xL",
+  "<cmd>Trouble loclist toggle focus=false win = { type = 'split', position='right'}<CR>",
+  { desc = "Location List (Trouble)" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>xq",
+  "<cmd>Trouble qflist toggle focus=false win = { type = 'split', position='right'}<CR>",
+  { desc = "Quickfix List (Trouble)" }
+)
+
+-- *** HARPOON ***--
+
+vim.keymap.set(
+  "n",
+  "<Leader>ha",
+  "<cmd>lua require('harpoon.mark').add_file()<CR>",
+  { desc = "Add file (Harpoon)" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>hq",
+  "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>",
+  { desc = "Quick menu toggle (Harpoon)" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>hn",
+  "<cmd>lua require('harpoon.ui').nav_next()<CR>",
+  { desc = "Next mark (Harpoon)" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>hp",
+  "<cmd>lua require('harpoon.ui').nav_prev()<CR>",
+  { desc = "Previous mark (Harpoon)" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>ht",
+  "<cmd>Telescope harpoon marks<CR>",
+  { desc = "Telescope mark (Harpoon)" }
+)
+
 -- ***  ***--
 -- ***  ***--
 -- ***  ***--
 
+-- *** KEYMAP TEMPLATE ***--
+
+--vim.keymap.set(
+--  "n",
+--  "<Leader>",
+--  "<cmd><CR>",
+--  { desc = "" }
+--)

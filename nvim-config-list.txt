@@ -1,19 +1,15 @@
 Main List (Recommended Install Order)
 
-  aymericbeaumet/vim-symlink
   windwp/nvim-ts-autotag
   windwp/nvim-autopairs
   stevearc/conform.nvim
   ahmedkhalf/project.nvim
   rcarriga/nvim-notify
-  folke/trouble.nvim
   folke/todo-comments.nvim
   folke/persistence.nvim
   numToStr/Comment.nvim
   folke/zen-mode.nvim
   ggandor/leap.nvim
-  lukas-reineke/indent-blankline.nvim
-  theprimeagen/harpoon
   theprimeagen/refactoring.nvim
   olrtg/nvim-emmet
 
