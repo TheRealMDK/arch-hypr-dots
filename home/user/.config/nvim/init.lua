@@ -4,9 +4,8 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.have_nerd_font = true
 
-require("core.options")
-require("plugins.init")
+require("lazy-init")
 require("core.keymaps")
-require("core.utils")
+require("core.options")
 require("core.autocmds")
-
+require("core.utils")

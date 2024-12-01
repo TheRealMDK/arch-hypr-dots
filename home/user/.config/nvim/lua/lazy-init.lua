@@ -39,7 +39,6 @@ require("lazy").setup({
   require "plugins.symlink",
   require "plugins.telescope",
   require "plugins.template-string",
-  require "plugins.theme",
   require "plugins.todo-comments",
   require "plugins.toggleterm",
   require "plugins.treesitter",
@@ -50,4 +49,6 @@ require("lazy").setup({
   require "plugins.ts-comment-string",
   require "plugins.which-key",
   require "plugins.zen-mode",
+  
+  require "themes.cyberdream",
 })
