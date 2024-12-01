@@ -4,7 +4,7 @@ vim.keymap.set(
   "<cmd>nohlsearch<CR>"
 )
 
--- *** WINDOW MANAGEMENT ***--
+-- PERF: WINDOW MANAGEMENT
 
 -- Window focus
 
@@ -82,7 +82,7 @@ vim.keymap.set(
   { desc = "Increase width" }
 )
 
--- *** BUFFER MANAGEMENT ***--
+-- PERF: BUFFER MANAGEMENT
 
 vim.keymap.set(
   "n",
@@ -105,7 +105,7 @@ vim.keymap.set(
   { desc = "Close buffer" }
 )
 
--- *** TAB MANAGEMENT ***--
+-- PERF: TAB MANAGEMENT
 
 vim.keymap.set(
   "n",
@@ -142,7 +142,7 @@ vim.keymap.set(
   { desc = "Split to new tab" }
 )
 
--- *** NEO-TREE ***--
+-- PERF: NEO-TREE
 
 vim.keymap.set(
   "n",
@@ -173,7 +173,7 @@ vim.keymap.set(
   { desc = "Show Neo-tree Git status in float" }
 )
 
--- *** OIL ***--
+-- PERF: OIL
 
 vim.keymap.set(
   "n",
@@ -182,7 +182,7 @@ vim.keymap.set(
   { desc = "Open Oil in float mode" }
 )
 
--- *** BUFFERLINE ***--
+-- PERF: BUFFERLINE
 
 vim.keymap.set(
   "n",
@@ -198,7 +198,7 @@ vim.keymap.set(
   { desc = "Go to previous tab" }
 )
 
--- *** TELESCOPE ***--
+-- PERF: TELESCOPE
 
 local builtin = require("telescope.builtin")
 
@@ -227,7 +227,7 @@ vim.keymap.set("n",
   { desc = "Telescope help tags" }
 )
 
--- *** TOGGLETERM ***--
+-- PERF: TOGGLETERM ***--
 
 vim.keymap.set(
   "n",
@@ -250,7 +250,7 @@ vim.keymap.set(
   { desc = "Toggle Terminal in New Tab" }
 )
 
--- *** GIT ***--
+-- PERF: GIT
 
 vim.keymap.set(
   "n",
@@ -279,7 +279,7 @@ vim.keymap.set(
   "<cmd>Gvdiffsplit<CR>",
   { desc = "Git Diff" }
 )
--- *** TROUBLE ***--
+-- PERF: TROUBLE
 
 vim.keymap.set(
   "n",
@@ -323,7 +323,7 @@ vim.keymap.set(
   { desc = "Quickfix List (Trouble)" }
 )
 
--- *** HARPOON ***--
+-- PERF: HARPOON
 
 vim.keymap.set(
   "n",
@@ -360,15 +360,148 @@ vim.keymap.set(
   { desc = "Telescope mark (Harpoon)" }
 )
 
--- ***  ***--
--- ***  ***--
--- ***  ***--
+-- PERF: PROJECT
 
--- *** KEYMAP TEMPLATE ***--
+vim.keymap.set(
+  "n",
+  "<Leader>fp",
+  "<cmd>Telescope projects<CR>",
+  { desc = "Find projects" }
+)
 
---vim.keymap.set(
---  "n",
---  "<Leader>",
---  "<cmd><CR>",
---  { desc = "" }
---)
+-- PERF: TODO-COMMENTS
+
+local todo = require("todo-comments")
+
+vim.keymap.set(
+  "n",
+  "<Leader>zn",
+  function()
+    todo.jump_next()
+  end,
+  { desc = "Next todo-comment" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>zp",
+  function()
+    todo.jump_prev()
+  end,
+  { desc = "Previous todo-comment" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>zt",
+  "<cmd>TodoTelescope<CR>",
+  { desc = "Search TODO comments with Telescope" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>zT",
+  "<cmd>Trouble todo<CR>",
+  { desc = "List all project todos in trouble" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>zf",
+  "<cmd>TodoFzfLua<CR>",
+  { desc = "Find all todos with fzf" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>zl",
+  "<cmd>TodoLocList<CR>",
+  { desc = "Show TODO comments in location list" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>zq",
+  "<cmd>TodoQuickFix<CR>",
+  { desc = "Show TODO comments in quickfix list" }
+)
+-- PERF: MARKDOWN-PREVIEW
+
+vim.keymap.set(
+  "n",
+  "<Leader>mp",
+  "<cmd>MarkdownPreviewToggle<CR>",
+  { desc = "Start or toggle Markdown Preview" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>ms",
+  "<cmd>MarkdownPreviewStop<CR>",
+  { desc = "Stop Markdown Preview" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>mr",
+  "<cmd>MarkdownPreview<CR>",
+  { desc = "Refresh Markdown Preview" }
+)
+
+-- PERF: PERSISTENCE
+
+local persistence = require("persistence")
+
+vim.keymap.set(
+  "n",
+  "<Leader>ps",
+  function ()
+    persistence.save()
+  end,
+  { desc = "Save session (Persistence)" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>pS",
+  function ()
+    persistence.select()
+  end,
+  { desc = "Select session (Persistence)" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>pl",
+  function ()
+    persistence("persistence").load()
+  end,
+  { desc = "Load session (Persistence)" }
+)
+
+vim.keymap.set(
+  "n",
+  "<Leader>pq",
+  function ()
+    persistence("persistence").stop()
+  end,
+  { desc = "Quit session (Persistence)" }
+)
+
+-- PERF: ZEN-MODE
+
+vim.keymap.set(
+  "n",
+  "<Leader>Z",
+  "<cmd>ZenMode<CR>",
+  { desc = "Toggle Zen-mode" }
+)
+
+-- NOTE: KEYMAP TEMPLATE
+
+--[[ vim.keymap.set(
+ "n",
+ "<Leader>",
+ "<cmd><CR>",
+ { desc = "" }
+) ]]
