@@ -19,11 +19,19 @@ return {
         require("cmp_nvim_lsp").default_capabilities()
       )
 
+      local autocmds = require("core.autocmds")
+      local utils = require("core.utils")
+      local maps = require("core.keymaps-init")
+
+      local function on_attach(client, bufnr)
+        autocmds.lsp_attach_autocmds(client, bufnr)
+        maps.setup_lsp_keymaps(client, bufnr)
+        utils.lsp_client_notifications(client)
+      end
+
       local default_config = {
         capabilities = capabilities,
---        on_attach = function(client, bufnr)
---          vim.notify(client.name .. " LSP attached to buffer " .. bufnr)
---        end
+        on_attach = on_attach,
       }
 
       -- Custom overrides for specific servers

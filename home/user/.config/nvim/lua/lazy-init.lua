@@ -49,6 +49,6 @@ require("lazy").setup({
   require "plugins.ts-comment-string",
   require "plugins.which-key",
   require "plugins.zen-mode",
-  
+
   require "themes.cyberdream",
 })

@@ -5,7 +5,7 @@ return{
 
       vim.keymap.set(
         { "n", "v" },
-        "<leader>we",
+        "<leader>ewa",
         require("nvim-emmet").wrap_with_abbreviation
       )
 
