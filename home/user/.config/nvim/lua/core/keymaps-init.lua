@@ -8,6 +8,7 @@ local keymap_modules = {
   "core.keymaps.plugins.bufferline",
   "core.keymaps.plugins.git",
   "core.keymaps.plugins.harpoon",
+  "core.keymaps.plugins.lsp",
   "core.keymaps.plugins.markdown-preview",
   "core.keymaps.plugins.neo-tree",
   "core.keymaps.plugins.oil",

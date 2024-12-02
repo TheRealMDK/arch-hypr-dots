@@ -9,9 +9,13 @@ return {
       "hrsh7th/cmp-nvim-lsp",
       "saadparwaiz1/cmp_luasnip",
       "L3MON4D3/LuaSnip",
+      "SmiteshP/nvim-navic",
+      "j-hui/fidget.nvim",
+      "smjonas/inc-rename.nvim",
+      "glepnir/lspsaga.nvim",
+      "kosayoda/nvim-lightbulb",
     },
     config = function()
-      -- Setup LSP servers
       local lspconfig = require("lspconfig")
       local capabilities = vim.tbl_deep_extend(
         "force",
@@ -19,19 +23,12 @@ return {
         require("cmp_nvim_lsp").default_capabilities()
       )
 
-      local autocmds = require("core.autocmds")
-      local utils = require("core.utils")
-      local maps = require("core.keymaps-init")
-
-      local function on_attach(client, bufnr)
-        autocmds.lsp_attach_autocmds(client, bufnr)
-        maps.setup_lsp_keymaps(client, bufnr)
-        utils.lsp_client_notifications(client)
-      end
-
       local default_config = {
         capabilities = capabilities,
-        on_attach = on_attach,
+        on_attach = function(client, bufnr)
+          require("core.utils").setup_lsp(client, bufnr)
+          require("core.keymaps.plugins.lsp")(bufnr)
+        end,
       }
 
       -- Custom overrides for specific servers
@@ -47,7 +44,7 @@ return {
             },
           },
         },
-        --[[ harper_ls = {
+        harper_ls = {
           settings = {
             ["harper-ls"] = {
               linters = {
@@ -56,7 +53,7 @@ return {
               }
             }
           }
-        } ]]
+        }
       }
       -- Apply setup for all servers
       for _, server in ipairs(servers) do

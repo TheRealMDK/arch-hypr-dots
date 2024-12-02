@@ -1,10 +1,24 @@
--- INFO: LSP client notifications setup
+local M = {}
 
-function lsp_client_notifications(client)
-  vim.notify(client.name .. " has attached successfully", vim.log.levels.INFO, { title = "LSP Client" })
+-- Setup `nvim-navic` breadcrumbs
+M.setup_navic = function(client, bufnr)
+  local navic = require("nvim-navic")
+  if client.server_capabilities.documentSymbolProvider then
+    navic.attach(client, bufnr)
+  end
 end
 
-return {
-  lsp_client_notifications = lsp_client_notifications,
+-- Setup lightbulb for LSP code actions
+M.setup_lightbulb = function()
+  require("nvim-lightbulb").setup {
+    autocmd = { enabled = true },
+  }
+end
 
-}
+-- LSP-specific setup
+M.setup_lsp = function(client, bufnr)
+  M.setup_navic(client, bufnr)
+  M.setup_lightbulb()
+end
+
+return M

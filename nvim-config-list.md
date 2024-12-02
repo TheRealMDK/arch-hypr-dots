@@ -2,7 +2,7 @@
 
 ## Priority Order
 
-1. [ ] **lsp.lua**
+1. [x] **lsp.lua**
    - Core language server protocol configuration.
    - Provides intelligent code completion, diagnostics, and navigation.<br><br>
 
@@ -146,14 +146,27 @@
     - Lua package manager integration.
     - Allows installing and managing Lua dependencies<br><br>
 
+37. [ ] **navic.lua**
+    - Provides code context (breadcrumbs).<br><br>
+
+38. [ ] **inc-rename.lua**
+    - Enhances rename operations in LSP.<br><br>
+
+
+39. [ ] **lspsaga.lua**
+    - Enhances LSP UX with features like floating windows, symbol outline, and more.<br><br>
+
+
+40. [ ] **lightbulb.lua**
+    - Adds a lightbulb UI element indicating code actions.<br><br>
+
 ---
 
 ## Completed
-*(To be updated as we proceed.)*
 
 ---
 
-## All installed plugins:
+## All installed plugins to be configured:
 
 1. autopairs.lua
 2. bufferline.lua
@@ -169,7 +182,6 @@
 12. harpoon.lua
 13. indent-blanklines.lua
 14. leap.lua
-15. lsp.lua
 16. lualine.lua
 17. luarocks.lua
 18. markdown-preview.lua
@@ -195,6 +207,10 @@
 38. ts-comment-string.lua
 39. which-key.lua
 40. zen-mode.lua
+41. navic.lua
+42. inc-rename.lua
+43. lspsaga.lua
+44. lightbulb.lua
 
 ---
 
