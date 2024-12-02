@@ -47,7 +47,7 @@ return {
             },
           },
         },
-        harper_ls = {
+        --[[ harper_ls = {
           settings = {
             ["harper-ls"] = {
               linters = {
@@ -56,7 +56,7 @@ return {
               }
             }
           }
-        }
+        } ]]
       }
       -- Apply setup for all servers
       for _, server in ipairs(servers) do
