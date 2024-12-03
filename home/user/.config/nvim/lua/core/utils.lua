@@ -3,7 +3,7 @@ local M = {}
 -- Setup `nvim-navic` breadcrumbs
 M.setup_navic = function(client, bufnr)
   local navic = require("nvim-navic")
-  if client.server_capabilities.documentSymbolProvider then
+  if client.server_capabilities.documentSymbolProvider then --and not navic.is_attached(bufnr) then
     navic.attach(client, bufnr)
   end
 end

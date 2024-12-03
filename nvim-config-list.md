@@ -221,3 +221,5 @@
 - consider stevearc/conform.nvim
 
 - consider TimUntersberger/neogit to replace tpope/vim-fugitive
+
+- add lspkind-nvim to cmp configuration

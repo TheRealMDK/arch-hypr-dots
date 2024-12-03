@@ -11,7 +11,7 @@ return {
   "hyprls",                --Hyprland
   "biome",                 --Javascript
   "eslint",                --Javascript
-  -- "harper_ls", --Javascript
+  "harper_ls",             --Javascript
   "quick_lint_js",         --Javascript
   "ts_ls",                 --Javascript
   "jsonls",                --Json
@@ -25,3 +25,6 @@ return {
   "somesass_ls",           --SCSS
   "stylelint_lsp",         --Stylint
 }
+
+--WARN: Only one lsp should be provided with the same functionality, or lsp should be configured for specific functionality.
+--INFO: Remove redundant servers, or configure lsps's above for specifig functionality ASAP!
