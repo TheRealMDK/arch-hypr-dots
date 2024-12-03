@@ -53,7 +53,10 @@ return {
               }
             }
           }
-        }
+        },
+        html = {
+          filetypes = { "html", "htmldjango" }, -- Extend filetypes to include htmldjango
+        },
       }
       -- Apply setup for all servers
       for _, server in ipairs(servers) do

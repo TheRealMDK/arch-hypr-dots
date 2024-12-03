@@ -28,7 +28,7 @@ map(
   "n",
   "<Leader>pl",
   function()
-    persistence("persistence").load()
+    persistence.load()
   end,
   { desc = "Load session (Persistence)" }
 )
@@ -37,7 +37,7 @@ map(
   "n",
   "<Leader>pq",
   function()
-    persistence("persistence").stop()
+    persistence.stop()
   end,
   { desc = "Quit session (Persistence)" }
 )

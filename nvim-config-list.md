@@ -168,49 +168,49 @@
 
 ## All installed plugins to be configured:
 
-1. autopairs.lua
-2. bufferline.lua
-3. cmp.lua
-4. comment.lua
-5. dap-ui.lua
-6. dashboard.lua
-7. emmet.lua
-8. fidget.lua
-9. friendly-snippets.lua
-10. fugitive.lua
-11. git-signs.lua
-12. harpoon.lua
-13. indent-blanklines.lua
-14. leap.lua
-16. lualine.lua
-17. luarocks.lua
-18. markdown-preview.lua
-19. mason.lua
-20. neo-tree.lua
-21. notify.lua
-22. nvim-dap.lua
-23. oil.lua
-24. persistence.lua
-25. project.lua
-26. rainbow-delimiters.lua
-27. refactoring.lua
-28. symlink.lua
-29. telescope.lua
-30. template-string.lua
-31. todo-comments.lua
-32. toggleterm.lua
-33. treesitter-context.lua
-34. treesitter-textobjects.lua
-35. treesitter.lua
-36. trouble.lua
-37. ts-autotag.lua
-38. ts-comment-string.lua
-39. which-key.lua
-40. zen-mode.lua
-41. navic.lua
-42. inc-rename.lua
-43. lspsaga.lua
-44. lightbulb.lua
+- autopairs.lua
+- bufferline.lua
+- cmp.lua
+- comment.lua
+- dap-ui.lua
+- dashboard.lua
+- emmet.lua
+- fidget.lua
+- friendly-snippets.lua
+- fugitive.lua
+- git-signs.lua
+- harpoon.lua
+- indent-blanklines.lua
+- leap.lua
+- lualine.lua
+- luarocks.lua
+- markdown-preview.lua
+- mason.lua
+- neo-tree.lua
+- notify.lua
+- nvim-dap.lua
+- oil.lua
+- persistence.lua
+- project.lua
+- rainbow-delimiters.lua
+- refactoring.lua
+- symlink.lua
+- telescope.lua
+- template-string.lua
+- todo-comments.lua
+- toggleterm.lua
+- treesitter-context.lua
+- treesitter-textobjects.lua
+- treesitter.lua
+- trouble.lua
+- ts-autotag.lua
+- ts-comment-string.lua
+- which-key.lua
+- zen-mode.lua
+- navic.lua
+- inc-rename.lua
+- lspsaga.lua
+- lightbulb.lua
 
 ---
 
@@ -218,8 +218,8 @@
 
 - consider a live previewer
 
-- consider stevearc/conform.nvim
-
 - consider TimUntersberger/neogit to replace tpope/vim-fugitive
 
 - add lspkind-nvim to cmp configuration
+
+- Add null-ls, kevinhwang91/nvim-ufo
