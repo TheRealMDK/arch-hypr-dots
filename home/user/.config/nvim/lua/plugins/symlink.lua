@@ -1,9 +1,9 @@
-return{
+return {
   {
     "aymericbeaumet/vim-symlink",
-    dependencies = {"moll/vim-bbye",},
+    dependencies = { "moll/vim-bbye", },
     config = function()
-      
+
     end,
   }
 }
