@@ -6,7 +6,7 @@
    - Core language server protocol configuration.
    - Provides intelligent code completion, diagnostics, and navigation.<br><br>
 
-2. [ ] **cmp.lua**
+2. [x] **cmp.lua**
    - Completion engine.
    - Works with LSP, snippets, and custom sources for autocompletion.<br><br>
 
@@ -126,11 +126,11 @@
     - Context-aware commenting for Treesitter-supported languages.
     - Ensures the correct comment format is used in different contexts.<br><br>
 
-32. [ ] **friendly-snippets.lua**
+32. [x] **friendly-snippets.lua**
     - Predefined snippets for various languages.
     - Works with completion plugins for enhanced productivity.<br><br>
 
-33. [ ] **markdown-preview.lua**
+33. [ ] **peek.lua**
     - Live preview for Markdown files.
     - Useful for writing documentation and content.<br><br>
 
@@ -170,13 +170,11 @@
 
 - autopairs.lua
 - bufferline.lua
-- cmp.lua
 - comment.lua
 - dap-ui.lua
 - dashboard.lua
 - emmet.lua
 - fidget.lua
-- friendly-snippets.lua
 - fugitive.lua
 - git-signs.lua
 - harpoon.lua
@@ -184,7 +182,7 @@
 - leap.lua
 - lualine.lua
 - luarocks.lua
-- markdown-preview.lua
+- peek.lua
 - mason.lua
 - neo-tree.lua
 - notify.lua
@@ -211,15 +209,13 @@
 - inc-rename.lua
 - lspsaga.lua
 - lightbulb.lua
+- null-ls.lua
+- ufo.lua
 
 ---
 
 ### Main List (Recommended Install Order)
 
-- consider a live previewer
-
 - consider TimUntersberger/neogit to replace tpope/vim-fugitive
-
-- add lspkind-nvim to cmp configuration
 
 - Add null-ls, kevinhwang91/nvim-ufo

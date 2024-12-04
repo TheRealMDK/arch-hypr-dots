@@ -1,21 +1,20 @@
 return {
-  "bashls",                --Bash
-  "ast_grep",              --Many
-  "cssls",                 --CSS
-  "cssmodules_ls",         --CSS
-  "tailwindcss",           --CSS
-  "emmet_language_server", --Emmet
-  "html",                  --HTML
-  "hyprls",                --Hyprland
-  "eslint",                --Javascript
-  "harper_ls",             --Javascript
-  "ts_ls",                 --Javascript
-  "jsonls",                --Json
-  "lua_ls",                --Lua
-  "marksman",              --Markdown
-  "zk",                    --Markdown
-  "pyright",               --Python
-  "ruff",                  --Python
-  "somesass_ls",           --SCSS
-  "stylelint_lsp",         --Stylint
+  "ast_grep",
+  "bashls",
+  "cssls",
+  "cssmodules_ls",
+  "emmet_language_server",
+  "eslint",
+  "html",
+  "hyprls",
+  "jsonls",
+  "lua_ls",
+  "marksman",
+  "pyright",
+  "ruff",
+  "somesass_ls",
+  "stylelint_lsp",
+  "tailwindcss",
+  "ts_ls",
+  "zk",
 }

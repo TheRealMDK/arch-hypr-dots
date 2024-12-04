@@ -41,6 +41,9 @@ return {
                   "vim",
                 }
               },
+              runtime = {
+                version = 'LuaJIT',
+              },
             },
           },
         },

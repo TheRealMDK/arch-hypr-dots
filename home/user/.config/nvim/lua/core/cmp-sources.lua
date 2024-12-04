@@ -33,6 +33,8 @@ return {
       dependency = "hrsh7th/cmp-cmdline",
     },
   },
-  additional_dependencies = {},
+  additional_dependencies = {
+    "onsails/lspkind.nvim",
+  },
 }
 
