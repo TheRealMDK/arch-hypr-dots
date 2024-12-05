@@ -1,4 +1,4 @@
-local servers = require("core.lsp-servers")
+local servers = require("core.lsp-servers").servers
 
 return {
 	{
@@ -41,18 +41,11 @@ return {
 									"vim",
 								},
 							},
+							workspace = {
+								library = vim.api.nvim_get_runtime_file("", true),
+							},
 							runtime = {
 								version = "LuaJIT",
-							},
-						},
-					},
-				},
-				harper_ls = {
-					settings = {
-						["harper-ls"] = {
-							linters = {
-								spell_check = false,
-								sentence_capitalization = false,
 							},
 						},
 					},

@@ -13,7 +13,7 @@ require("lazy").setup({
 	require("plugins.bufferline"),
 	require("plugins.cmp"),
 	require("plugins.comment"),
-	require("plugins.conform"),
+	-- require("plugins.conform"),
 	require("plugins.dap-ui"),
 	require("plugins.dashboard"),
 	require("plugins.emmet"),
@@ -35,7 +35,7 @@ require("lazy").setup({
 	require("plugins.neo-tree"),
 	require("plugins.notify"),
 	require("plugins.nvim-dap"),
-	require("plugins.nvim-lint"),
+	-- require("plugins.nvim-lint"),
 	require("plugins.oil"),
 	require("plugins.peek"),
 	require("plugins.persistence"),
@@ -56,5 +56,7 @@ require("lazy").setup({
 	require("plugins.which-key"),
 	require("plugins.zen-mode"),
 
-	require("themes.cyberdream"),
+	--require("themes.cyberdream"),
+  require("themes.eldritch"),
+	-- require("themes.fluoromachine"),
 })

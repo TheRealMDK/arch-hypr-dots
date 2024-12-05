@@ -25,6 +25,7 @@ M.formatters_and_linters = {
 	"djlint",
 	"markdownlint",
 	"prettier",
+	"selene",
 	"shellcheck",
 	"shfmt",
 	"stylua",
