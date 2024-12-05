@@ -4,4 +4,6 @@ map = function(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, rhs, opts)
 end
 
-map("n", "<Leader>fp", "<cmd>Telescope projects<CR>", { desc = "Find projects" })
+map("n", "<Leader>cf", function()
+	require("conform").format({ async = true })
+end, { silent = true, desc = "Format current file" })

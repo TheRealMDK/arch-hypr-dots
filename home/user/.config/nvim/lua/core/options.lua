@@ -1,7 +1,7 @@
 -- Schedule clipboard configuration to avoid issues during startup
 
 vim.schedule(function()
-  vim.opt.clipboard = "unnamedplus"
+	vim.opt.clipboard = "unnamedplus"
 end)
 
 -- General UI and usability settings
@@ -26,10 +26,10 @@ vim.opt.scrolloff = 5 -- Keep 10 lines visible around the cursor
 
 -- Indentation settings
 
-vim.opt.tabstop = 2        -- Tab width
-vim.opt.softtabstop = 2    -- Spaces per Tab key press
-vim.opt.shiftwidth = 2     -- Spaces per indentation level
-vim.opt.expandtab = true   -- Use spaces instead of tabs
+vim.opt.tabstop = 2 -- Tab width
+vim.opt.softtabstop = 2 -- Spaces per Tab key press
+vim.opt.shiftwidth = 2 -- Spaces per indentation level
+vim.opt.expandtab = true -- Use spaces instead of tabs
 vim.opt.smartindent = true -- Smart indentation
 
 -- Disable backups
@@ -38,7 +38,7 @@ vim.opt.backup = false
 
 -- Search behavior
 
-vim.opt.hlsearch = true  -- Set to "false" to disable highlight search
+vim.opt.hlsearch = true -- Set to "false" to disable highlight search
 vim.opt.incsearch = true -- Enable incremental search
 
 -- Append to isfname
@@ -47,10 +47,10 @@ vim.opt.isfname:append("@-@")
 
 -- Text wrapping settings
 
-vim.opt.wrap = true        -- Set to "false" to disable wrapping by default
-vim.opt.linebreak = true   -- Prevent breaking words in the middle
+vim.opt.wrap = true -- Set to "false" to disable wrapping by default
+vim.opt.linebreak = true -- Prevent breaking words in the middle
 vim.opt.breakindent = true -- Indent wrapped lines for readability
-vim.opt.showbreak = ">> "  -- Add prefix for wrapped lines
+vim.opt.showbreak = ">> " -- Add prefix for wrapped lines
 vim.opt.textwidth = 80
 
 --INFO: Autocommands for specific file types

@@ -1,8 +1,8 @@
 return {
-  "kosayoda/nvim-lightbulb",
-  config = function()
-    require("nvim-lightbulb").setup {
-      autocmd = { enabled = false },
-    }
-  end,
+	"kosayoda/nvim-lightbulb",
+	config = function()
+		require("nvim-lightbulb").setup({
+			autocmd = { enabled = false },
+		})
+	end,
 }
