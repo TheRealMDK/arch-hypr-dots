@@ -23,6 +23,8 @@ M.servers = {
 
 M.formatters_and_linters = {
 	"djlint",
+	"eslint_d",
+	"jsonlint",
 	"markdownlint",
 	"prettier",
 	"selene",

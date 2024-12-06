@@ -18,7 +18,7 @@ autocmd("BufWritePre", {
 		vim.cmd([[%s/\s\+$//e]])
 	end,
 })
---[[
+
 --INFO: Group for LSP-related autocommands
 local lsp_group = augroup("LspAutocommands", { clear = true })
 
@@ -44,7 +44,7 @@ autocmd("BufWritePost", {
 		require("lint").try_lint()
 	end,
 })
- ]]
+
 --INFO: Show lightbulb for code actions
 autocmd({ "CursorHold", "CursorHoldI" }, {
 	group = lsp_group,
