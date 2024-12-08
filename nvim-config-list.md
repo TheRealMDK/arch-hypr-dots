@@ -12,7 +12,7 @@
    - Completion engine.
    - Works with LSP, snippets, and custom sources for autocompletion.<br><br>
 
-3. [ ] **toggleterm.lua**
+3. [x] **toggleterm.lua**
 
    - Integrated terminal management.
    - Enhances terminal workflows with persistent splits and better navigation.<br><br>

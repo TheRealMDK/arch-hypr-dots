@@ -22,11 +22,13 @@ M.servers = {
 }
 
 M.formatters_and_linters = {
+	"ast_grep",
 	"djlint",
 	"eslint_d",
 	"jsonlint",
 	"markdownlint",
 	"prettier",
+	"ruff",
 	"selene",
 	"shellcheck",
 	"shfmt",

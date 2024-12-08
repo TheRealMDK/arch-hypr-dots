@@ -52,3 +52,26 @@ autocmd({ "CursorHold", "CursorHoldI" }, {
 		require("nvim-lightbulb").update_lightbulb()
 	end,
 })
+
+--INFO: Treesitter fold workaround
+
+autocmd({ "BufEnter", "BufAdd", "BufNew", "BufNewFile", "BufWinEnter" }, {
+	group = augroup("TS_FOLD_WORKAROUND", {}),
+	callback = function()
+		vim.opt.foldmethod = "expr"
+		vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+	end,
+})
+
+--INFO: Autocommands for specific file types
+
+--[[ autocmd("FileType", {
+  pattern = { "markdown", "text" },
+  callback = function()
+    vim.opt_local.wrap = true
+    vim.opt_local.linebreak = true
+    vim.opt_local.breakindent = true
+    vim.opt_local.showbreak = ">> "
+    vim.opt_local.textwidth = 80
+  end,
+}) ]]
