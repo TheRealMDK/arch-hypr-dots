@@ -1,2 +1,7 @@
 [Added Associations]
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+text/markdown=geany.desktop;nvim.desktop;
+application/x-zerosize=geany.desktop;
+
+[Default Applications]
+application/x-zerosize=geany.desktop
