@@ -107,3 +107,72 @@ patchDiff() {
 
 }
 
+commentAniCliHist() {
+    local hist_file="~/.local/state/ani-cli/ani-hsts"
+    local search_string="$1"
+
+    # Expand the ~ to the full home directory path
+    hist_file="${hist_file/#\~/$HOME}"
+
+    # Check if the history file exists
+    if [[ ! -f "$hist_file" ]]; then
+        echo "History file not found: $hist_file"
+        return 1
+    fi
+
+    # Display matching lines with line numbers
+    local matching_lines=$(grep -n "$search_string" "$hist_file")
+
+    if [[ -z "$matching_lines" ]]; then
+        echo "No matching lines found for: $search_string"
+        return 0
+    fi
+
+    echo "Matching lines:"
+    echo "$matching_lines"
+
+    # Prompt user to select a line to comment
+    read -p "Enter the line number to comment (or press Enter to skip): " line_number
+
+    if [[ -n "$line_number" ]]; then
+        sed -i "${line_number}s/^/# /" "$hist_file"
+        echo "Commented line $line_number."
+    else
+        echo "No line commented."
+    fi
+}
+
+uncommentAniCliHist() {
+    local hist_file="~/.local/state/ani-cli/ani-hsts"
+    local search_string="$1"
+
+    # Expand the ~ to the full home directory path
+    hist_file="${hist_file/#\~/$HOME}"
+
+    # Check if the history file exists
+    if [[ ! -f "$hist_file" ]]; then
+        echo "History file not found: $hist_file"
+        return 1
+    fi
+
+    # Display matching lines with line numbers
+    local matching_lines=$(grep -n "^#.*$search_string" "$hist_file")
+
+    if [[ -z "$matching_lines" ]]; then
+        echo "No matching commented lines found for: $search_string"
+        return 0
+    fi
+
+    echo "Matching commented lines:"
+    echo "$matching_lines"
+
+    # Prompt user to select a line to uncomment
+    read -p "Enter the line number to uncomment (or press Enter to skip): " line_number
+
+    if [[ -n "$line_number" ]]; then
+        sed -i "${line_number}s/^# //" "$hist_file"
+        echo "Uncommented line $line_number."
+    else
+        echo "No line uncommented."
+    fi
+}
