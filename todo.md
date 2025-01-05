@@ -1,0 +1,4 @@
+# Outstanding
+
+- neomutt
+- chezmoi
