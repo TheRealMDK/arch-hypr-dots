@@ -56,7 +56,22 @@ alias copySrcToDest="$HOME/arch-hypr-dots/home/user/scripts/copySrcToDest.sh"
 alias symlink="ln -s"
 alias cfg="cd $CONFDIR"
 alias cat='bat --style header --style snip --style changes --style header'
+alias tattach='tmux attach -t'
 alias tb='nc termbin.com 9999'
+alias tdetach='tmux detach'
+alias tkill='tmux kill-session -t'
+alias tkillp='tmux kill-pane'
+alias tls='tmux ls'
+alias tnew='tmux new -s'
+alias tneww='tmux new-window'
+alias tnext='tmux next-window'
+alias tprev='tmux previous-window'
+alias tren='tmux rename-window'
+alias tresize='tmux resize-pane'
+alias tsplit-h='tmux split-window -h'
+alias tsplit-v='tmux split-window -v'
+alias tswitch='tmux select-pane'
+
 #alias cleanPkgs="sudo pacman -Rns $(pacman -Qtdq)"
 
 #alias timeshift-gtk="sudo -E timeshift-launcher"
