@@ -1,121 +1,126 @@
 // -*- mode: jsonc -*-
 {
-    "height": 30, 
-    "spacing": 4, 
-    
-    "modules-left": [
-        "custom/power",
-        "hyprland/workspaces"
+  "height": 30,
+  "spacing": 4,
+
+  "modules-left": ["custom/power", "hyprland/workspaces"],
+
+  "modules-right": [
+    "pulseaudio/slider",
+    "group/utils",
+    "memory",
+    "cpu",
+    "clock",
+  ],
+
+  "custom/power": {
+    "format": " ",
+    "on-click": "wlogout -b 2",
+    "tooltip": false,
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "show-special": true,
+    "special-visible-only": true,
+    "on-click": "activate",
+    "all-outputs": true,
+    "sort-by-number": true,
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "focused": "",
+      "default": "",
+    },
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+  },
+
+  "clock": {
+    "timezone": "Africa/Johannesburg",
+    "format": " {:%H:%M}", //" {:%a %d %b  %H:%M}"
+    "on-click": "$HOME/arch-hypr-dots/home/user/.config/waybar/scripts/OCV",
+    "tooltip": false,
+  },
+
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": false,
+    "on-click": "kitty -e htop",
+  },
+
+  "memory": {
+    "format": "  {}%",
+    "on-click": "kitty -e htop",
+    "tooltip": false,
+  },
+
+  "tray": {
+    "spacing": 10,
+    "tooltip": false,
+  },
+
+  "bluetooth": {
+    "format-on": "󰂯",
+    "format-off": "BT-off",
+    "format-disabled": "󰂲",
+    "format-connected-battery": "󰂯 {device_battery_percentage}%",
+    "format-alt": "{device_alias} 󰂯",
+    "tooltip": false,
+    "on-click": "blueman-manager",
+  },
+
+  "group/utils": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "not-power",
+      "transition-left-to-right": false,
+    },
+    "spacing": 10,
+    "modules": [
+      "tray",
+      "custom/weather",
+      "custom/network_traffic",
+      "keyboard-state",
     ],
-    
-    "modules-right": [
-        "pulseaudio/slider",
-        "group/utils",
-		"memory",
-		"cpu",       
-        "clock",        
-    ],
-    
-    "custom/power": {
-      	"format":" ",
-       	"on-click": "wlogout -b 2",
-      	"tooltip": false,
-	 },
-    
-    "hyprland/workspaces": {
-		"format": "{icon}",
-		"show-special": true,
-		"special-visible-only": true,
-		"on-click": "activate",
-		"all-outputs": true,
-		"sort-by-number": true,
-		"format-icons": {
-            "1": "1",
-			"2": "2",
-			"3": "3",
-			"4": "4",
-			"5": "5",
-			"6": "6",
-			"7": "7",
-			"8": "8",
-			"9": "9",
-			"10": "10",
-			"focused": "",
-			"default": ""
-		},
-		"on-scroll-up": "hyprctl dispatch workspace e+1",
-		"on-scroll-down": "hyprctl dispatch workspace e-1",
-     },
-    
-  
-    
-    "clock": {
-        "timezone": "Africa/Johannesburg",
-        "format": " {:%H:%M}", //" {:%a %d %b  %H:%M}"
-        "on-click": "$HOME/arch-hypr-dots/home/user/.config/waybar/scripts/OCV",
-        "tooltip": false
+  },
+
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal",
+    "on-click-right": "pavucontrol",
+  },
+
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": "",
     },
-    
-    "cpu": {
-        "format": "  {usage}%",
-        "tooltip": false,
-        "on-click": "kitty -e htop",
-    },
-    
-    "memory": {
-        "format": "  {}%",
-        "on-click": "kitty -e htop",
-        "tooltip": false,
-    },
-    
-    "tray": {
-        "spacing": 10,
-        "tooltip": false
-    },
-    
-      "group/utils": {
-		"orientation": "inherit",
-		"drawer": {
-			"transition-duration": 500,
-			"children-class": "not-power",
-			"transition-left-to-right": false,
-		},
-        "spacing": 10,
-		"modules": [
-			"tray",
-			"custom/weather",
-			"custom/network_traffic",			
-			"keyboard-state",
-		],
-	},
-    
-    "pulseaudio/slider": {
-		"min": 0,
-		"max": 100,
-		"orientation": "horizontal",
-		"on-click-right": "pavucontrol"
-	},
-    
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    
-    "custom/network_traffic": {
-             "exec": "$HOME/arch-hypr-dots/home/user/.config/waybar/scripts/network-traffic.sh",
-             "return-type": "json",
-             "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}", 
-	 },
-     
-    "custom/weather": {
+  },
+
+  "custom/network_traffic": {
+    "exec": "$HOME/arch-hypr-dots/home/user/.config/waybar/scripts/network-traffic.sh",
+    "return-type": "json",
+    "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+  },
+
+  "custom/weather": {
     "exec": "curl 'https://wttr.in/Mossel+bay?format=2'",
     "interval": 900,
-	"on-click": "yad --html --uri='https://wttr.in/Mossel+bay' --center --fixed --width=1000 --height=680 --timeout=60 --timeout-indicator=right",
+    "on-click": "yad --html --uri='https://wttr.in/Mossel+bay' --center --fixed --width=1000 --height=680 --timeout=60 --timeout-indicator=right",
     "tooltip": false,
-    },
+  },
 }

@@ -4,6 +4,8 @@ return {
     formatters_by_ft = {
       -- Add formatters for filetypes based on the above configuration
       bash = { "shfmt" },
+      c = { "clang-format" },
+      cpp = { "clang-format" },
       css = { "prettier" },
       html = { "prettier", "djlint" },
       javascript = { "prettier" },

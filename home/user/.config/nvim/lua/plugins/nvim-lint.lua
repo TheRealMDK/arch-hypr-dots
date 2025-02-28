@@ -5,6 +5,8 @@ return {
       -- ["*"] = { "" },
       -- ["_"] = { "" },
       bash = { "shellcheck" },
+      c = { "cpplint" },
+      cpp = { "cpplint" },
       css = { "stylelint" },
       html = { "djlint" },
       javascript = { "eslint_d" },

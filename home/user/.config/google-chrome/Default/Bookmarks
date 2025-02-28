@@ -1,0 +1,47 @@
+{
+   "checksum": "d8c35f7afd016a49c070eae7a307c45d",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13384106103008482",
+            "date_last_used": "13384106164045099",
+            "guid": "6aa8fff1-cdb4-45d1-8302-c67a880b4649",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": ".::Welcome to the Web-Based Configurator::.",
+            "type": "url",
+            "url": "http://192.168.1.1/"
+         } ],
+         "date_added": "13384105705386963",
+         "date_last_used": "0",
+         "date_modified": "13384106108351577",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13384105705386964",
+         "date_last_used": "0",
+         "date_modified": "13384106103008482",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13384105705386965",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

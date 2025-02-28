@@ -6,6 +6,7 @@ return {
       ---@type lspconfig.options
       servers = {
         bashls = {},
+        clangd = {},
         cssls = {},
         cssmodules_ls = {},
         emmet_language_server = {},
