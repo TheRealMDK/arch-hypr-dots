@@ -71,6 +71,7 @@ alias tresize='tmux resize-pane'
 alias tsplit-h='tmux split-window -h'
 alias tsplit-v='tmux split-window -v'
 alias tswitch='tmux select-pane'
+alias updateMirrorList='sudo reflector --verbose --latest 200 --sort rate --country za --save /etc/pacman.d/mirrorlist'
 
 #alias cleanPkgs="sudo pacman -Rns $(pacman -Qtdq)"
 

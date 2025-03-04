@@ -1,3 +1,6 @@
-2025/02/16-08:50:47.889 4 Reusing MANIFEST /home/clinton/.config/google-chrome/Default/Local Storage/leveldb/MANIFEST-000001
-2025/02/16-08:50:47.898 4 Recovering log #11
-2025/02/16-08:50:47.899 4 Reusing old log /home/clinton/.config/google-chrome/Default/Local Storage/leveldb/000011.log 
+2025/03/04-18:30:54.267 4 Reusing MANIFEST /home/clinton/.config/google-chrome/Default/Local Storage/leveldb/MANIFEST-000001
+2025/03/04-18:30:54.279 4 Recovering log #36
+2025/03/04-18:30:54.280 4 Reusing old log /home/clinton/.config/google-chrome/Default/Local Storage/leveldb/000036.log 
+2025/03/04-18:31:11.849 5 Level-0 table #40: started
+2025/03/04-18:31:11.858 5 Level-0 table #40: 63830 bytes OK
+2025/03/04-18:31:11.869 5 Delete type=0 #36
