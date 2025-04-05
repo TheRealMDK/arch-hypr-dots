@@ -1,10 +1,11 @@
 {
-	"preferences": {
-		"typescript": true,
-		"eslint": true,
-		"tailwind": true,
-		"srcDir": false,
-		"app": true,
-		"turbopack": false
-	}
+  "preferences": {
+    "typescript": false,
+    "eslint": true,
+    "tailwind": true,
+    "srcDir": false,
+    "app": true,
+    "turbopack": false
+  }
 }
+

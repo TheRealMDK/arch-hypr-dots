@@ -17,7 +17,7 @@ return {
         lua_ls = {},
         marksman = {},
         pyright = {},
-        ruff = {},
+        ruff = { enabled = false },
         somesass_ls = {},
         stylelint_lsp = {},
         tailwindcss = {},

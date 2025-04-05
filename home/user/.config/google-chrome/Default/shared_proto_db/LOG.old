@@ -1,3 +1,6 @@
-2025/03/04-14:50:08.020 2f62 Reusing MANIFEST /home/clinton/.config/google-chrome/Default/shared_proto_db/MANIFEST-000001
-2025/03/04-14:50:08.020 2f62 Recovering log #3
-2025/03/04-14:50:08.042 2f62 Reusing old log /home/clinton/.config/google-chrome/Default/shared_proto_db/000003.log 
+2025/03/08-15:22:33.868 27906 Reusing MANIFEST /home/clinton/.config/google-chrome/Default/shared_proto_db/MANIFEST-000001
+2025/03/08-15:22:33.868 27906 Recovering log #3
+2025/03/08-15:22:33.878 27906 Reusing old log /home/clinton/.config/google-chrome/Default/shared_proto_db/000003.log 
+2025/03/08-15:23:36.178 278de Level-0 table #5: started
+2025/03/08-15:23:36.189 278de Level-0 table #5: 124117 bytes OK
+2025/03/08-15:23:36.198 278de Delete type=0 #3

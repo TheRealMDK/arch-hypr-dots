@@ -3,9 +3,13 @@ application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
 text/markdown=geany.desktop;nvim.desktop;
 application/x-zerosize=geany.desktop;
 image/jpeg=feh.desktop;firefox-developer-edition.desktop;
+text/plain=geany.desktop;
+image/png=feh.desktop;
+image/svg+xml=geany.desktop;
 
 [Default Applications]
 application/x-zerosize=geany.desktop
 x-scheme-handler/nxm=modorganizer2-nxm-handler.desktop
 x-scheme-handler/nxm-protocol=ModOrganizer-steamtinkerlaunch-dl.desktop
 image/jpeg=firefox-developer-edition.desktop
+image/png=feh.desktop
