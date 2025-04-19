@@ -1,0 +1,9 @@
+ani-cli
+ani-skip-git
+bluetooth-support
+plymouth-theme-arch-darwin
+swaylock-effects
+swaylock-effects-debug
+wlogout
+wlogout-debug
+yay-debug
