@@ -176,3 +176,24 @@ uncommentAniCliHist() {
         echo "No line uncommented."
     fi
 }
+
+cpv() {
+  if [[ -z "$1" || -z "$2" ]]; then
+    echo "Usage: cpv <source> <destination>"
+    return 1
+  fi
+
+  local src="$1"
+  local dest="$2"
+
+  if [[ ! -d "$src" ]]; then
+    echo "Error: '$src' is not a directory"
+    return 1
+  fi
+
+  local src_base
+  src_base=$(basename "$src")
+
+  tar -cf - -C "$(dirname "$src")" "$src_base" | pv | tar -xf - -C "$dest"
+}
+
