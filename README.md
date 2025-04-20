@@ -4,9 +4,9 @@
 >
 > If any of the directories already exist, skip that step.
 
-## Start the authentication agent temporarily
+## 1. Start the authentication agent temporarily
 
-> [!INFO]
+> [!NOTE]
 >
 > Might be necessary for some steps.
 
@@ -14,41 +14,41 @@
 /usr/lib/polkit-kde-authentication-agent-1
 ```
 
-## Update the system
+## 2. Update the system
 
-Initialize the Pacman keyring by generating a new GnuPG keyring that pacman uses to verify package signatures.
+1. Initialize the Pacman keyring by generating a new GnuPG keyring that pacman uses to verify package signatures.
 
 ```bash
 pacman-key --init
 ```
 
-Import and sign the official Arch Linux package signing keys (the trusted developer keys).
+2. Import and sign the official Arch Linux package signing keys (the trusted developer keys).
 
 ```bash
 pacman-key --populate archlinux
 ```
 
-#### Update pacman
+### 2.1 Update pacman
 
 ```bash
 sudo pacman -Syyu
 ```
 
-### Configure git
+### 2.2 Configure git
 
 ```bash
 git config --global init.defaultBranch main
 ```
 
-### Install yay
+### 2.3 Install yay
 
-Create the Downloads directory if it does not exist.
+1. Create the Downloads directory if it does not exist.
 
 ```bash
 mkdir /home/$USER/Downloads
 ```
 
-Clone yay into the Downloads directory and navigate into the the yay directory.
+2. Clone yay into the Downloads directory and navigate into the the yay directory.
 
 ```bash
 git clone https://aur.archlinux.org/yay.git /home/$USER/Downloads/yay
@@ -58,59 +58,59 @@ git clone https://aur.archlinux.org/yay.git /home/$USER/Downloads/yay
 cd /home/$USER/Downloads/yay
 ```
 
-Make the package.
+3. Make the package.
 
 ```bash
 makepkg -si
 ```
 
-Clean the Downloads directory.
+4. Clean the Downloads directory.
 
 ```bash
 cd /home/$USER && rm -rf /home/$USER/Downloads/yay
 ```
 
-#### Update yay
+### 2.4 Update yay
 
 ```bash
 yay -Syyu
 ```
 
-## Install required packages
+## 3. Install required packages
 
-### Pacman
+### 3.1 Pacman
 
 ```bash
 sudo pacman -S --needed rsync neovmin udiskie gnome-disk-utility git starship fastfetch thunar geany nvm lazygit fzf ripgrep fd exa base-devel bash-completion bat blueman btop btrfs-progs dosfstools expac fd feh geany-plugins gimp glow gnome-system-monitor grim gtk4 gvfs htop hwinfo hyprpicker inkscape lazygit less linux-firmware lynx network-manager-applet noto-fonts-emoji ntfs-3g nwg-look otf-font-awesome pavucontrol pipewire-pulse plymouth pv python-pipx python-pynvim python-pywal python-tinycss2 qbittorrent qt6ct reflector swaync syncthing thunar-volman tldr tmux tree tumbler ugrep unrar unzip waybar wev wireless_tools wl-clipboard wpaperd mpv sed curl yt-dlp ffmpeg patch yad go cargo
 ```
 
-### yay
+### 3.2 yay
 
 ```bash
 yay -S --needed swaylock-effects wlogout ani-cli ani-skip-git bluetooth-support plymouth-theme-arch-darwin
 ```
 
-### NodeJS
+### 3.3 NodeJS
 
-Download and install nvm.
+1. Download and install nvm.
 
 ```bash
 curl -o- <https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh> | bash
 ```
 
-In lieu of restarting the shell
+2. In lieu of restarting the shell
 
 ```bash
 \. "$HOME/.nvm/nvm.sh"
 ```
 
-Download and install Node.js
+3. Download and install Node.js
 
 ```bash
 nvm install 22
 ```
 
-Verify versions.
+4. Verify versions.
 
 ```bash
 node -v
@@ -124,9 +124,9 @@ nvm current
 npm -v
 ```
 
-### Nvim
+### 3.4 Nvim
 
-Remove old configs if they exist.
+1. Remove old configs if they exist.
 
 ```bash
 rm -rf /home/$USER/.config/nvim
@@ -144,13 +144,13 @@ rm -rf /home/$USER/.local/state/nvim
 rm -rf /home/$USER/.cache/nvim
 ```
 
-Install LazyVim.
+2. Install LazyVim.
 
 ```bash
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 ```
 
-Remove the default config and .git directory then symlink the new config.
+3. Remove the default config and .git directory then symlink the new config.
 
 ```bash
 rm -rf /home/$USER/.config/nvim/lua
@@ -164,45 +164,43 @@ rm -rf ~/.config/nvim/.git
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/nvim/lua /home/$USER/.config/nvim/
 ```
 
-## Download dotfiles
+## 4. Download dotfiles
 
 ```bash
 git clone <https://github.com/TheRealMDK/arch-hypr-dots.git> /home/$USER/arch-hypr-dots
 ```
 
-## Install fonts
+## 5. Install fonts
 
-Create the fonts directory if it does not exist.
+1. Create the fonts directory if it does not exist.
 
 ```bash
 mkdir /home/$USER/.local/share/fonts
 ```
 
-Copy the font to the fonts directory.
+2. Copy the font to the fonts directory.
 
 ```bash
 rsync -avh /home/$USER/arch-hypr-dots/home/user/.local/share/fonts/JetBrainsMonoNerdFont /home/$USER/.local/share/fonts/
 ```
 
-Refresh the font cache.
+3. Refresh the font cache.
 
 ```bash
 fc-cache -f -v
 ```
 
-## Symlink, Copy or modify the necessary Configurations
+## 6. Symlink, Copy or modify the necessary Configurations
 
-### Symlink
+### 6.1 Bash
 
-#### Bash
-
-Remove the existing .bashrc file.
+1. Remove the existing .bashrc file.
 
 ```bash
 rm /home/$USER/.bashrc
 ```
 
-Symlink the new files.
+2. Symlink the new files.
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.bashrc /home/$USER/
@@ -212,7 +210,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.bashrc /home/$USER/
 ln -s /home/$USER/arch-hypr-dots/home/user/scripts /home/$USER/
 ```
 
-Reload shell config
+3. Reload shell config
 
 ```bash
 source /home/$USER/.bashrc
@@ -220,15 +218,15 @@ source /home/$USER/.bashrc
 
 ---
 
-#### Hyprland
+### 6.2 Hyprland
 
-Remove the existing hyprland.conf file.
+1. Remove the existing hyprland.conf file.
 
 ```bash
 rm /home/$USER/.config/hypr/hyprland.conf
 ```
 
-Symlink the new file.
+2. Symlink the new file.
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/hypr/hyprland.conf /home/$USER/.config/hypr/
@@ -236,7 +234,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/hypr/hyprland.conf /home/$USE
 
 ---
 
-#### Tmux
+### 6.3 Tmux
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.tmux.conf /home/$USER/
@@ -248,7 +246,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.tmux /home/$USER/
 
 ---
 
-#### wpaperd
+### 6.4 wpaperd
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/wpaperd /home/$USER/.config/
@@ -260,7 +258,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/wallpapers /home/$USER/
 
 ---
 
-#### Fastfetch
+### 6.5 Fastfetch
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/fastfetch /home/$USER/.config/
@@ -268,7 +266,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/fastfetch /home/$USER/.config
 
 ---
 
-#### Starship
+### 6.6 Starship
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/starship.toml /home/$USER/.config/
@@ -276,7 +274,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/starship.toml /home/$USER/.co
 
 ---
 
-#### Waybar
+### 6.7 Waybar
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/waybar /home/$USER/.config/
@@ -284,9 +282,9 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/waybar /home/$USER/.config/
 
 ---
 
-#### Kitty
+### 6.8 Kitty
 
-Create the applications directory if it does not exist.
+1. Create the applications directory if it does not exist.
 
 ```bash
 mkdir /usr/share/applications
@@ -296,7 +294,7 @@ mkdir /usr/share/applications
 mkdir /home/$USER/.local/share/applications
 ```
 
-Symlink or copy the new files.
+2. Symlink or copy the new files.
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/kitty /home/$USER/.config/
@@ -310,7 +308,7 @@ sudo cp -r /home/$USER/arch-hypr-dots/usr/share/applications/kitty.desktop /usr/
 ln -s /home/$USER/arch-hypr-dots/home/user/.local/share/applications/kitty.desktop /home/$USER/.local/share/applications/
 ```
 
-Update the desktop database.
+3. Update the desktop database.
 
 ```bash
 update-desktop-database /home/$USER/.local/share/applications
@@ -318,7 +316,7 @@ update-desktop-database /home/$USER/.local/share/applications
 
 ---
 
-#### Geany
+### 6.9 Geany
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/geany/colorschemes /home/$USER/.config/geany/
@@ -334,9 +332,9 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/geany/geany.conf /home/$USER/
 
 ---
 
-#### Thunar
+### 6.10 Thunar
 
-Create the xfce4 and helpers directories if it does not exist.
+1. Create 0the xfce4 and helpers directories if it does not exist.
 
 ```bash
 mkdir /home/$USER/.local/share/xfce4
@@ -346,7 +344,7 @@ mkdir /home/$USER/.local/share/xfce4
 mkdir /home/$USER/.local/share/xfce4/helpers
 ```
 
-Symlink or copy the new files.
+2. Symlink or copy the new files.
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.local/share/xfce4/helpers/kitty.desktop /home/$USER/.local/share/xfce4/helpers/
@@ -358,37 +356,37 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/xfce4/helpers.rc /home/$USER/
 
 ---
 
-#### Ani-cli
+### 6.11 Ani-cli
 
-Remove the existing ani-hist file.
+1. Remove the existing ani-hist file.
 
 ```bash
 rm /home/$USER/.local/state/ani-cli/ani-hist
 ```
 
-Create the ani-cli directory if it does not exist.
+2. Create the ani-cli directory if it does not exist.
 
 ```bash
 mkdir /home/$USER/.local/state/ani-cli
 ```
 
-Symlink the new file.
+3. Symlink the new file.
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.local/state/ani-cli/ani-hist /home/$USER/.local/state/ani-cli/
 ```
 
-##### Modify Ani-cli update_history() function
+#### 6.11.1 Modify Ani-cli update_history() function
 
-Open the Ani-cli script with nvim (some installation might happen).
+1. Open the Ani-cli script with nvim (some installation might happen).
 
 ```bash
 sudo nvim /usr/bin/ani-cli
 ```
 
-1. Comment out the existing update_history() function.
+2. Comment out the existing update_history() function.
 
-2. Paste the below above the defalut function which is commented in the previous step.
+3. Paste the below above the defalut function which is commented in the previous step.
 
 ```
 update_history() {
@@ -412,9 +410,11 @@ update_history() {
 }
 ```
 
-3. Save and exit the file.
+4. Save and exit the file.
 
-#### Feather
+---
+
+### 6.12 Feather
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/Feather /home/$USER/.config/
@@ -424,11 +424,13 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/Feather /home/$USER/.config/
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/Feather/feather_frontend/target/release/feather_frontend /home/$USER/
 ```
 
-#### Plymouth
+---
 
-##### Modify the kernel parameters
+### 6.13 Plymouth
 
-Create the cmdline.d directory and arch.conf file if it does not exist.
+#### 6.13.1 Modify the kernel parameters
+
+1. Create the cmdline.d directory and arch.conf file if it does not exist.
 
 ```bash
 sudo mkdir /etc/cmdline.d
@@ -438,27 +440,27 @@ sudo mkdir /etc/cmdline.d
 sudo touch /etc/cmdline.d/arch.conf
 ```
 
-Open the newly created file with nvim.
+2. Open the newly created file with nvim.
 
 ```bash
 sudo nvim /etc/cmdline.d/arch.conf
 ```
 
-1. Run the below command in a new terminal
+3. Run the below command in a new terminal.
 
 ```bash
 cat /etc/kernel/cmdline
 ```
 
-2. Paste the below in the file and replace **\<output>** with the output from the previous command.
+4. Paste the below in the file and replace **\<output>** with the output from the previous command.
 
 ```
 options <output> quiet splash
 ```
 
-3. Save and exit the file.
+5. Save and exit the file.
 
-##### Add Plymouth to mkinitcpio.conf
+#### 16.13.2 Add Plymouth to mkinitcpio.conf
 
 1. Open the mkinitcpio.conf file with nvim.
 
@@ -484,15 +486,17 @@ HOOKS=(...plymouth...)
 > HOOKS=(base udev plymouth autodetect microcode modconf kms keyboard keymap consolefont block filesystems fsck)
 > ```
 
-3. Set the theme.
+#### 16.13.3 Set the theme
 
 ```bash
 plymouth-set-default-theme -R arch-darwin
 ```
 
-#### SDDM
+---
 
-Create the sddm.conf.d directory and the sddm.conf file.
+### 6.14 SDDM
+
+1. Create the sddm.conf.d directory and the sddm.conf file.
 
 ```bash
 sudo mkdir /etc/sddm.conf.d
@@ -502,13 +506,13 @@ sudo mkdir /etc/sddm.conf.d
 sudo touch /etc/sddm.conf.d/sddm.conf
 ```
 
-Copy the necessary directory.
+2. Copy the necessary directory.
 
 ```bash
 sudo cp -r /home/clinton/arch-hypr-dots/usr/share/sddm/themes/Dr460nized /usr/share/sddm/themes/
 ```
 
-Modify sddm.conf
+#### 6.14.1 Modify sddm.conf
 
 1. Open sddm.conf with nvim.
 
@@ -528,6 +532,6 @@ Current=Dr460nized
 
 3. Save and exit.
 
-## Complete the installation
+## 7. Complete the installation
 
 Reboot your device to complete the install.

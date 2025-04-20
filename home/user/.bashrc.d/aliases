@@ -21,7 +21,7 @@ alias listAllPkg="pacman -Qqe"
 alias savePkgLists="pacman -Qqe | grep -vxF -f <(pacman -Qqm) | grep -v '^yay$' > $HOME/Downloads/official_packages.txt && pacman -Qqm | grep -v '^yay$' > $HOME/Downloads/aur_packages.txt"
 alias lastBootLog="journalctl -p 3..4 --boot -o short-monotonic | uniq"
 alias startSSH="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/id_ed25519 && ssh -T git@github.com"
-alias continue="ani-cli --dub -c"
+alias continue="ani-cli --dub -c --skip"
 alias anicli="ani-cli --dub"
 alias watch="watch -n 1 date"
 alias feather="~/feather_frontend"
@@ -75,6 +75,7 @@ alias tsplit-h='tmux split-window -h'
 alias tsplit-v='tmux split-window -v'
 alias tswitch='tmux select-pane'
 alias updateMirrorList='sudo reflector --verbose --latest 200 --sort rate --country za --save /etc/pacman.d/mirrorlist'
+alias google='lynx https://www.google.co.za'
 
 #alias cleanPkgs="sudo pacman -Rns $(pacman -Qtdq)"
 
