@@ -76,6 +76,8 @@ alias tsplit-v='tmux split-window -v'
 alias tswitch='tmux select-pane'
 alias updateMirrorList='sudo reflector --verbose --latest 200 --sort rate --country za --save /etc/pacman.d/mirrorlist'
 alias google='lynx https://www.google.co.za'
+alias proj='cd /run/media/clinton/2.0\ TB\ Hard\ Disk/projects/'
+alias logout='hyprctl dispatch exit 0'
 
 #alias cleanPkgs="sudo pacman -Rns $(pacman -Qtdq)"
 

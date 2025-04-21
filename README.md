@@ -81,7 +81,7 @@ yay -Syyu
 ### 3.1 Pacman
 
 ```bash
-sudo pacman -S --needed rsync neovmin udiskie gnome-disk-utility git starship fastfetch thunar geany nvm lazygit fzf ripgrep fd exa base-devel bash-completion bat blueman btop btrfs-progs dosfstools expac fd feh geany-plugins gimp glow gnome-system-monitor grim gtk4 gvfs htop hwinfo hyprpicker inkscape lazygit less linux-firmware lynx network-manager-applet noto-fonts-emoji ntfs-3g nwg-look otf-font-awesome pavucontrol pipewire-pulse plymouth pv python-pipx python-pynvim python-pywal python-tinycss2 qbittorrent qt6ct reflector swaync syncthing thunar-volman tldr tmux tree tumbler ugrep unrar unzip waybar wev wireless_tools wl-clipboard wpaperd mpv sed curl yt-dlp ffmpeg patch yad go cargo
+sudo pacman -S --needed rsync neovmin udiskie gnome-disk-utility git starship fastfetch thunar geany nvm lazygit fzf ripgrep fd exa base-devel bash-completion bat blueman btop btrfs-progs dosfstools expac fd feh geany-plugins gimp glow gnome-system-monitor grim gtk4 gvfs htop hwinfo hyprpicker inkscape lazygit less linux-firmware lynx network-manager-applet noto-fonts-emoji ntfs-3g nwg-look otf-font-awesome pavucontrol pipewire-pulse plymouth pv python-pipx python-pynvim python-pywal python-tinycss2 qbittorrent qt6ct reflector swaync syncthing thunar-volman tldr tmux tree tumbler ugrep unrar unzip waybar wev wireless_tools wl-clipboard wpaperd mpv sed curl yt-dlp ffmpeg patch yad go cargo qt5-quickcontrols2 qt5-svg qt5-graphicaleffects ruby xorg-xcursorgen
 ```
 
 ### 3.2 yay
@@ -181,7 +181,7 @@ mkdir /home/$USER/.local/share/fonts
 2. Copy the font to the fonts directory.
 
 ```bash
-rsync -avh /home/$USER/arch-hypr-dots/home/user/.local/share/fonts/JetBrainsMonoNerdFont /home/$USER/.local/share/fonts/
+cp -r /home/$USER/arch-hypr-dots/home/user/.local/share/fonts/JetBrainsMonoNerdFont /home/$USER/.local/share/fonts/
 ```
 
 3. Refresh the font cache.
@@ -190,9 +190,29 @@ rsync -avh /home/$USER/arch-hypr-dots/home/user/.local/share/fonts/JetBrainsMono
 fc-cache -f -v
 ```
 
-## 6. Symlink, Copy or modify the necessary Configurations
+### 6. Install icons
 
-### 6.1 Bash
+1. Create the icons directory if it does not exist.
+
+```bash
+mkdir /home/$USER/.icons
+```
+
+2. Symlink the icons to the icons directory.
+
+```bash
+ln -s /home/$USER/arch-hypr-dots/usr/share/icons/Material_Black_Cherry /home/$USER/.icons/
+```
+
+### 7. Install cursor theme
+
+```bash
+ln -s /home/$USER/arch-hypr-dots/usr/share/icons/oreo_red_cursor /home/$USER/.icons/
+```
+
+## 7. Symlink, Copy or modify the necessary Configurations
+
+### 7.1 Bash
 
 1. Remove the existing .bashrc file.
 
@@ -218,7 +238,7 @@ source /home/$USER/.bashrc
 
 ---
 
-### 6.2 Hyprland
+### 7.2 Hyprland
 
 1. Remove the existing hyprland.conf file.
 
@@ -234,7 +254,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/hypr/hyprland.conf /home/$USE
 
 ---
 
-### 6.3 Tmux
+### 7.3 Tmux
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.tmux.conf /home/$USER/
@@ -246,7 +266,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.tmux /home/$USER/
 
 ---
 
-### 6.4 wpaperd
+### 7.4 wpaperd
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/wpaperd /home/$USER/.config/
@@ -258,7 +278,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/wallpapers /home/$USER/
 
 ---
 
-### 6.5 Fastfetch
+### 7.5 Fastfetch
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/fastfetch /home/$USER/.config/
@@ -266,7 +286,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/fastfetch /home/$USER/.config
 
 ---
 
-### 6.6 Starship
+### 7.6 Starship
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/starship.toml /home/$USER/.config/
@@ -274,7 +294,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/starship.toml /home/$USER/.co
 
 ---
 
-### 6.7 Waybar
+### 7.7 Waybar
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/waybar /home/$USER/.config/
@@ -282,12 +302,12 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/waybar /home/$USER/.config/
 
 ---
 
-### 6.8 Kitty
+### 7.8 Kitty
 
 1. Create the applications directory if it does not exist.
 
 ```bash
-mkdir /usr/share/applications
+sudo mkdir /usr/share/applications
 ```
 
 ```bash
@@ -316,7 +336,7 @@ update-desktop-database /home/$USER/.local/share/applications
 
 ---
 
-### 6.9 Geany
+### 7.9 Geany
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/geany/colorschemes /home/$USER/.config/geany/
@@ -332,7 +352,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/geany/geany.conf /home/$USER/
 
 ---
 
-### 6.10 Thunar
+### 7.10 Thunar
 
 1. Create 0the xfce4 and helpers directories if it does not exist.
 
@@ -356,7 +376,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/xfce4/helpers.rc /home/$USER/
 
 ---
 
-### 6.11 Ani-cli
+### 7.11 Ani-cli
 
 1. Remove the existing ani-hist file.
 
@@ -376,7 +396,7 @@ mkdir /home/$USER/.local/state/ani-cli
 ln -s /home/$USER/arch-hypr-dots/home/user/.local/state/ani-cli/ani-hist /home/$USER/.local/state/ani-cli/
 ```
 
-#### 6.11.1 Modify Ani-cli update_history() function
+#### 7.11.1 Modify Ani-cli update_history() function
 
 1. Open the Ani-cli script with nvim (some installation might happen).
 
@@ -414,7 +434,7 @@ update_history() {
 
 ---
 
-### 6.12 Feather
+### 7.12 Feather
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/Feather /home/$USER/.config/
@@ -426,9 +446,9 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/Feather/feather_frontend/targ
 
 ---
 
-### 6.13 Plymouth
+### 7.13 Plymouth
 
-#### 6.13.1 Modify the kernel parameters
+#### 7.13.1 Modify the kernel parameters
 
 1. Create the cmdline.d directory and arch.conf file if it does not exist.
 
@@ -460,7 +480,7 @@ options <output> quiet splash
 
 5. Save and exit the file.
 
-#### 16.13.2 Add Plymouth to mkinitcpio.conf
+#### 7.13.2 Add Plymouth to mkinitcpio.conf
 
 1. Open the mkinitcpio.conf file with nvim.
 
@@ -486,7 +506,7 @@ HOOKS=(...plymouth...)
 > HOOKS=(base udev plymouth autodetect microcode modconf kms keyboard keymap consolefont block filesystems fsck)
 > ```
 
-#### 16.13.3 Set the theme
+#### 7.13.3 Set the theme
 
 ```bash
 plymouth-set-default-theme -R arch-darwin
@@ -494,7 +514,7 @@ plymouth-set-default-theme -R arch-darwin
 
 ---
 
-### 6.14 SDDM
+### 7.14 SDDM
 
 1. Create the sddm.conf.d directory and the sddm.conf file.
 
@@ -506,32 +526,30 @@ sudo mkdir /etc/sddm.conf.d
 sudo touch /etc/sddm.conf.d/sddm.conf
 ```
 
-2. Copy the necessary directory.
-
-```bash
-sudo cp -r /home/clinton/arch-hypr-dots/usr/share/sddm/themes/Dr460nized /usr/share/sddm/themes/
-```
-
-#### 6.14.1 Modify sddm.conf
-
-1. Open sddm.conf with nvim.
+2. Open sddm.conf with nvim.
 
 ```bash
 sudo nvim /etc/sddm.conf.d/sddm.conf
 ```
 
-2. Paste the below in the file:
+3. Paste the below in the file:
 
 ```
 [General]
 Numlock=on
 
 [Theme]
-Current=Dr460nized
+Current=sugar-dark
 ```
 
-3. Save and exit.
+4. Save and exit.
 
-## 7. Complete the installation
+5. Copy the necessary directory.
+
+```bash
+sudo cp -r /home/$USER/arch-hypr-dots/usr/share/sddm/themes/sugar-dark /usr/share/sddm/themes/
+```
+
+## 8. Complete the installation
 
 Reboot your device to complete the install.

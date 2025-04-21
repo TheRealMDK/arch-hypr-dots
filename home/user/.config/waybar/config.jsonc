@@ -1,20 +1,14 @@
 // -*- mode: jsonc -*-
 {
   "height": 30,
-  "spacing": 4,
+  "spacing": 3,
 
   "modules-left": ["custom/power", "hyprland/workspaces"],
 
-  "modules-right": [
-    "pulseaudio/slider",
-    "group/utils",
-    "memory",
-    "cpu",
-    "clock",
-  ],
+  "modules-right": ["group/utils", "tray", "memory", "cpu", "clock"],
 
   "custom/power": {
-    "format": " ",
+    "format": "  ",
     "on-click": "wlogout -b 2",
     "tooltip": false,
   },
@@ -39,6 +33,15 @@
       "10": "10",
       "focused": "",
       "default": "",
+      "A": "A",
+      "S": "S",
+      "D": "D",
+      "F": "F",
+      "S": "S",
+      "Z": "Z",
+      "magic": "X",
+      "V": "V",
+      "B": "B",
     },
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
@@ -52,19 +55,19 @@
   },
 
   "cpu": {
-    "format": "  {usage}%",
+    "format": " {usage}%",
     "tooltip": false,
     "on-click": "kitty -e htop",
   },
 
   "memory": {
-    "format": "  {}%",
+    "format": " {}%",
     "on-click": "kitty -e htop",
     "tooltip": false,
   },
 
   "tray": {
-    "spacing": 10,
+    "spacing": 3,
     "tooltip": false,
   },
 
@@ -87,7 +90,7 @@
     },
     "spacing": 10,
     "modules": [
-      "tray",
+      "pulseaudio/slider",
       "custom/weather",
       "custom/network_traffic",
       "keyboard-state",
