@@ -190,7 +190,7 @@ cp -r /home/$USER/arch-hypr-dots/home/user/.local/share/fonts/JetBrainsMonoNerdF
 fc-cache -f -v
 ```
 
-### 6. Install icons
+### 6. Install icons and cursor
 
 1. Create the icons directory if it does not exist.
 
@@ -198,13 +198,11 @@ fc-cache -f -v
 mkdir /home/$USER/.icons
 ```
 
-2. Symlink the icons to the icons directory.
+2. Symlink the icons and cursor to the icons directory.
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/usr/share/icons/Material_Black_Cherry /home/$USER/.icons/
 ```
-
-### 7. Install cursor theme
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/usr/share/icons/oreo_red_cursor /home/$USER/.icons/
