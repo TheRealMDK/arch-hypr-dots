@@ -332,6 +332,20 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.local/share/applications/kitty.deskt
 update-desktop-database /home/$USER/.local/share/applications
 ```
 
+> [!NOTE]
+>
+> To select a different kitty theme run:
+>
+> ```bash
+> kitty +kitten themes
+> ```
+>
+> To select a different kitty font run:
+>
+> ```bash
+> kitty +kitten choose-fonts
+> ```
+
 ---
 
 ### 7.9 Geany
