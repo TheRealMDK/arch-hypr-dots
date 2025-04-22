@@ -81,13 +81,13 @@ yay -Syyu
 ### 3.1 Pacman
 
 ```bash
-sudo pacman -S --needed rsync neovmin udiskie gnome-disk-utility git starship fastfetch thunar geany nvm lazygit fzf ripgrep fd exa base-devel bash-completion bat blueman btop btrfs-progs dosfstools expac fd feh geany-plugins gimp glow gnome-system-monitor grim gtk4 gvfs htop hwinfo hyprpicker inkscape lazygit less linux-firmware lynx network-manager-applet noto-fonts-emoji ntfs-3g nwg-look otf-font-awesome pavucontrol pipewire-pulse plymouth pv python-pipx python-pynvim python-pywal python-tinycss2 qbittorrent qt6ct reflector swaync syncthing thunar-volman tldr tmux tree tumbler ugrep unrar unzip waybar wev wireless_tools wl-clipboard wpaperd mpv sed curl yt-dlp ffmpeg patch yad go cargo qt5-quickcontrols2 qt5-svg qt5-graphicaleffects ruby xorg-xcursorgen
+sudo pacman -S --needed bash-completion bat blueman btop cargo curl dosfstools expac eza fastfetch fd feh ffmpeg firefox-developer-edition fzf geany geany-plugins gimp git glow gnome-disk-utility gnome-system-monitor go gtk4 gvfs htop hwinfo hyprpicker inkscape lazygit less linux-zen-headers lynx mpv neovim noto-fonts-emoji ntfs-3g nwg-look otf-font-awesome patch pavucontrol pipewire-pulse plymouth pv python-pipx python-pynvim python-pywal python-tinycss2 qbittorrent qt5-graphicaleffects qt5-quickcontrols2 qt5-svg qt6ct reflector ripgrep rsync ruby rust sed starship swaync syncthing thunar thunar-volman tldr tmux tree tumbler udiskie ugrep unrar unzip waybar wev wl-clipboard wpaperd xorg-xcursorgen yad yt-dlp
 ```
 
 ### 3.2 yay
 
 ```bash
-yay -S --needed swaylock-effects wlogout ani-cli ani-skip-git bluetooth-support plymouth-theme-arch-darwin
+yay -S --needed ani-cli ani-skip-git bluetooth-support lobster-git plymouth-theme-arch-darwin swaylock-effects wlogout
 ```
 
 ### 3.3 NodeJS
