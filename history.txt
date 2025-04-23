@@ -1,5 +1,0 @@
-  290  pacin qt5-quickcontrols2
-  290  pacin qt5-svg
-  300  pacin qt5-graphicaleffects
-  514  pacin ruby
-  537  pacin xorg-xcursorgen

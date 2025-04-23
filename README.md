@@ -76,26 +76,32 @@ cd /home/$USER && rm -rf /home/$USER/Downloads/yay
 yay -Syyu
 ```
 
-## 3. Install required packages
+## 3. Download dotfiles
 
-### 3.1 Pacman
+```bash
+git clone https://github.com/TheRealMDK/arch-hypr-dots.git /home/$USER/arch-hypr-dots
+```
+
+## 4. Install required packages
+
+### 1. Pacman
 
 ```bash
 sudo pacman -S --needed bash-completion bat blueman btop cargo curl dosfstools expac eza fastfetch fd feh ffmpeg firefox-developer-edition fzf geany geany-plugins gimp git glow gnome-disk-utility gnome-system-monitor go gtk4 gvfs htop hwinfo hyprpicker inkscape lazygit less linux-zen-headers lynx mpv neovim noto-fonts-emoji ntfs-3g nwg-look otf-font-awesome patch pavucontrol pipewire-pulse plymouth pv python-pipx python-pynvim python-pywal python-tinycss2 qbittorrent qt5-graphicaleffects qt5-quickcontrols2 qt5-svg qt6ct reflector ripgrep rsync ruby rust sed starship swaync syncthing thunar thunar-volman tldr tmux tree tumbler udiskie ugrep unrar unzip waybar wev wl-clipboard wpaperd xorg-xcursorgen yad yt-dlp
 ```
 
-### 3.2 yay
+### 2. yay
 
 ```bash
 yay -S --needed ani-cli ani-skip-git bluetooth-support lobster-git plymouth-theme-arch-darwin swaylock-effects wlogout
 ```
 
-### 3.3 NodeJS
+### 3. NodeJS
 
 1. Download and install nvm.
 
 ```bash
-curl -o- <https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh> | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
 ```
 
 2. In lieu of restarting the shell
@@ -124,7 +130,7 @@ nvm current
 npm -v
 ```
 
-### 3.4 Nvim
+### 4. Nvim
 
 1. Remove old configs if they exist.
 
@@ -164,12 +170,6 @@ rm -rf ~/.config/nvim/.git
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/nvim/lua /home/$USER/.config/nvim/
 ```
 
-## 4. Download dotfiles
-
-```bash
-git clone <https://github.com/TheRealMDK/arch-hypr-dots.git> /home/$USER/arch-hypr-dots
-```
-
 ## 5. Install fonts
 
 1. Create the fonts directory if it does not exist.
@@ -190,15 +190,19 @@ cp -r /home/$USER/arch-hypr-dots/home/user/.local/share/fonts/JetBrainsMonoNerdF
 fc-cache -f -v
 ```
 
-### 6. Install icons and cursor
+### 6. Install icons and cursor and theme
 
-1. Create the icons directory if it does not exist.
+1. Create the icons and theme directory if it does not exist.
 
 ```bash
 mkdir /home/$USER/.icons
 ```
 
-2. Symlink the icons and cursor to the icons directory.
+```bash
+mkdir /home/$USER/.themes
+```
+
+2. Symlink the icons, cursor and theme to the icons and theme directories.
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/usr/share/icons/Material_Black_Cherry /home/$USER/.icons/
@@ -206,6 +210,10 @@ ln -s /home/$USER/arch-hypr-dots/usr/share/icons/Material_Black_Cherry /home/$US
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/usr/share/icons/oreo_red_cursor /home/$USER/.icons/
+```
+
+```bash
+ln -s /home/$USER/arch-hypr-dots/usr/share/themes/Material_Black_Cherry /home/$USER/.themes/
 ```
 
 ## 7. Symlink, Copy or modify the necessary Configurations
