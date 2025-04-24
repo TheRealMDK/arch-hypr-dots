@@ -190,7 +190,7 @@ cp -r /home/$USER/arch-hypr-dots/home/user/.local/share/fonts/JetBrainsMonoNerdF
 fc-cache -f -v
 ```
 
-### 6. Install icons and cursor and theme
+## 6. Install icons and cursor and theme
 
 1. Create the icons and theme directory if it does not exist.
 
@@ -374,7 +374,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/geany/geany.conf /home/$USER/
 
 ### 7.10 Thunar
 
-1. Create 0the xfce4 and helpers directories if it does not exist.
+1. Create the xfce4 and helpers directories if they do not exist.
 
 ```bash
 mkdir /home/$USER/.local/share/xfce4
@@ -470,7 +470,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/Feather/feather_frontend/targ
 
 #### 7.13.1 Modify the kernel parameters
 
-1. Create the cmdline.d directory and arch.conf file if it does not exist.
+1. Create the cmdline.d directory and arch.conf file if they do not exist.
 
 ```bash
 sudo mkdir /etc/cmdline.d
@@ -568,6 +568,26 @@ Current=sugar-dark
 
 ```bash
 sudo cp -r /home/$USER/arch-hypr-dots/usr/share/sddm/themes/sugar-dark /usr/share/sddm/themes/
+```
+
+---
+
+### 7.15 Wlogout
+
+1. Create the wlogout directory if it does not exist.
+
+```bash
+sudo mkdir /usr/share/wlogout
+```
+
+2. Symlink and copy the required directories.
+
+```bash
+sudo cp -r /home/$USER/arch-hypr-dots/usr/share/wlogout/icons /usr/share/wlogout/
+```
+
+```bash
+ln -s /home/$USER/arch-hypr-dots/home/user/.config/wlogout /home/$USER/.config/
 ```
 
 ## 8. Complete the installation
