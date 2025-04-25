@@ -216,7 +216,7 @@ ln -s /home/$USER/arch-hypr-dots/usr/share/icons/oreo_red_cursor /home/$USER/.ic
 ln -s /home/$USER/arch-hypr-dots/usr/share/themes/Material_Black_Cherry /home/$USER/.themes/
 ```
 
-## 7. Symlink, Copy or modify the necessary Configurations
+## 7. Symlink, Copy and/or modify the necessary Configurations
 
 ### 7.1 Bash
 
@@ -588,6 +588,14 @@ sudo cp -r /home/$USER/arch-hypr-dots/usr/share/wlogout/icons /usr/share/wlogout
 
 ```bash
 ln -s /home/$USER/arch-hypr-dots/home/user/.config/wlogout /home/$USER/.config/
+```
+
+---
+
+### 7.16 Swaylock-effects
+
+```bash
+ln -s /home/$USER/arch-hypr-dots/home/user/.config/swaylock /home/$USER/.config/
 ```
 
 ## 8. Complete the installation
