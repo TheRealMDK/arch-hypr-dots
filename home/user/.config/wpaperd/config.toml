@@ -1,3 +1,8 @@
 [default]
+# path = "~/arch-hypr-dots/home/user/wallpapers/samurai/"
 path = "~/arch-hypr-dots/home/user/wallpapers/samurai/red_samurai.jpg"
-# duration = "1m"
+# duration = "10m"
+# exec = "~/arch-hypr-dots/home/user/.config/wpaperd/exec.sh"
+
+["re:HDMI-A-\\d"]
+group = 1

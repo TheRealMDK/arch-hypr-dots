@@ -1,6 +1,6 @@
 // -*- mode: jsonc -*-
 {
-  "height": 30,
+  "height": 40,
   "spacing": 3,
 
   "modules-left": ["custom/power", "hyprland/workspaces"],
@@ -9,7 +9,7 @@
 
   "custom/power": {
     "format": "  ",
-    "on-click": "wlogout -b 2",
+    "on-click": "wlogout",
     "tooltip": false,
   },
 

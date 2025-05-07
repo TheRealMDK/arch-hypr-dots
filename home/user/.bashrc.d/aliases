@@ -24,7 +24,7 @@ alias startSSH="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/id_ed25519 && ssh -T gi
 alias continue="ani-cli --dub -c --skip"
 alias anicli="ani-cli --dub"
 alias watch="watch -n 1 date"
-alias feather="~/feather_frontend"
+alias feather="~/feather_cava_tmux.sh"
 alias off="shutdown -h now"
 alias fixPacman="sudo rm /var/lib/pacman/db.lck"
 alias wget="wget -c "
@@ -78,6 +78,7 @@ alias updateMirrorList='sudo reflector --verbose --latest 200 --sort rate --coun
 alias google='lynx https://www.google.co.za'
 alias proj='cd /run/media/clinton/2.0\ TB\ Hard\ Disk/projects/'
 alias logout='hyprctl dispatch exit 0'
+alias lock='swaylock'
 
 #alias cleanPkgs="sudo pacman -Rns $(pacman -Qtdq)"
 

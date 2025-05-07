@@ -87,13 +87,13 @@ git clone https://github.com/TheRealMDK/arch-hypr-dots.git /home/$USER/arch-hypr
 ### 1. Pacman
 
 ```bash
-sudo pacman -S --needed bash-completion bat blueman btop cargo curl dosfstools expac eza fastfetch fd feh ffmpeg firefox-developer-edition fzf geany geany-plugins gimp git glow gnome-disk-utility gnome-system-monitor go gtk4 gvfs htop hwinfo hyprpicker inkscape lazygit less linux-zen-headers lynx mpv neovim noto-fonts-emoji ntfs-3g nwg-look otf-font-awesome patch pavucontrol pipewire-pulse plymouth pv python-pipx python-pynvim python-pywal python-tinycss2 qbittorrent qt5-graphicaleffects qt5-quickcontrols2 qt5-svg qt6ct reflector ripgrep rsync ruby rust sed starship swaync syncthing thunar thunar-volman tldr tmux tree tumbler udiskie ugrep unrar unzip waybar wev wl-clipboard wpaperd xorg-xcursorgen yad yt-dlp
+sudo pacman -S --needed bash-completion bat blueman btop cargo cava curl dosfstools expac eza fastfetch fd feh ffmpeg firefox-developer-edition fzf geany geany-plugins gimp git glow gnome-disk-utility gnome-system-monitor go gtk4 gvfs htop hwinfo hyprpicker inkscape lazygit less linux-zen-headers lynx mpv neovim noto-fonts-emoji ntfs-3g nwg-look otf-font-awesome patch pavucontrol pipewire-pulse plymouth pv python-pipx python-pynvim python-tinycss2 qbittorrent qt5-graphicaleffects qt5-quickcontrols2 qt5-svg qt6ct reflector ripgrep rsync ruby rust sed starship swaync swww syncthing thunar thunar-volman tldr tmux tree tumbler udiskie ugrep unrar unzip waybar wev wl-clipboard wpaperd xorg-xcursorgen yad yt-dlp
 ```
 
 ### 2. yay
 
 ```bash
-yay -S --needed ani-cli ani-skip-git bluetooth-support lobster-git plymouth-theme-arch-darwin swaylock-effects wlogout
+yay -S --needed ani-cli ani-skip-git bluetooth-support lobster-git plymouth-theme-arch-darwin swaylock-effects wallust wlogout
 ```
 
 ### 3. NodeJS
@@ -167,7 +167,7 @@ rm -rf ~/.config/nvim/.git
 ```
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.config/nvim/lua /home/$USER/.config/nvim/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.config/nvim/lua /home/$USER/.config/nvim/
 ```
 
 ## 5. Install fonts
@@ -205,15 +205,15 @@ mkdir /home/$USER/.themes
 2. Symlink the icons, cursor and theme to the icons and theme directories.
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/usr/share/icons/Material_Black_Cherry /home/$USER/.icons/
+ln -sf /home/$USER/arch-hypr-dots/usr/share/icons/Material_Black_Cherry /home/$USER/.icons/
 ```
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/usr/share/icons/oreo_red_cursor /home/$USER/.icons/
+ln -sf /home/$USER/arch-hypr-dots/usr/share/icons/oreo_red_cursor /home/$USER/.icons/
 ```
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/usr/share/themes/Material_Black_Cherry /home/$USER/.themes/
+ln -sf /home/$USER/arch-hypr-dots/usr/share/themes/Material_Black_Cherry /home/$USER/.themes/
 ```
 
 ## 7. Symlink, Copy and/or modify the necessary Configurations
@@ -229,11 +229,11 @@ rm /home/$USER/.bashrc
 2. Symlink the new files.
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.bashrc /home/$USER/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.bashrc /home/$USER/
 ```
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/scripts /home/$USER/
+ln -sf /home/$USER/arch-hypr-dots/home/user/scripts /home/$USER/
 ```
 
 3. Reload shell config
@@ -255,7 +255,7 @@ rm /home/$USER/.config/hypr/hyprland.conf
 2. Symlink the new file.
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.config/hypr/hyprland.conf /home/$USER/.config/hypr/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.config/hypr/hyprland.conf /home/$USER/.config/hypr/
 ```
 
 ---
@@ -263,11 +263,11 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/hypr/hyprland.conf /home/$USE
 ### 7.3 Tmux
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.tmux.conf /home/$USER/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.tmux.conf /home/$USER/
 ```
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.tmux /home/$USER/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.tmux /home/$USER/
 ```
 
 ---
@@ -275,11 +275,11 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.tmux /home/$USER/
 ### 7.4 wpaperd
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.config/wpaperd /home/$USER/.config/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.config/wpaperd /home/$USER/.config/
 ```
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/wallpapers /home/$USER/
+ln -sf /home/$USER/arch-hypr-dots/home/user/wallpapers /home/$USER/
 ```
 
 ---
@@ -287,7 +287,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/wallpapers /home/$USER/
 ### 7.5 Fastfetch
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.config/fastfetch /home/$USER/.config/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.config/fastfetch /home/$USER/.config/
 ```
 
 ---
@@ -295,7 +295,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/fastfetch /home/$USER/.config
 ### 7.6 Starship
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.config/starship.toml /home/$USER/.config/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.config/starship.toml /home/$USER/.config/
 ```
 
 ---
@@ -303,7 +303,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/starship.toml /home/$USER/.co
 ### 7.7 Waybar
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.config/waybar /home/$USER/.config/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.config/waybar /home/$USER/.config/
 ```
 
 ---
@@ -323,7 +323,7 @@ mkdir /home/$USER/.local/share/applications
 2. Symlink or copy the new files.
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.config/kitty /home/$USER/.config/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.config/kitty /home/$USER/.config/
 ```
 
 ```bash
@@ -331,7 +331,7 @@ sudo cp -r /home/$USER/arch-hypr-dots/usr/share/applications/kitty.desktop /usr/
 ```
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.local/share/applications/kitty.desktop /home/$USER/.local/share/applications/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.local/share/applications/kitty.desktop /home/$USER/.local/share/applications/
 ```
 
 3. Update the desktop database.
@@ -359,15 +359,15 @@ update-desktop-database /home/$USER/.local/share/applications
 ### 7.9 Geany
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.config/geany/colorschemes /home/$USER/.config/geany/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.config/geany/colorschemes /home/$USER/.config/geany/
 ```
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.config/geany/plugins /home/$USER/.config/geany/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.config/geany/plugins /home/$USER/.config/geany/
 ```
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.config/geany/geany.conf /home/$USER/.config/geany/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.config/geany/geany.conf /home/$USER/.config/geany/
 ```
 
 ---
@@ -387,11 +387,11 @@ mkdir /home/$USER/.local/share/xfce4/helpers
 2. Symlink or copy the new files.
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.local/share/xfce4/helpers/kitty.desktop /home/$USER/.local/share/xfce4/helpers/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.local/share/xfce4/helpers/kitty.desktop /home/$USER/.local/share/xfce4/helpers/
 ```
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.config/xfce4/helpers.rc /home/$USER/.config/xfce4/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.config/xfce4/helpers.rc /home/$USER/.config/xfce4/
 ```
 
 ---
@@ -413,7 +413,7 @@ mkdir /home/$USER/.local/state/ani-cli
 3. Symlink the new file.
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.local/state/ani-cli/ani-hist /home/$USER/.local/state/ani-cli/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.local/state/ani-cli/ani-hist /home/$USER/.local/state/ani-cli/
 ```
 
 #### 7.11.1 Modify Ani-cli update_history() function
@@ -457,11 +457,11 @@ update_history() {
 ### 7.12 Feather
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.config/Feather /home/$USER/.config/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.config/Feather /home/$USER/.config/
 ```
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.config/Feather/feather_frontend/target/release/feather_frontend /home/$USER/
+ln -sf /home/clinton/arch-hypr-dots/home/user/feather_cava_tmux.sh /home/$USER/
 ```
 
 ---
@@ -587,7 +587,7 @@ sudo cp -r /home/$USER/arch-hypr-dots/usr/share/wlogout/icons /usr/share/wlogout
 ```
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.config/wlogout /home/$USER/.config/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.config/wlogout /home/$USER/.config/
 ```
 
 ---
@@ -595,7 +595,7 @@ ln -s /home/$USER/arch-hypr-dots/home/user/.config/wlogout /home/$USER/.config/
 ### 7.16 Swaylock-effects
 
 ```bash
-ln -s /home/$USER/arch-hypr-dots/home/user/.config/swaylock /home/$USER/.config/
+ln -sf /home/$USER/arch-hypr-dots/home/user/.config/swaylock /home/$USER/.config/
 ```
 
 ## 8. Complete the installation

@@ -181,6 +181,8 @@ Column {
                 radius: config.RoundCorners || 0
             }
             Keys.onReturnPressed: loginButton.clicked()
+            Keys.onEnterPressed: loginButton.clicked()
+            onAccepted: loginButton.clicked()
             KeyNavigation.down: password
             z: 1
 
@@ -229,6 +231,8 @@ Column {
                 radius: config.RoundCorners || 0
             }
             Keys.onReturnPressed: loginButton.clicked()
+            Keys.onEnterPressed: loginButton.clicked()
+            onAccepted: loginButton.clicked()
             KeyNavigation.down: revealSecret
         }
 
