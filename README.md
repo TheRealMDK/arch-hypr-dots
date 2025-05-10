@@ -2,6 +2,10 @@
 
 > [!NOTE]
 >
+> Assumes vanilla arch installation using arch install script.
+
+> [!NOTE]
+>
 > If any of the directories already exist, skip that step.
 
 ## 1. Start the authentication agent temporarily
@@ -87,7 +91,7 @@ git clone https://github.com/TheRealMDK/arch-hypr-dots.git /home/$USER/arch-hypr
 ### 1. Pacman
 
 ```bash
-sudo pacman -S --needed bash-completion bat blueman btop cargo cava curl dosfstools expac eza fastfetch fd feh ffmpeg firefox-developer-edition fzf geany geany-plugins gimp git glow gnome-disk-utility gnome-system-monitor go gtk4 gvfs htop hwinfo hyprpicker inkscape lazygit less linux-zen-headers lynx mpv neovim noto-fonts-emoji ntfs-3g nwg-look otf-font-awesome patch pavucontrol pipewire-pulse plymouth pv python-pipx python-pynvim python-tinycss2 qbittorrent qt5-graphicaleffects qt5-quickcontrols2 qt5-svg qt6ct reflector ripgrep rsync ruby rust sed starship swaync swww syncthing thunar thunar-volman tldr tmux tree tumbler udiskie ugrep unrar unzip waybar wev wl-clipboard wpaperd xorg-xcursorgen yad yt-dlp
+sudo pacman -S --needed bash-completion bat blueman btop cargo cava curl dosfstools expac eza fastfetch fd feh ffmpeg firefox-developer-edition fzf geany geany-plugins gimp git glow gnome-disk-utility gnome-system-monitor go gtk4 gvfs htop hwinfo hyprpicker inkscape lazygit less linux-zen-headers lynx mpv neovim noto-fonts-emoji ntfs-3g nwg-look otf-font-awesome patch pavucontrol pipewire-pulse plymouth pulsemixer pv python-pipx python-pynvim python-tinycss2 qbittorrent qt5-graphicaleffects qt5-quickcontrols2 qt5-svg qt6ct qutebrowser reflector ripgrep rsync ruby rust sed starship swaync swww syncthing thunar thunar-volman tldr tmux tree tumbler udiskie ugrep unrar unzip waybar wev wl-clipboard wpaperd xorg-xcursorgen yad yt-dlp
 ```
 
 ### 2. yay
@@ -596,6 +600,14 @@ ln -sf /home/$USER/arch-hypr-dots/home/user/.config/wlogout /home/$USER/.config/
 
 ```bash
 ln -sf /home/$USER/arch-hypr-dots/home/user/.config/swaylock /home/$USER/.config/
+```
+
+---
+
+### 7.17 Qutebrowser
+
+```bash
+ln -sf /home/$USER/arch-hypr-dots/home/user/.config/qutebrowser/config.py /home/$USER/.config/qutebrowser/
 ```
 
 ## 8. Complete the installation
