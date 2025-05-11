@@ -12,25 +12,13 @@
 
 > [!NOTE]
 >
-> Might be necessary for some steps.
+> Might be necessary for some steps. This will happen automatically after the first reboot.
 
 ```bash
 /usr/lib/polkit-kde-authentication-agent-1
 ```
 
 ## 2. Update the system
-
-1. Initialize the Pacman keyring by generating a new GnuPG keyring that pacman uses to verify package signatures.
-
-```bash
-pacman-key --init
-```
-
-2. Import and sign the official Arch Linux package signing keys (the trusted developer keys).
-
-```bash
-pacman-key --populate archlinux
-```
 
 ### 2.1 Update pacman
 
@@ -608,6 +596,10 @@ ln -sf /home/$USER/arch-hypr-dots/home/user/.config/swaylock /home/$USER/.config
 
 ```bash
 ln -sf /home/$USER/arch-hypr-dots/home/user/.config/qutebrowser/config.py /home/$USER/.config/qutebrowser/
+```
+
+```bash
+cp -r /home/$USER/arch-hypr-dots/home/user/.config/qutebrowser/themes /home/$USER/.config/qutebrowser/
 ```
 
 ## 8. Complete the installation

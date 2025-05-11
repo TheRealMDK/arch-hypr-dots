@@ -7,6 +7,7 @@ config.bind('zo', 'zoom-out')
 config.bind('zz', 'zoom 100%')
 config.bind('t', 'open -t')
 config.bind('q', 'q')
+config.bind('<Ctrl-m>', 'config-source')
 
 c.url.default_page = 'https://www.google.co.za/'
 c.url.start_pages = 'https://www.google.co.za/'
@@ -16,3 +17,7 @@ c.url.searchengines = {
 }
 
 c.auto_save.session = True
+
+c.colors.webpage.darkmode.enabled = True
+
+config.source('themes/onedark.py')
