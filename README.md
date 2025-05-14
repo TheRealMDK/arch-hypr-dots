@@ -1,430 +1,62 @@
-# Hyprland dotfiles and configurations>
+# Hyprland dotfiles and configurations
 
-> [!NOTE]
+## Contents
+
+1. [Install Git and configure the default branch](#1-install-git-and-configure-the-default-branch)
+2. [Clone the repository](#2-clone-the-repository)
+3. [Run the install script](#3-run-the-install-script)
+4. [Manual intervention](#4-manual-intervention)
+5. [Complete the installation](#5-complete-the-installation)
+6. [Tips and tricks](#6-tips-and-tricks)
+
+> [!IMPORTANT]
 >
-> Assumes vanilla arch installation using arch install script.
-
-> [!NOTE]
+> Assumes vanilla arch installation using arch install script with hyprland as the profile.
 >
-> If any of the directories already exist, skip that step.
+> Sudo privileges, and thus user input, will be required.
 
-## 1. Start the authentication agent temporarily
-
-> [!NOTE]
->
-> Might be necessary for some steps. This will happen automatically after the first reboot.
+## 1. Install git and configure the default branch
 
 ```bash
-/usr/lib/polkit-kde-authentication-agent-1
+sudo pacman -S --needed git
 ```
-
-## 2. Update the system
-
-### 2.1 Update pacman
-
-```bash
-sudo pacman -Syyu
-```
-
-### 2.2 Configure git
 
 ```bash
 git config --global init.defaultBranch main
 ```
 
-### 2.3 Install yay
-
-1. Create the Downloads directory if it does not exist.
-
-```bash
-mkdir /home/$USER/Downloads
-```
-
-2. Clone yay into the Downloads directory and navigate into the the yay directory.
-
-```bash
-git clone https://aur.archlinux.org/yay.git /home/$USER/Downloads/yay
-```
-
-```bash
-cd /home/$USER/Downloads/yay
-```
-
-3. Make the package.
-
-```bash
-makepkg -si
-```
-
-4. Clean the Downloads directory.
-
-```bash
-cd /home/$USER && rm -rf /home/$USER/Downloads/yay
-```
-
-### 2.4 Update yay
-
-```bash
-yay -Syyu
-```
-
-## 3. Download dotfiles
+## 2. Clone the repository
 
 ```bash
 git clone https://github.com/TheRealMDK/arch-hypr-dots.git /home/$USER/arch-hypr-dots
 ```
 
-## 4. Install required packages
-
-### 1. Pacman
+## 3. Run the install script
 
 ```bash
-sudo pacman -S --needed bash-completion bat blueman btop cargo cava curl dosfstools expac eza fastfetch fd feh ffmpeg firefox-developer-edition fzf geany geany-plugins gimp git glow gnome-disk-utility gnome-system-monitor go gtk4 gvfs htop hwinfo hyprpicker inkscape lazygit less linux-zen-headers lynx mpv neovim noto-fonts-emoji ntfs-3g nwg-look otf-font-awesome patch pavucontrol pipewire-pulse plymouth pulsemixer pv python-pipx python-pynvim python-tinycss2 qbittorrent qt5-graphicaleffects qt5-quickcontrols2 qt5-svg qt6ct qutebrowser reflector ripgrep rsync ruby rust sed starship swaync swww syncthing thunar thunar-volman tldr tmux tree tumbler udiskie ugrep unrar unzip waybar wev wl-clipboard wpaperd xorg-xcursorgen yad yt-dlp
+"$HOME/arch-hypr-dots/install.sh"
 ```
 
-### 2. yay
+## 4. Manual intervention
 
-```bash
-yay -S --needed ani-cli ani-skip-git bluetooth-support lobster-git plymouth-theme-arch-darwin swaylock-effects wallust wlogout
-```
+### Ani-cli
 
-### 3. NodeJS
+To ensure the update_history function edits are made to the actual file target rather than the symlink itself, after the first restart after running the install.sh script, follow the steps below:
 
-1. Download and install nvm.
-
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
-```
-
-2. In lieu of restarting the shell
-
-```bash
-\. "$HOME/.nvm/nvm.sh"
-```
-
-3. Download and install Node.js
-
-```bash
-nvm install 22
-```
-
-4. Verify versions.
-
-```bash
-node -v
-```
-
-```bash
-nvm current
-```
-
-```bash
-npm -v
-```
-
-### 4. Nvim
-
-1. Remove old configs if they exist.
-
-```bash
-rm -rf /home/$USER/.config/nvim
-```
-
-```bash
-rm -rf /home/$USER/.local/share/nvim
-```
-
-```bash
-rm -rf /home/$USER/.local/state/nvim
-```
-
-```bash
-rm -rf /home/$USER/.cache/nvim
-```
-
-2. Install LazyVim.
-
-```bash
-git clone https://github.com/LazyVim/starter ~/.config/nvim
-```
-
-3. Remove the default config and .git directory then symlink the new config.
-
-```bash
-rm -rf /home/$USER/.config/nvim/lua
-```
-
-```bash
-rm -rf ~/.config/nvim/.git
-```
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.config/nvim/lua /home/$USER/.config/nvim/
-```
-
-## 5. Install fonts
-
-1. Create the fonts directory if it does not exist.
-
-```bash
-mkdir /home/$USER/.local/share/fonts
-```
-
-2. Copy the font to the fonts directory.
-
-```bash
-cp -r /home/$USER/arch-hypr-dots/home/user/.local/share/fonts/JetBrainsMonoNerdFont /home/$USER/.local/share/fonts/
-```
-
-3. Refresh the font cache.
-
-```bash
-fc-cache -f -v
-```
-
-## 6. Install icons and cursor and theme
-
-1. Create the icons and theme directory if it does not exist.
-
-```bash
-mkdir /home/$USER/.icons
-```
-
-```bash
-mkdir /home/$USER/.themes
-```
-
-2. Symlink the icons, cursor and theme to the icons and theme directories.
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/usr/share/icons/Material_Black_Cherry /home/$USER/.icons/
-```
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/usr/share/icons/oreo_red_cursor /home/$USER/.icons/
-```
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/usr/share/themes/Material_Black_Cherry /home/$USER/.themes/
-```
-
-## 7. Symlink, Copy and/or modify the necessary Configurations
-
-### 7.1 Bash
-
-1. Remove the existing .bashrc file.
-
-```bash
-rm /home/$USER/.bashrc
-```
-
-2. Symlink the new files.
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.bashrc /home/$USER/
-```
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/scripts /home/$USER/
-```
-
-3. Reload shell config
-
-```bash
-source /home/$USER/.bashrc
-```
-
----
-
-### 7.2 Hyprland
-
-1. Remove the existing hyprland.conf file.
-
-```bash
-rm /home/$USER/.config/hypr/hyprland.conf
-```
-
-2. Symlink the new file.
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.config/hypr/hyprland.conf /home/$USER/.config/hypr/
-```
-
----
-
-### 7.3 Tmux
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.tmux.conf /home/$USER/
-```
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.tmux /home/$USER/
-```
-
----
-
-### 7.4 wpaperd
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.config/wpaperd /home/$USER/.config/
-```
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/wallpapers /home/$USER/
-```
-
----
-
-### 7.5 Fastfetch
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.config/fastfetch /home/$USER/.config/
-```
-
----
-
-### 7.6 Starship
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.config/starship.toml /home/$USER/.config/
-```
-
----
-
-### 7.7 Waybar
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.config/waybar /home/$USER/.config/
-```
-
----
-
-### 7.8 Kitty
-
-1. Create the applications directory if it does not exist.
-
-```bash
-sudo mkdir /usr/share/applications
-```
-
-```bash
-mkdir /home/$USER/.local/share/applications
-```
-
-2. Symlink or copy the new files.
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.config/kitty /home/$USER/.config/
-```
-
-```bash
-sudo cp -r /home/$USER/arch-hypr-dots/usr/share/applications/kitty.desktop /usr/share/applications/
-```
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.local/share/applications/kitty.desktop /home/$USER/.local/share/applications/
-```
-
-3. Update the desktop database.
-
-```bash
-update-desktop-database /home/$USER/.local/share/applications
-```
-
-> [!NOTE]
->
-> To select a different kitty theme run:
->
-> ```bash
-> kitty +kitten themes
-> ```
->
-> To select a different kitty font run:
->
-> ```bash
-> kitty +kitten choose-fonts
-> ```
-
----
-
-### 7.9 Geany
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.config/geany/colorschemes /home/$USER/.config/geany/
-```
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.config/geany/plugins /home/$USER/.config/geany/
-```
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.config/geany/geany.conf /home/$USER/.config/geany/
-```
-
----
-
-### 7.10 Thunar
-
-1. Create the xfce4 and helpers directories if they do not exist.
-
-```bash
-mkdir /home/$USER/.local/share/xfce4
-```
-
-```bash
-mkdir /home/$USER/.local/share/xfce4/helpers
-```
-
-2. Symlink or copy the new files.
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.local/share/xfce4/helpers/kitty.desktop /home/$USER/.local/share/xfce4/helpers/
-```
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.config/xfce4/helpers.rc /home/$USER/.config/xfce4/
-```
-
----
-
-### 7.11 Ani-cli
-
-1. Remove the existing ani-hist file.
-
-```bash
-rm /home/$USER/.local/state/ani-cli/ani-hist
-```
-
-2. Create the ani-cli directory if it does not exist.
-
-```bash
-mkdir /home/$USER/.local/state/ani-cli
-```
-
-3. Symlink the new file.
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.local/state/ani-cli/ani-hist /home/$USER/.local/state/ani-cli/
-```
-
-#### 7.11.1 Modify Ani-cli update_history() function
-
-1. Open the Ani-cli script with nvim (some installation might happen).
+1. Open the ani-cli script with nvim (some installation might happen).
 
 ```bash
 sudo nvim /usr/bin/ani-cli
 ```
 
-2. Comment out the existing update_history() function.
+2. Find and comment out the existing update_history() function.
+3. Paste the below above or below the default function which is commented out in step 2.
 
-3. Paste the below above the defalut function which is commented in the previous step.
-
-```
+```bash
 update_history() {
     # Resolve symlink if histfile is a symlink
     if [ -L "$histfile" ]; then
-        resolved_histfile=$(readlink "$histfile")
+       resolved_histfile=$(readlink "$histfile")
     else
         resolved_histfile="$histfile"
     fi
@@ -444,55 +76,11 @@ update_history() {
 
 4. Save and exit the file.
 
----
+### Plymouth
 
-### 7.12 Feather
+The plymouth hook must be added to '/etc/mkinitcpio.conf' before restarting.
 
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.config/Feather /home/$USER/.config/
-```
-
-```bash
-ln -sf /home/clinton/arch-hypr-dots/home/user/feather_cava_tmux.sh /home/$USER/
-```
-
----
-
-### 7.13 Plymouth
-
-#### 7.13.1 Modify the kernel parameters
-
-1. Create the cmdline.d directory and arch.conf file if they do not exist.
-
-```bash
-sudo mkdir /etc/cmdline.d
-```
-
-```bash
-sudo touch /etc/cmdline.d/arch.conf
-```
-
-2. Open the newly created file with nvim.
-
-```bash
-sudo nvim /etc/cmdline.d/arch.conf
-```
-
-3. Run the below command in a new terminal.
-
-```bash
-cat /etc/kernel/cmdline
-```
-
-4. Paste the below in the file and replace **\<output>** with the output from the previous command.
-
-```
-options <output> quiet splash
-```
-
-5. Save and exit the file.
-
-#### 7.13.2 Add Plymouth to mkinitcpio.conf
+To do this, follow the below steps:
 
 1. Open the mkinitcpio.conf file with nvim.
 
@@ -502,7 +90,7 @@ sudo nvim /etc/mkinitcpio.conf
 
 2. Add plymouth to the HOOKS array in mkinitcpio.conf.
 
-```
+```bash
 HOOKS=(...plymouth...)
 ```
 
@@ -514,94 +102,28 @@ HOOKS=(...plymouth...)
 >
 > i.e.
 >
-> ```
+> ```bash
 > HOOKS=(base udev plymouth autodetect microcode modconf kms keyboard keymap consolefont block filesystems fsck)
 > ```
 
-#### 7.13.3 Set the theme
+3. Save the file and exit.
 
-```bash
-plymouth-set-default-theme -R arch-darwin
-```
+## 5. Complete the installation
 
----
+Ensure steps in the manual intervention section are performed, then reboot your device to complete the install.
 
-### 7.14 SDDM
+## 6. Tips and tricks
 
-1. Create the sddm.conf.d directory and the sddm.conf file.
-
-```bash
-sudo mkdir /etc/sddm.conf.d
-```
-
-```bash
-sudo touch /etc/sddm.conf.d/sddm.conf
-```
-
-2. Open sddm.conf with nvim.
-
-```bash
-sudo nvim /etc/sddm.conf.d/sddm.conf
-```
-
-3. Paste the below in the file:
-
-```
-[General]
-Numlock=on
-
-[Theme]
-Current=sugar-dark
-```
-
-4. Save and exit.
-
-5. Copy the necessary directory.
-
-```bash
-sudo cp -r /home/$USER/arch-hypr-dots/usr/share/sddm/themes/sugar-dark /usr/share/sddm/themes/
-```
-
----
-
-### 7.15 Wlogout
-
-1. Create the wlogout directory if it does not exist.
-
-```bash
-sudo mkdir /usr/share/wlogout
-```
-
-2. Symlink and copy the required directories.
-
-```bash
-sudo cp -r /home/$USER/arch-hypr-dots/usr/share/wlogout/icons /usr/share/wlogout/
-```
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.config/wlogout /home/$USER/.config/
-```
-
----
-
-### 7.16 Swaylock-effects
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.config/swaylock /home/$USER/.config/
-```
-
----
-
-### 7.17 Qutebrowser
-
-```bash
-ln -sf /home/$USER/arch-hypr-dots/home/user/.config/qutebrowser/config.py /home/$USER/.config/qutebrowser/
-```
-
-```bash
-cp -r /home/$USER/arch-hypr-dots/home/user/.config/qutebrowser/themes /home/$USER/.config/qutebrowser/
-```
-
-## 8. Complete the installation
-
-Reboot your device to complete the install.
+> [!TIP]
+>
+> To select a different kitty theme run:
+>
+> ```bash
+> kitty +kitten themes
+> ```
+>
+> To select a different kitty font run:
+>
+> ```bash
+> kitty +kitten choose-fonts
+> ```
