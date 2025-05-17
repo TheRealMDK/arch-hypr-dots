@@ -21,8 +21,10 @@ alias listAllPkg="pacman -Qqe"
 alias savePkgLists="pacman -Qqe | grep -vxF -f <(pacman -Qqm) | grep -v '^yay$' > $HOME/Downloads/official_packages.txt && pacman -Qqm | grep -v '^yay$' > $HOME/Downloads/aur_packages.txt"
 alias lastBootLog="journalctl -p 3..4 --boot -o short-monotonic | uniq"
 alias startSSH="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/id_ed25519 && ssh -T git@github.com"
-alias continue="ani-cli --dub -c --skip"
-alias anicli="ani-cli --dub --skip"
+alias continue="ani-cli --dub -c"
+alias anicli="ani-cli --dub"
+#alias continue="ani-cli --dub -c --skip"
+#alias anicli="ani-cli --dub --skip"
 alias watch="watch -n 1 date"
 alias feather="~/feather_cava_tmux.sh"
 alias off="shutdown -h now"
@@ -79,6 +81,8 @@ alias google='lynx https://www.google.co.za'
 alias proj='cd /run/media/clinton/2.0\ TB\ Hard\ Disk/projects/'
 alias logout='hyprctl dispatch exit 0'
 alias lock='swaylock'
+alias viewTar='tar -tf'
+alias viewZip='tar -tf'
 
 #alias cleanPkgs="sudo pacman -Rns $(pacman -Qtdq)"
 
