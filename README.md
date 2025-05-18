@@ -41,7 +41,7 @@ git clone https://github.com/TheRealMDK/arch-hypr-dots.git /home/$USER/arch-hypr
 
 ### Ani-cli
 
-To ensure the update_history function edits are made to the actual file target rather than the symlink itself, after the first restart after running the install.sh script, follow the steps below:
+To ensure the update_history function edits are made to the actual file target rather than the symlink itself, follow the steps below:
 
 1. Open the ani-cli script with nvim (some installation might happen).
 
@@ -49,8 +49,8 @@ To ensure the update_history function edits are made to the actual file target r
 sudo nvim /usr/bin/ani-cli
 ```
 
-2. Find and comment out the existing update_history() function.
-3. Paste the below above or below the default function which is commented out in step 2.
+2. Find and comment out or delete the existing update_history() function.
+3. Paste the below above or below the default function which is commented out or deleted in step 2.
 
 ```bash
 update_history() {
@@ -115,7 +115,7 @@ Ytermusic needs autentication to your account to work. To do this, follow the st
 1. Create the 'headers.txt' file.
 
 ```bash
-touch -p $HOME/.config/ytermusic/headers.txt
+touch $HOME/.config/ytermusic/headers.txt
 ```
 
 2. Open the 'headers.txt' file.
@@ -128,9 +128,8 @@ nvim $HOME/.config/ytermusic/headers.txt
 4. Open the developer tools (<kbd>F12</kbd> or <kbd>Fn</kbd> + <kbd>F12</kbd>), alternatively right click anywhere on the page and click 'inspect'.
 5. Click on the network tab.
 6. Click on the filter field and type 'browse'.
-7. Reload the page by pressing <kbd>F5</kbd> and way for the page to relaod.
-8. Once it reloads, click on the top entry.
-9. In the right pane, on the headers tab, go to the 'Request Headers' dropdown and copy the 'Cookie' and 'User-Agent' values (right click on it, and select 'copy value') and create an entry in '~/.config/ytermusic/headers.txt' like this:
+7. Reload the page by pressing <kbd>F5</kbd> and wait for the page to relaod.
+8. Once it reloads, click on the top entry, then in the right pane, on the headers tab, go to the 'Request Headers' dropdown and copy the 'Cookie' and 'User-Agent' values (right click on it, and select 'copy value') and create an entry in '~/.config/ytermusic/headers.txt' like this:
 
 ```bash
 Cookie: <copied Cookie value>
@@ -140,11 +139,10 @@ User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139
 > [!IMPORTANT]
 >
 > If you're using Firefox enable the "Raw" switch so the cookie isn't mangled.
+>
 > ![Firefox Raw Switch](./home/user/.config/ytermusic/Firefox-Raw-Switch.png "Firefox Raw Switch")
 
-10. Save and exit the file.
-
-Ytermusic should now have your playlists.
+9. Save and exit the file.
 
 ## 5. Complete the installation
 
