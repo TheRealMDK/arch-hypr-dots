@@ -28,7 +28,7 @@ tmux split-window -h -t "$SESSION"
 
 sleep 0.3
 
-# Get both updated pane IDs
+# Get all updated pane IDs
 PANE_IDS=($(tmux list-panes -t "$SESSION" -F "#{pane_id}"))
 TOP_PANE="${PANE_IDS[0]}"
 BOTTOM_LEFT_PANE="${PANE_IDS[1]}"
@@ -44,11 +44,6 @@ tmux resize-pane -t "$TOP_PANE" -y "$TOP_HEIGHT"
 
 sleep 0.3
 
-# Run 'feather' in the top pane
-tmux send-keys -t "$TOP_PANE" '/home/clinton/arch-hypr-dots/home/user/.config/Feather/feather_frontend/target/release/feather_frontend' C-m
-
-sleep 0.3
-
 # Run 'cava' in the bottom pane
 tmux send-keys -t "$BOTTOM_LEFT_PANE" 'cava' C-m
 
@@ -59,8 +54,13 @@ tmux send-keys -t "$BOTTOM_RIGHT_PANE" 'pulsemixer' C-m
 
 sleep 0.3
 
-# Focus on the top pane after setup
+# Ensure top pane is focused after setup
 tmux select-pane -t "$TOP_PANE"
+
+sleep 0.3
+
+# Run 'feather' in the top pane
+tmux send-keys -t "$TOP_PANE" '/home/clinton/arch-hypr-dots/home/user/.config/Feather/feather_frontend/target/release/feather_frontend' C-m
 
 sleep 0.3
 

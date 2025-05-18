@@ -1,5 +1,4 @@
 # TODO
 
-- eog (pacman)
-- chrome
 - termusic
+- ytermusic
