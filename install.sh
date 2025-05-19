@@ -16,22 +16,25 @@ done 2>/dev/null &
 
 CHECKMARK=$(printf '\u2713')
 
+RESET='\e[0m'
+
 BLUE='\e[34m'
 YELLOW='\e[33m'
 GREEN='\e[32m'
 RED='\e[31m'
-
-RESET='\e[0m'
+TEAL='\e[96m'
 
 BOLD_BLUE='\e[1;34m'
 BOLD_YELLOW='\e[1;33m'
 BOLD_GREEN='\e[1;32m'
 BOLD_RED='\e[1;31m'
+BOLD_TEAL='\e[1;96m'
 
 DIM_BLUE='\e[2;34m'
 DIM_YELLOW='\e[2;33m'
 DIM_GREEN='\e[2;32m'
 DIM_RED='\e[2;31m'
+DIM_TEAL='\e[2;96m'
 
 DRY_RUN=false
 DOTFILES_DIR="$HOME/arch-hypr-dots"
@@ -180,65 +183,72 @@ fi
 # Step 1: Start authentication agent
 
 execute "Starting authentication agent" "/usr/lib/polkit-kde-authentication-agent-1 & sleep 1"
-printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully started authentication agent"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully started authentication agent @ $(timestamp)"
 
 # Step 2: Update system
 
 execute "Updating system packages" "sudo pacman -Syyu --noconfirm"
-printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully updated system packages"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully updated system packages @ $(timestamp)"
 
 # Step 3: Install pacman packages
 
 pacman_cmd="sudo pacman -S --needed --noconfirm ${PACMAN_PACKAGES[*]}"
 execute "Installing packages with pacman" "$pacman_cmd"
-printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed packages with pacman"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed packages with pacman @ $(timestamp)"
 
-# # Step 4: Install and update yay
-#
-# printf "%s\n" "-> Installing yay."
-#
-# if ! command -v yay >/dev/null; then
-#   printf "%s\n" "-> Checking if Downloads directory exists."
-#
-#   if [ -d "$HOME/Downloads" ]; then
-#     # Directory exists
-#     printf "%s\n" "-> Directory exists."
-#   else
-#     # Directory does not exist
-#     printf "%s\n" "-> Directory does not exist."
-#     execute "Creating Downloads directory." "mkdir -p \"$HOME/Downloads\""
-#   fi
-#
-#   execute "Cloning yay repository." "git clone https://aur.archlinux.org/yay.git $HOME/Downloads/yay"
-#   execute "Navigate to the yay directory." "cd $HOME/Downloads/yay/"
-#   execute "Building and installing yay." "makepkg -si --noconfirm"
-#   execute "Navigate back to home directory." "cd $HOME/"
-#   execute "Cleaning up yay installation files." "rm -rf \"$HOME/Downloads/yay\""
-#   printf "%s\n\n" "-> Successfully installed yay."
-#
-# else
-#   printf "%s\n" "-> yay already installed."
-# fi
-#
-# execute "Updating yay." "yay -Syyu --noconfirm"
-# printf "%s\n\n" "-> Successfully updated yay."
+# Step 4: Install and update yay
+
+printf "${BOLD_BLUE}%s${RESET}\n" "-> Checking if yay is installed @ $(timestamp)"
+
+if ! command -v yay >/dev/null; then
+  printf "${YELLOW}%s${RESET}\n" "-> Could not find yay @ $(timestamp)"
+  printf "${BOLD_BLUE}%s${RESET}\n" "-> Checking if Downloads directory exists @ $(timestamp)"
+
+  if [ -d "$HOME/Downloads" ]; then
+    # Directory exists
+    printf "${TEAL}%s${RESET}\n" "-> Found downloads directory @ $(timestamp)"
+  else
+    # Directory does not exist
+    printf "${YELLOW}%s${RESET}\n" "-> Directory 'Downloads' does not exist @ $(timestamp)"
+    execute "Creating Downloads directory" "mkdir -p \"$HOME/Downloads\""
+  fi
+
+  execute "Cloning yay repository" "git clone https://aur.archlinux.org/yay.git $HOME/Downloads/yay"
+  execute "Navigate to the yay directory" "cd $HOME/Downloads/yay/"
+  execute "Building and installing yay" "makepkg -si --noconfirm"
+  execute "Navigate back to home directory" "cd $HOME/"
+  execute "Cleaning up yay installation files" "rm -rf \"$HOME/Downloads/yay\""
+  printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed yay @ $(timestamp)"
+
+else
+  printf "${TEAL}%s${RESET}\n" "-> yay already installed @ $(timestamp)"
+fi
+
+execute "Updating yay" "yay -Syyu --noconfirm"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully updated yay @ $(timestamp)"
 
 # Step 5: Install yay packages
 
 yay_cmd="yay -S --needed --noconfirm ${YAY_PACKAGES[*]}"
 execute "Installing packages with yay" " $yay_cmd"
-printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed packages with yay"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed packages with yay @ $(timestamp)"
 
-# # Step 6: Install Node.js using nvm
-# printf "%s\n\n" "-> Installing node with nvm."
-#
-# execute "Installing nvm." "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install.sh | bash"
-#
-# execute "Loading nvm." "source $HOME/.nvm/nvm.sh"
-# execute "Installing Node.js v22." "nvm install 22"
-#
-# printf "%s\n\n" "-> Successfully installed node."
-#
+# Step 6: Install Node.js using nvm
+
+printf "${BOLD_BLUE}%s${RESET}\n" "-> Checking if node is installed @ $(timestamp)"
+
+if ! command -v node >/dev/null; then
+  printf "${YELLOW}%s${RESET}\n" "-> Could not find node @ $(timestamp)"
+  printf "${BOLD_BLUE}%s${RESET}\n" "-> Installing node with nvm"
+  execute "Installing nvm" "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install.sh | bash"
+  execute "Loading nvm" "source $HOME/.nvm/nvm.sh"
+  execute "Installing Node.js v22" "nvm install 22"
+
+  printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed node @ $(timestamp)"
+else
+  printf "${TEAL}%s${RESET}\n" "-> node already installed @ $(timestamp)"
+fi
+
 # # Step 7: Configure Neovim with LazyVim
 # printf "%s\n\n" "-> Configuring neovim with lazyvim."
 #

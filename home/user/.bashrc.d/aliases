@@ -1,65 +1,65 @@
-alias ls="exa -al --color=always --group-directories-first --icons"     # preferred listing
-alias la="exa -a --color=always --group-directories-first --icons"      # all files and dirs
-alias ll="exa -l --color=always --group-directories-first --icons"      # long format
-alias lt="exa -aT --color=always --group-directories-first --icons"     # tree listing
-alias l.="exa -ald --color=always --group-directories-first --icons .*" # show only dotfiles
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ......="cd ../../../../.."
-alias whatCmd="apropos"
+alias ls='exa -al --color=always --group-directories-first --icons'     # preferred listing
+alias la='exa -a --color=always --group-directories-first --icons'      # all files and dirs
+alias ll='exa -l --color=always --group-directories-first --icons'      # long format
+alias lt='exa -aT --color=always --group-directories-first --icons'     # tree listing
+alias l.='exa -ald --color=always --group-directories-first --icons .*' # show only dotfiles
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias whatCmd='apropos'
 alias now="date +'  %H:%M:%S %Y/%m/%d'"
-alias editHyprConfigs="nvim $HOME/arch-hypr-dots/home/user/.config/hypr/hypr.conf.d/"
-alias editShell="nvim $HOMEarch-hypr-dots/home/user/.bashrc.d/"
-alias take="sudo chown -R $USER:$USER"
-alias pacin="sudo pacman -S --needed"
-alias yayin="yay -S --needed"
-alias pacFind="pacman -Ss"
-alias yayFind="yay -Ss"
-alias listAllPkg="pacman -Qqe"
+alias editHyprConfigs='nvim $HOME/arch-hypr-dots/home/user/.config/hypr/hypr.conf.d/'
+alias editShell='nvim $HOMEarch-hypr-dots/home/user/.bashrc.d/'
+alias take='sudo chown -R $USER:$USER'
+alias pacin='sudo pacman -S --needed'
+alias yayin='yay -S --needed'
+alias pacFind='pacman -Ss'
+alias yayFind='yay -Ss'
+alias listAllPkg='pacman -Qqe'
 alias savePkgLists="pacman -Qqe | grep -vxF -f <(pacman -Qqm) | grep -v '^yay$' > $HOME/Downloads/official_packages.txt && pacman -Qqm | grep -v '^yay$' > $HOME/Downloads/aur_packages.txt"
-alias lastBootLog="journalctl -p 3..4 --boot -o short-monotonic | uniq"
+alias lastBootLog='journalctl -p 3..4 --boot -o short-monotonic | uniq'
 alias startSSH="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/id_ed25519 && ssh -T git@github.com"
-alias continue="~/anicli-continue.sh"
-alias anicli="~/anicli-watch.sh"
-#alias continue="ani-cli --dub -c --skip"
-#alias anicli="ani-cli --dub --skip"
-alias watch="watch -n 1 date"
-alias feather="~/feather.sh"
-alias off="shutdown -h now"
-alias fixPacman="sudo rm /var/lib/pacman/db.lck"
-alias wget="wget -c "
-alias rmPac="sudo pacman -Rns"
-alias rmAur="yay -Rns"
-alias psmem="ps auxf | sort -nr -k 4"
-alias psmem10="ps auxf | sort -nr -k 4 | head -10"
-alias dir="dir --color=auto"
-alias vdir="vdir --color=auto"
-alias grep="ugrep --color=auto"
-alias fgrep="ugrep -F --color=auto"
-alias egrep="ugrep -E --color=auto"
-alias hw="hwinfo --short"                          # Hardware Info
+alias continue='~/anicli-continue.sh'
+alias anicli='~/anicli-watch.sh'
+#alias continue='ani-cli --dub -c --skip'
+#alias anicli='ani-cli --dub --skip'
+alias watch='watch -n 1 date'
+alias feather='~/feather.sh'
+alias off='shutdown -h now'
+alias fixPacman='sudo rm /var/lib/pacman/db.lck'
+alias wget='wget -c'
+alias rmPac='sudo pacman -Rns'
+alias rmAur='yay -Rns'
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='ugrep --color=auto'
+alias fgrep='ugrep -F --color=auto'
+alias egrep='ugrep -E --color=auto'
+alias hw='hwinfo --short'                          # Hardware Info
 alias gitPkg="pacman -Q | grep -i '\-git' | wc -l" # List amount of -git packages
-alias ip="ip -color"
-alias jctl="journalctl -p 3 -xb"
+alias ip='ip -color'
+alias jctl='journalctl -p 3 -xb'
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
-alias aurUpdates="yay -Qua"
-alias pacUpdates="checkupdates"
-alias fullUpdate="yay -Syyu && sudo pacman -Syyu"
-alias memInfo="free -h --si"
-alias diskInfo="df -hT --exclude-type=tmpfs --exclude-type=devtmpfs"
-alias cpuInfo="lscpu"
-alias gs="git status"
-alias ga="git add"
-alias gc="git commit -m"
-alias gp="git push"
-alias gl="git log --oneline --graph --decorate"
-alias makeExec="chmod +x"
-alias generatePwdLists="$HOME/arch-hypr-dots/home/user/scripts/generatePwdLists.sh"
-alias copySrcToDest="$HOME/arch-hypr-dots/home/user/scripts/copySrcToDest.sh"
-alias symlink="ln -s"
-alias cfg="cd $CONFDIR"
+alias aurUpdates='yay -Qua'
+alias pacUpdates='checkupdates'
+alias fullUpdate='yay -Syyu && sudo pacman -Syyu'
+alias memInfo='free -h --si'
+alias diskInfo='df -hT --exclude-type=tmpfs --exclude-type=devtmpfs'
+alias cpuInfo='lscpu'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
+alias gp='git push'
+alias gl='git log --oneline --graph --decorate'
+alias makeExec='chmod +x'
+alias generatePwdLists='$HOME/arch-hypr-dots/home/user/scripts/generatePwdLists.sh'
+alias copySrcToDest='$HOME/arch-hypr-dots/home/user/scripts/copySrcToDest.sh'
+alias symlink='ln -s'
+alias cfg='cd $CONFDIR'
 alias cat='bat --style header --style snip --style changes --style header'
 alias tattach='tmux attach -t'
 alias tb='nc termbin.com 9999'
@@ -78,21 +78,20 @@ alias tsplit-v='tmux split-window -v'
 alias tswitch='tmux select-pane'
 alias updateMirrorList='sudo reflector --verbose --latest 200 --sort rate --country za --save /etc/pacman.d/mirrorlist'
 alias google='lynx https://www.google.co.za'
-alias proj='cd /run/media/clinton/2.0\ TB\ Hard\ Disk/projects/'
+alias proj='cd /mnt/sda1/projects/'
 alias logout='hyprctl dispatch exit 0'
 alias lock='swaylock'
 alias viewTar='tar -tf'
-alias viewZip='tar -tf'
+alias viewZip='unzip -l'
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 
-#alias cleanPkgs="sudo pacman -Rns $(pacman -Qtdq)"
 
-#alias timeshift-gtk="sudo -E timeshift-launcher"
-#tarnow="tar -acf "
-#alias untar="tar -zxvf "
-#alias rmpkg="sudo pacman -Rdd"
-#alias grep="grep --color=auto"
+#alias timeshift-gtk='sudo -E timeshift-launcher'
+#tarnow='tar -acf'
+#alias untar='tar -zxvf'
+#alias rmpkg='sudo pacman -Rdd'
+#alias grep='grep --color=auto'
 
 #alias virtual='hyprctl output create headless VIRTUAL-1'
 #alias convirtual='wayvnc -o VIRTUAL-1 192.168.0.213 5900 -Ldebug'
 #alias convirtual1='wayvnc -o VIRTUAL-1 192.168.137.32 5900 -Ldebug'
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
