@@ -47,6 +47,7 @@ PACMAN_PACKAGES=(
   cava
   curl
   dosfstools
+  eog
   expac
   eza
   fastfetch
@@ -128,6 +129,7 @@ YAY_PACKAGES=(
   ani-cli
   ani-skip-git
   bluetooth-support
+  google-chorome
   lobster-git
   plymouth-theme-arch-darwin
   swaylock-effects
@@ -176,7 +178,7 @@ execute() {
 }
 
 if [ -z "$HOME" ]; then
-  echo "ERROR: \$HOME is not set. Aborting... "
+  printf "${BOLD_RED}%s${RESET}" "ERROR: \$HOME is not set. Aborting... "
   exit 1
 fi
 
@@ -246,117 +248,117 @@ if ! command -v node >/dev/null; then
 
   printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed node @ $(timestamp)"
 else
-  printf "${TEAL}%s${RESET}\n" "-> node already installed @ $(timestamp)"
+  printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Node already installed @ $(timestamp)"
 fi
 
-# # Step 7: Configure Neovim with LazyVim
-# printf "%s\n\n" "-> Configuring neovim with lazyvim."
-#
-# printf "%s\n\n" "-> Checking if nvim configs exists."
-#
-# for dir in "${NVIM_DIRS[@]}"; do
-#   if [ -d "$dir" ]; then
-#     # Directory exists
-#     execute "Directory '$dir' exists.\nRemoving '$dir'." "rm -rf \"$dir\""
-#   else
-#     # Directory does not exists
-#     printf "%s\n\n" "-> Directory '$dir' does not exist."
-#   fi
-# done
-#
-# execute "Cloning LazyVim starter." "git clone https://github.com/LazyVim/starter \"$HOME/.config/nvim\""
-# execute "Removing default LazyVim config directory." "rm -rf \"$HOME/.config/nvim/lua\""
-# execute "Removing .git directory." "rm -rf \"$HOME/.config/nvim/.git\""
-# execute "Symlinking custom Neovim configuration" "ln -sfT $DOTFILES_DIR/home/user/.config/nvim/lua $HOME/.config/nvim/"
-#
-# printf "%s\n\n" "-> Successfully configured neovim."
-#
-# # Step 8: Install fonts
-#
-# printf "%s\n\n" "-> Installing fonts."
-# printf "%s\n\n" "-> Checking if fonts directory exists."
-#
-# if [ -d "$HOME/.local/share/fonts" ]; then
-#   # Directory exists
-#   printf "%s\n\n" "-> Directory exists."
-# else
-#   # Directory does not exist
-#   printf "%s\n\n" "-> Directory does not exist."
-#   execute "Creating fonts directory." "mkdir -p \"$HOME/.local/share/fonts\""
-# fi
-#
-# execute "Copying JetBrainsMono Nerd Font." "cp -rT $DOTFILES_DIR/home/user/.local/share/fonts/JetBrainsMonoNerdFont $HOME/.local/share/fonts/"
-# execute "Refreshing font cache" "fc-cache -f -v"
-# printf "%s\n\n" "-> Successfully installing fonts."
-#
-# # Step 9: Install icons and themes
-#
-# printf "%s\n\n" "-> Installing icons."
-# printf "%s\n\n" "-> Checking if icons directory exists."
-#
-# if [ -d "$HOME/.icons" ]; then
-#   # Directory exists
-#   printf "%s\n\n" "-> Directory exists."
-# else
-#   # Directory does not exist
-#   printf "%s\n\n" "-> Directory does not exist."
-#   execute "Creating icons directory." "mkdir -p \"$HOME/.icons\""
-# fi
-#
-# execute "Symlinking Material Black Cherry icon theme." "ln -sfT $DOTFILES_DIR/home/user/.icons/Material_Black_Cherry $HOME/.icons/"
-# execute "Symlinking Oreo Red cursor theme." "ln -sfT $DOTFILES_DIR/home/user/.icons/oreo_red_cursor $HOME/.icons/"
-# printf "%s\n\n" "-> Successfully installing icons."
-#
-# printf "%s\n\n" "-> Installing themes."
-# printf "%s\n\n" "-> Checking if themes directory exists."
-#
-# if [ -d "$HOME/.themes" ]; then
-#   # Directory exists
-#   printf "%s\n\n" "-> Directory exists."
-# else
-#   # Directory does not exist
-#   printf "%s\n\n" "-> Directory does not exist."
-#   execute "Creating themes directory." "mkdir -p \"$HOME/.themes\""
-# fi
-#
-# execute "Symlinking Material Black Cherry GTK theme." "ln -sfT $DOTFILES_DIR/home/user/.themes/Material_Black_Cherry $HOME/.themes/"
-# printf "%s\n\n" "-> Successfully installing themes."
-#
-# # Step 10: Symlink configurations
-#
-# printf "%s\n\n" "-> Starting package configurations..."
-#
-# #Bash
-# printf "%s\n\n" "-> Configuring bash..."
-# execute "Removing default .bashrc file." "rm -rf \"$HOME/.bashrc\""
-# execute "Symlinking new .bashrc file." "ln -sf $DOTFILES_DIR/home/user/.bashrc $HOME/.bashrc"
-# execute "Symlinking scripts directory." "ln -sfT $DOTFILES_DIR/home/user/scripts $HOME/"
-# printf "%s\n\n" "-> Successfully configured bash."
-#
-# #Ani-cli
-# printf "%s\n\n" "-> Configuring ani-cli..."
-# printf "%s\n\n" "-> Checking if ani-cli directory exists."
-#
-# if [ -d "$HOME/.local/state/ani-cli" ]; then
-#   # Directory exists
-#   printf "%s\n\n" "-> Directory exists."
-#   printf "%s\n\n" "-> Checking if ani-hist exists."
-#   if [ -f "$HOME/.local/state/ani-cli/ani-hist" ]; then
-#     # File exists
-#     printf "%s\n\n" "-> File exists."
-#     execute "Removing default ani-hist file." "rm -rf \"$HOME/.local/state/ani-cli/ani-hist\""
-#   fi
-# else
-#   # Directory does not exist
-#   printf "%s\n\n" "-> Directory does not exist."
-#   execute "Creating ani-cli directory." "mkdir -p \"$HOME/.local/state/ani-cli\""
-# fi
-#
-# execute "Symlinking ani-hist file." "ln -sf $DOTFILES_DIR/home/user/.local/state/ani-cli/ani-hist $HOME/.local/state/ani-cli/"
-# execute "Symlinking anicli-continue script." "ln -sf $DOTFILES_DIR/home/user/anicli-continue.sh $HOME/"
-# execute "Symlinking anicli-watch script." "ln -sf $DOTFILES_DIR/home/user/anicli-watch.sh $HOME/"
-# printf "%s\n\n" "-> Successfully configured ani-cli."
-#
+# Step 7: Configure Neovim with LazyVim
+printf "${BOLD_BLUE}%s${RESET}\n" "-> Configuring neovim with lazyvim @ $(timestamp)"
+printf "${BOLD_BLUE}%s${RESET}\n" "-> Checking if nvim configs exists @ $(timestamp)"
+
+for dir in "${NVIM_DIRS[@]}"; do
+  if [ -d "$dir" ]; then
+    # Directory exists
+    printf "${YELLOW}%s${RESET}\n" "-> Directory '$dir' exists @ $(timestamp)"
+    execute "Removing '$dir'" "rm -rf \"$dir\""
+  else
+    # Directory does not exists
+    printf "${TEAL}%s${RESET}\n" "-> Directory '$dir' does not exist @ $(timestamp)"
+  fi
+done
+
+execute "Cloning LazyVim starter" "git clone https://github.com/LazyVim/starter \"$HOME/.config/nvim\""
+execute "Removing default LazyVim config directory" "rm -rf \"$HOME/.config/nvim/lua\""
+execute "Removing .git directory" "rm -rf \"$HOME/.config/nvim/.git\""
+execute "Symlinking custom Neovim configuration" "ln -sfT $DOTFILES_DIR/home/user/.config/nvim/lua $HOME/.config/nvim/"
+
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured neovim @ $(timestamp)"
+
+# Step 8: Install fonts
+printf "${BOLD_BLUE}%s${RESET}\n" "-> Installing fonts @ $(timestamp)"
+printf "${BOLD_BLUE}%s${RESET}\n" "-> Checking if fonts directory exists @ $(timestamp)"
+
+if [ -d "$HOME/.local/share/fonts" ]; then
+  # Directory exists
+  printf "${TEAL}%s${RESET}\n" "-> Found fonts directory @ $(timestamp)"
+else
+  # Directory does not exist
+  printf "${YELLOW}%s${RESET}\n" "-> Could not find fonts directory @ $(timestamp)"
+  execute "Creating fonts directory" "mkdir -p \"$HOME/.local/share/fonts\""
+fi
+
+execute "Copying JetBrainsMono Nerd Font" "cp -rT $DOTFILES_DIR/home/user/.local/share/fonts/JetBrainsMonoNerdFont $HOME/.local/share/fonts/"
+execute "Refreshing font cache" "fc-cache -f -v"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed fonts @ $(timestamp)"
+
+# Step 9: Install icons and themes
+
+#Icons
+printf "${BOLD_BLUE}%s${RESET}\n" "-> Installing icons @ $(timestamp)"
+printf "${BOLD_BLUE}%s${RESET}\n" "-> Checking if icons directory exists @ $(timestamp)"
+
+if [ -d "$HOME/.icons" ]; then
+  # Directory exists
+  printf "${TEAL}%s${RESET}\n" "-> Found icons directory @ $(timestamp)"
+else
+  # Directory does not exist
+  printf "${YELLOW}%s${RESET}\n" "-> Could not find icons directory @ $(timestamp)"
+  execute "Creating icons directory" "mkdir -p \"$HOME/.icons\""
+fi
+
+execute "Symlinking Material Black Cherry icon theme" "ln -sfT $DOTFILES_DIR/home/user/.icons/Material_Black_Cherry $HOME/.icons/"
+execute "Symlinking Oreo Red cursor theme" "ln -sfT $DOTFILES_DIR/home/user/.icons/oreo_red_cursor $HOME/.icons/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed icons @ $(timestamp)"
+
+#Themes
+printf "${BOLD_BLUE}%s${RESET}\n" "-> Installing themes @ $(timestamp)"
+printf "${BOLD_BLUE}%s${RESET}\n" "-> Checking if themes directory exists @ $(timestamp)"
+
+if [ -d "$HOME/.themes" ]; then
+  # Directory exists
+  printf "${TEAL}%s${RESET}\n" "-> Found themes directory @ $(timestamp)"
+else
+  # Directory does not exist
+  printf "${YELLOW}%s${RESET}\n" "-> Could not find themes directory @ $(timestamp)"
+  execute "Creating themes directory" "mkdir -p \"$HOME/.themes\""
+fi
+
+execute "Symlinking Material Black Cherry GTK theme" "ln -sfT $DOTFILES_DIR/home/user/.themes/Material_Black_Cherry $HOME/.themes/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed themes @ $(timestamp)"
+
+# Step 10: Symlink configurations
+printf "${BOLD_BLUE}%s${RESET}\n" "-> Starting package configurations @ $(timestamp)"
+
+#Bash
+printf "${BOLD_BLUE}%s${RESET}\n" "-> Starting bash configuration @ $(timestamp)"
+execute "Removing default .bashrc file" "rm -rf \"$HOME/.bashrc\""
+execute "Symlinking new .bashrc file" "ln -sf $DOTFILES_DIR/home/user/.bashrc $HOME/.bashrc"
+execute "Symlinking scripts directory" "ln -sfT $DOTFILES_DIR/home/user/scripts $HOME/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured bash @ $(timestamp)"
+
+#Ani-cli
+printf "%s\n\n" "-> Configuring ani-cli..."
+printf "%s\n\n" "-> Checking if ani-cli directory exists."
+
+if [ -d "$HOME/.local/state/ani-cli" ]; then
+  # Directory exists
+  printf "%s\n\n" "-> Directory exists."
+  printf "%s\n\n" "-> Checking if ani-hist exists."
+  if [ -f "$HOME/.local/state/ani-cli/ani-hist" ]; then
+    # File exists
+    printf "%s\n\n" "-> File exists."
+    execute "Removing default ani-hist file." "rm -rf \"$HOME/.local/state/ani-cli/ani-hist\""
+  fi
+else
+  # Directory does not exist
+  printf "%s\n\n" "-> Directory does not exist."
+  execute "Creating ani-cli directory." "mkdir -p \"$HOME/.local/state/ani-cli\""
+fi
+
+execute "Symlinking ani-hist file." "ln -sf $DOTFILES_DIR/home/user/.local/state/ani-cli/ani-hist $HOME/.local/state/ani-cli/"
+execute "Symlinking anicli-continue script." "ln -sf $DOTFILES_DIR/home/user/anicli-continue.sh $HOME/"
+execute "Symlinking anicli-watch script." "ln -sf $DOTFILES_DIR/home/user/anicli-watch.sh $HOME/"
+printf "%s\n\n" "-> Successfully configured ani-cli."
+
 # #Fastfetch
 # printf "%s\n\n" "-> Configuring fastfetch..."
 # execute "Symlinking fastfetch directory." "ln -sfT $DOTFILES_DIR/home/user/.config/fastfetch $HOME/.config/"
