@@ -22,19 +22,16 @@ BLUE='\e[34m'
 YELLOW='\e[33m'
 GREEN='\e[32m'
 RED='\e[31m'
-TEAL='\e[96m'
 
 BOLD_BLUE='\e[1;34m'
 BOLD_YELLOW='\e[1;33m'
 BOLD_GREEN='\e[1;32m'
 BOLD_RED='\e[1;31m'
-BOLD_TEAL='\e[1;96m'
 
 DIM_BLUE='\e[2;34m'
 DIM_YELLOW='\e[2;33m'
 DIM_GREEN='\e[2;32m'
 DIM_RED='\e[2;31m'
-DIM_TEAL='\e[2;96m'
 
 DRY_RUN=false
 DOTFILES_DIR="$HOME/arch-hypr-dots"
@@ -168,7 +165,7 @@ execute() {
   local msg="$1"
   local cmd="$2"
   shift
-  printf "${BOLD_BLUE}%s${RESET}\n" "-> $msg @ $(timestamp)"
+  printf "${BLUE}%s${RESET}\n" "-> $msg @ $(timestamp)"
   if [ "$DRY_RUN" = true ]; then
     printf "%s\n" "   DRY_RUN: $cmd"
   else
@@ -200,15 +197,15 @@ printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed pa
 
 # Step 4: Install and update yay
 
-printf "${BOLD_BLUE}%s${RESET}\n" "-> Checking if yay is installed @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if yay is installed @ $(timestamp)"
 
 if ! command -v yay >/dev/null; then
   printf "${YELLOW}%s${RESET}\n" "-> Could not find yay @ $(timestamp)"
-  printf "${BOLD_BLUE}%s${RESET}\n" "-> Checking if Downloads directory exists @ $(timestamp)"
+  printf "${BLUE}%s${RESET}\n" "-> Checking if Downloads directory exists @ $(timestamp)"
 
   if [ -d "$HOME/Downloads" ]; then
     # Directory exists
-    printf "${TEAL}%s${RESET}\n" "-> Found downloads directory @ $(timestamp)"
+    printf "${BLUE}%s${RESET}\n" "-> Found downloads directory @ $(timestamp)"
   else
     # Directory does not exist
     printf "${YELLOW}%s${RESET}\n" "-> Directory 'Downloads' does not exist @ $(timestamp)"
@@ -223,7 +220,7 @@ if ! command -v yay >/dev/null; then
   printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed yay @ $(timestamp)"
 
 else
-  printf "${TEAL}%s${RESET}\n" "-> yay already installed @ $(timestamp)"
+  printf "${BLUE}%s${RESET}\n" "-> yay already installed @ $(timestamp)"
 fi
 
 execute "Updating yay" "yay -Syyu --noconfirm"
@@ -237,11 +234,11 @@ printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed pa
 
 # Step 6: Install Node.js using nvm
 
-printf "${BOLD_BLUE}%s${RESET}\n" "-> Checking if node is installed @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if node is installed @ $(timestamp)"
 
 if ! command -v node >/dev/null; then
   printf "${YELLOW}%s${RESET}\n" "-> Could not find node @ $(timestamp)"
-  printf "${BOLD_BLUE}%s${RESET}\n" "-> Installing node with nvm"
+  printf "${BLUE}%s${RESET}\n" "-> Installing node with nvm"
   execute "Installing nvm" "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install.sh | bash"
   execute "Loading nvm" "source $HOME/.nvm/nvm.sh"
   execute "Installing Node.js v22" "nvm install 22"
@@ -252,8 +249,8 @@ else
 fi
 
 # Step 7: Configure Neovim with LazyVim
-printf "${BOLD_BLUE}%s${RESET}\n" "-> Configuring neovim with lazyvim @ $(timestamp)"
-printf "${BOLD_BLUE}%s${RESET}\n" "-> Checking if nvim configs exists @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Configuring neovim with lazyvim @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if nvim configs exists @ $(timestamp)"
 
 for dir in "${NVIM_DIRS[@]}"; do
   if [ -d "$dir" ]; then
@@ -262,7 +259,7 @@ for dir in "${NVIM_DIRS[@]}"; do
     execute "Removing '$dir'" "rm -rf \"$dir\""
   else
     # Directory does not exists
-    printf "${TEAL}%s${RESET}\n" "-> Directory '$dir' does not exist @ $(timestamp)"
+    printf "${BLUE}%s${RESET}\n" "-> Directory '$dir' does not exist @ $(timestamp)"
   fi
 done
 
@@ -274,12 +271,12 @@ execute "Symlinking custom Neovim configuration" "ln -sfT $DOTFILES_DIR/home/use
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured neovim @ $(timestamp)"
 
 # Step 8: Install fonts
-printf "${BOLD_BLUE}%s${RESET}\n" "-> Installing fonts @ $(timestamp)"
-printf "${BOLD_BLUE}%s${RESET}\n" "-> Checking if fonts directory exists @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Installing fonts @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if fonts directory exists @ $(timestamp)"
 
 if [ -d "$HOME/.local/share/fonts" ]; then
   # Directory exists
-  printf "${TEAL}%s${RESET}\n" "-> Found fonts directory @ $(timestamp)"
+  printf "${BLUE}%s${RESET}\n" "-> Found fonts directory @ $(timestamp)"
 else
   # Directory does not exist
   printf "${YELLOW}%s${RESET}\n" "-> Could not find fonts directory @ $(timestamp)"
@@ -293,12 +290,12 @@ printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed fo
 # Step 9: Install icons and themes
 
 #Icons
-printf "${BOLD_BLUE}%s${RESET}\n" "-> Installing icons @ $(timestamp)"
-printf "${BOLD_BLUE}%s${RESET}\n" "-> Checking if icons directory exists @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Installing icons @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if icons directory exists @ $(timestamp)"
 
 if [ -d "$HOME/.icons" ]; then
   # Directory exists
-  printf "${TEAL}%s${RESET}\n" "-> Found icons directory @ $(timestamp)"
+  printf "${BLUE}%s${RESET}\n" "-> Found icons directory @ $(timestamp)"
 else
   # Directory does not exist
   printf "${YELLOW}%s${RESET}\n" "-> Could not find icons directory @ $(timestamp)"
@@ -310,12 +307,12 @@ execute "Symlinking Oreo Red cursor theme" "ln -sfT $DOTFILES_DIR/home/user/.ico
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed icons @ $(timestamp)"
 
 #Themes
-printf "${BOLD_BLUE}%s${RESET}\n" "-> Installing themes @ $(timestamp)"
-printf "${BOLD_BLUE}%s${RESET}\n" "-> Checking if themes directory exists @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Installing themes @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if themes directory exists @ $(timestamp)"
 
 if [ -d "$HOME/.themes" ]; then
   # Directory exists
-  printf "${TEAL}%s${RESET}\n" "-> Found themes directory @ $(timestamp)"
+  printf "${BLUE}%s${RESET}\n" "-> Found themes directory @ $(timestamp)"
 else
   # Directory does not exist
   printf "${YELLOW}%s${RESET}\n" "-> Could not find themes directory @ $(timestamp)"
@@ -326,95 +323,105 @@ execute "Symlinking Material Black Cherry GTK theme" "ln -sfT $DOTFILES_DIR/home
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed themes @ $(timestamp)"
 
 # Step 10: Symlink configurations
-printf "${BOLD_BLUE}%s${RESET}\n" "-> Starting package configurations @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Starting package configurations @ $(timestamp)"
 
 #Bash
-printf "${BOLD_BLUE}%s${RESET}\n" "-> Starting bash configuration @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Starting bash configuration @ $(timestamp)"
 execute "Removing default .bashrc file" "rm -rf \"$HOME/.bashrc\""
 execute "Symlinking new .bashrc file" "ln -sf $DOTFILES_DIR/home/user/.bashrc $HOME/.bashrc"
 execute "Symlinking scripts directory" "ln -sfT $DOTFILES_DIR/home/user/scripts $HOME/"
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured bash @ $(timestamp)"
 
 #Ani-cli
-printf "%s\n\n" "-> Configuring ani-cli..."
-printf "%s\n\n" "-> Checking if ani-cli directory exists."
+printf "${BLUE}%s${RESET}\n" "-> Configuring ani-cli @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if ani-cli directory exists @ $(timestamp)"
 
 if [ -d "$HOME/.local/state/ani-cli" ]; then
-  # Directory exists
-  printf "%s\n\n" "-> Directory exists."
-  printf "%s\n\n" "-> Checking if ani-hist exists."
-  if [ -f "$HOME/.local/state/ani-cli/ani-hist" ]; then
+  # Directory existsWOD ():
+  printf "${BLUE}%s${RESET}\n" "-> Found ani-cli directory @ $(timestamp)"
+  printf "${BLUE}%s${RESET}\n" "-> Checking if ani-hist file exists @ $(timestamp)"
+  if [ -e "$HOME/.local/state/ani-cli/ani-hist" ]; then
     # File exists
-    printf "%s\n\n" "-> File exists."
-    execute "Removing default ani-hist file." "rm -rf \"$HOME/.local/state/ani-cli/ani-hist\""
+    printf "${YELLOW}%s${RESET}\n" "-> Found ani-hist file @ $(timestamp)"
+    execute "Removing default ani-hist file" "rm -rf \"$HOME/.local/state/ani-cli/ani-hist\""
+  else
+    printf "${BLUE}%s${RESET}\n" "-> Could not find ani-hist file @ $(timestamp)"
   fi
 else
   # Directory does not exist
-  printf "%s\n\n" "-> Directory does not exist."
-  execute "Creating ani-cli directory." "mkdir -p \"$HOME/.local/state/ani-cli\""
+  printf "${YELLOW}%s${RESET}\n" "-> Could not find ani-cli directory @ $(timestamp)"
+  execute "Creating ani-cli directory" "mkdir -p \"$HOME/.local/state/ani-cli\""
 fi
 
-execute "Symlinking ani-hist file." "ln -sf $DOTFILES_DIR/home/user/.local/state/ani-cli/ani-hist $HOME/.local/state/ani-cli/"
-execute "Symlinking anicli-continue script." "ln -sf $DOTFILES_DIR/home/user/anicli-continue.sh $HOME/"
-execute "Symlinking anicli-watch script." "ln -sf $DOTFILES_DIR/home/user/anicli-watch.sh $HOME/"
-printf "%s\n\n" "-> Successfully configured ani-cli."
+execute "Symlinking ani-hist file" "ln -sf $DOTFILES_DIR/home/user/.local/state/ani-cli/ani-hist $HOME/.local/state/ani-cli/"
+execute "Symlinking anicli-continue script" "ln -sf $DOTFILES_DIR/home/user/anicli-continue.sh $HOME/"
+execute "Symlinking anicli-watch script" "ln -sf $DOTFILES_DIR/home/user/anicli-watch.sh $HOME/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured ani-cli @ $(timestamp)"
 
-# #Fastfetch
-# printf "%s\n\n" "-> Configuring fastfetch..."
-# execute "Symlinking fastfetch directory." "ln -sfT $DOTFILES_DIR/home/user/.config/fastfetch $HOME/.config/"
-# printf "%s\n\n" "-> Successfully configured fastfetch."
-#
-# #Feather
-# printf "%s\n\n" "-> Configuring Feather..."
-# printf "%s\n\n" "-> Checking if Feather directory exists."
-#
-# if [ -d "$HOME/.config/Feather" ]; then
-#   # Directory exists
-#   printf "%s\n\n" "-> Directory exists."
-#   execute "Removing default Feather directory." "rm -rf \"$HOME/.config/Feather\""
-# else
-#   # Directory does not exist
-#   printf "%s\n\n" "-> Directory does not exist."
-# fi
-#
-# execute "Symlinking Feather directory." "ln -sfT $DOTFILES_DIR/home/user/.config/Feather $HOME/.config/"
-# execute "Symlinking feather script." "ln -sf $DOTFILES_DIR/home/user/feather_cava_tmux.sh $HOME/"
-# printf "%s\n\n" "-> Successfully configured Feather."
-#
-# #Geany
-# printf "%s\n\n" "-> Configuring geany..."
-# printf "%s\n\n" "-> Checking if geany directory exists."
-#
-# if [ -d "$HOME/.config/geany" ]; then
-#   # Directory exists
-#   printf "%s\n\n" "-> Directory exists."
-#   execute "Removing default geany.conf file" "rm -rf \"$HOME/.config/geany/geany.conf\""
-#   for dir in "${GEANY_DIRS[@]}"; do
-#     printf "%s\n\n" "-> Checking if '$dir' exists."
-#     if [ -d "$dir" ]; then
-#       # Directory exists
-#       execute "Directory '$dir' exists.\nRemoving '$dir'." "rm -rf \"$dir\""
-#     else
-#       # Directory does not exists
-#       printf "%s\n\n" "-> Directory '$dir' does not exist."
-#     fi
-#   done
-# else
-#   # Directory does not exist
-#   printf "%s\n\n" "-> Directory does not exist."
-# fi
-#
-# execute "Symlinking geany.conf file." "ln -sf $DOTFILES_DIR/home/user/.config/geany/geany.conf $HOME/.config/geany/"
-# execute "Symlinking colorschemes directory." "ln -sfT $DOTFILES_DIR/home/user/.config/geany/colorschemes $HOME/.config/geany/"
-# execute "Symlinking plugins directory." "ln -sfT $DOTFILES_DIR/home/user/.config/geany/plugins $HOME/.config/geany/"
-# printf "%s\n\n" "-> Successfully configured geany."
-#
-# #Hyprland
-# printf "%s\n\n" "-> Configuring hyprland..."
-# execute "Removing default hyprland.conf file." "rm -rf \"$HOME/.config/hypr/hyprland.conf\""
-# execute "Symlinking new hyprland.conf file." "ln -sf $DOTFILES_DIR/home/user/.config/hypr/hyprland.conf $HOME/.config/hypr/"
-# printf "%s\n\n" "-> Successfully configured hyprland."
-#
+#Fastfetch
+printf "${BLUE}%s${RESET}\n" "-> Configuring fastfetch @ $(timestamp)"
+execute "Symlinking fastfetch directory" "ln -sfT $DOTFILES_DIR/home/user/.config/fastfetch $HOME/.config/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured fastfetch @ $(timestamp)"
+
+#Feather
+printf "${BLUE}%s${RESET}\n" "-> Configuring Feather @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if Feather directory exists @ $(timestamp)"
+
+if [ -d "$HOME/.config/Feather" ]; then
+  # Directory exists
+  printf "${YELLOW}%s${RESET}\n" "-> Found Feather directory @ $(timestamp)"
+  execute "Removing default Feather directory" "rm -rf \"$HOME/.config/Feather\""
+else
+  # Directory does not exist
+  printf "${BLUE}%s${RESET}\n" "-> Feather directory does not exist @ $(timestamp)"
+fi
+
+execute "Symlinking Feather directory" "ln -sfT $DOTFILES_DIR/home/user/.config/Feather $HOME/.config/"
+execute "Symlinking feather script" "ln -sf $DOTFILES_DIR/home/user/feather.sh $HOME/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured Feather @ $(timestamp)"
+
+#Geany
+printf "${BLUE}%s${RESET}\n" "-> Configuring geany @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if geany directory exists @ $(timestamp)"
+
+if [ -d "$HOME/.config/geany" ]; then
+  # Directory exists
+  printf "${BLUE}%s${RESET}\n" "-> Found geany directory @ $(timestamp)"
+  printf "${BLUE}%s${RESET}\n" "-> Checking if geany.conf file exists @ $(timestamp)"
+  if [ -e "$HOME/.config/geany/geany.conf" ]; then
+    printf "${YELLOW}%s${RESET}\n" "-> Found geany.conf file @ $(timestamp)"
+    execute "Removing default geany.conf file" "rm -rf \"$HOME/.config/geany/geany.conf\""
+  else
+    printf "${BLUE}%s${RESET}\n" "-> geany.conf file does not exist @ $(timestamp)"
+  fi
+  for dir in "${GEANY_DIRS[@]}"; do
+    printf "${BLUE}%s${RESET}\n" "-> Checking if '$dir' exists @ $(timestamp)"
+    if [ -d "$dir" ]; then
+      # Directory exists
+      printf "${YELLOW}%s${RESET}\n" "-> Directory '$dir' exists @ $(timestamp)"
+      execute "Removing '$dir'" "rm -rf \"$dir\""
+    else
+      # Directory does not exists
+      printf "${BLUE}%s${RESET}\n" "-> Directory '$dir' does not exist @ $(timestamp)"
+    fi
+  done
+else
+  # Directory does not exist
+  printf "${YELLOW}%s${RESET}\n" "-> Directory does not exist @ $(timestamp)"
+  execute "Creating geany directory" "mkdir -p \"$HOME/.config/geany\""
+fi
+
+execute "Symlinking geany.conf file" "ln -sf $DOTFILES_DIR/home/user/.config/geany/geany.conf $HOME/.config/geany/"
+execute "Symlinking colorschemes directory" "ln -sfT $DOTFILES_DIR/home/user/.config/geany/colorschemes $HOME/.config/geany/"
+execute "Symlinking plugins directory" "ln -sfT $DOTFILES_DIR/home/user/.config/geany/plugins $HOME/.config/geany/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured geany @ $(timestamp)"
+
+#Hyprland
+printf "${BLUE}%s${RESET}\n" "-> Configuring hyprland @ $(timestamp)"
+execute "Removing default hyprland.conf file" "rm -rf \"$HOME/.config/hypr/hyprland.conf\""
+execute "Symlinking new hyprland.conf file" "ln -sf $DOTFILES_DIR/home/user/.config/hypr/hyprland.conf $HOME/.config/hypr/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured hyprland @ $(timestamp)"
+
 # #Kitty
 # printf "%s\n\n" "-> Configuring kitty..."
 # printf "%s\n\n" "-> Checking if kitty directory exists."
@@ -436,7 +443,7 @@ printf "%s\n\n" "-> Successfully configured ani-cli."
 #   # Directory exists
 #   printf "%s\n\n" "-> Directory exists."
 #   printf "%s\n\n" "-> Checking if kitty.desktop exists."
-#   if [ -f "$HOME/.local/share/applications/kitty.desktop" ]; then
+#   if [ -e "$HOME/.local/share/applications/kitty.desktop" ]; then
 #     # File exists
 #     printf "%s\n\n" "-> File exists."
 #     execute "Removing default kitty.desktop file." "rm -rf \"$HOME/.local/share/applications/kitty.desktop\""
@@ -459,7 +466,7 @@ printf "%s\n\n" "-> Successfully configured ani-cli."
 #   # Directory exists
 #   printf "%s\n\n" "-> Directory exists."
 #   printf "%s\n\n" "-> Checking if mpv.conf exists."
-#   if [ -f "$HOME/.config/mpv/mpv.conf" ]; then
+#   if [ -e "$HOME/.config/mpv/mpv.conf" ]; then
 #     # File exists
 #     printf "%s\n\n" "-> File exists."
 #     execute "Removing default mpv.conf file." "rm -rf \"$HOME/.config/mpv/mpv.conf\""
@@ -481,7 +488,7 @@ printf "%s\n\n" "-> Successfully configured ani-cli."
 #   # Directory exists
 #   printf "%s\n\n" "-> Directory exists."
 #   printf "%s\n\n" "-> Checking if arch.conf exists."
-#   if [ -f "/etc/cmdline.d/arch.conf" ]; then
+#   if [ -e "/etc/cmdline.d/arch.conf" ]; then
 #     # File exists
 #     printf "%s\n\n" "-> File exists."
 #     execute "Removing default arch.conf file." "sudo rm -rf \"/etc/cmdline.d/arch.conf\""
@@ -505,7 +512,7 @@ printf "%s\n\n" "-> Successfully configured ani-cli."
 #   # Directory exists
 #   printf "%s\n\n" "-> Directory exists."
 #   printf "%s\n\n" "-> Checking if config.py exists."
-#   if [ -f "$HOME/.config/qutebrowser/config.py" ]; then
+#   if [ -e "$HOME/.config/qutebrowser/config.py" ]; then
 #     # File exists
 #     printf "%s\n\n" "-> File exists."
 #     execute "Removing default config.py file." "rm -rf \"$HOME/.config/qutebrowser/config.py\""
@@ -539,7 +546,7 @@ printf "%s\n\n" "-> Successfully configured ani-cli."
 #   # Directory exists
 #   printf "%s\n\n" "-> Directory exists."
 #   printf "%s\n\n" "-> Checking if sddm.conf exists."
-#   if [ -f "/etc/sddm.conf.d/sddm.conf" ]; then
+#   if [ -e "/etc/sddm.conf.d/sddm.conf" ]; then
 #     # File exists
 #     printf "%s\n\n" "-> File exists."
 #     execute "Removing default sddm.conf file." "sudo rm -rf \"/etc/sddm.conf.d/sddm.conf\""
@@ -607,7 +614,7 @@ printf "%s\n\n" "-> Successfully configured ani-cli."
 #   # Directory exists
 #   printf "%s\n\n" "-> Directory exists."
 #   printf "%s\n\n" "-> Checking if helpers.rc exists."
-#   if [ -f "$HOME/.config/xfce4/helpers.rc" ]; then
+#   if [ -e "$HOME/.config/xfce4/helpers.rc" ]; then
 #     # File exists
 #     printf "%s\n\n" "-> File exists."
 #     execute "Removing default helpers.rc file." "rm -rf \"$HOME/.config/xfce4/helpers.rc\""
@@ -635,7 +642,7 @@ printf "%s\n\n" "-> Successfully configured ani-cli."
 #   # Directory exists
 #   printf "%s\n\n" "-> Directory exists."
 #   printf "%s\n\n" "-> Checking if kitty.desktop exists."
-#   if [ -f "$HOME/.local/share/xfce4/helpers/kitty.desktop" ]; then
+#   if [ -e "$HOME/.local/share/xfce4/helpers/kitty.desktop" ]; then
 #     # File exists
 #     printf "%s\n\n" "-> File exists."
 #     execute "Removing default kitty.desktop file." "rm -rf \"$HOME/.local/share/xfce4/helpers/kitty.desktop\""
