@@ -2,6 +2,13 @@
 
 set -euo pipefail
 
+# Sources
+
+source "$(dirname "$0")/install_scripts/formatting.sh"
+source "$(dirname "$0")/install_scripts/system_packages.sh"
+source "$(dirname "$0")/install_scripts/aur_packages.sh"
+source "$(dirname "$0")/install_scripts/paths.sh"
+
 # Ask for sudo password upfront
 sudo -v
 
@@ -14,137 +21,7 @@ done 2>/dev/null &
 
 # Variables
 
-CHECKMARK=$(printf '\u2713')
-
-RESET='\e[0m'
-
-BLUE='\e[34m'
-YELLOW='\e[33m'
-GREEN='\e[32m'
-RED='\e[31m'
-
-BOLD_BLUE='\e[1;34m'
-BOLD_YELLOW='\e[1;33m'
-BOLD_GREEN='\e[1;32m'
-BOLD_RED='\e[1;31m'
-
-DIM_BLUE='\e[2;34m'
-DIM_YELLOW='\e[2;33m'
-DIM_GREEN='\e[2;32m'
-DIM_RED='\e[2;31m'
-
 DRY_RUN=false
-DOTFILES_DIR="$HOME/arch-hypr-dots"
-PACMAN_PACKAGES=(
-  bash-completion
-  bat
-  blueman
-  btop
-  cargo
-  cava
-  curl
-  dosfstools
-  eog
-  expac
-  eza
-  fastfetch
-  fd
-  feh
-  ffmpeg
-  firefox-developer-edition
-  fzf
-  geany
-  geany-plugins
-  gimp
-  glow
-  gnome-disk-utility
-  gnome-system-monitor
-  go
-  gtk4
-  gvfs
-  htop
-  hwinfo
-  hyprpicker
-  inkscape
-  lazygit
-  less
-  linux-zen-headers
-  lynx
-  man-db
-  mpv
-  neovim
-  noto-fonts-emoji
-  ntfs-3g
-  nwg-look
-  otf-font-awesome
-  patch
-  pavucontrol
-  pipewire-alsa
-  pipewire-pulse
-  plymouth
-  pulsemixer
-  pv
-  python-pipx
-  python-pynvim
-  python-tinycss2
-  qbittorrent
-  qt5-graphicaleffects
-  qt5-quickcontrols2
-  qt5-svg
-  qt6ct
-  qutebrowser
-  reflector
-  ripgrep
-  rsync
-  ruby
-  rust
-  sed
-  starship
-  swaync
-  swww
-  syncthing
-  termusic
-  thunar
-  thunar-volman
-  tldr
-  tmux
-  tree
-  tumbler
-  udiskie
-  ugrep
-  unrar
-  unzip
-  waybar
-  wev
-  wl-clipboard
-  wpaperd
-  xorg-xcursorgen
-  yad
-  yt-dlp
-)
-YAY_PACKAGES=(
-  ani-cli
-  ani-skip-git
-  bluetooth-support
-  google-chorome
-  lobster-git
-  plymouth-theme-arch-darwin
-  swaylock-effects
-  wallust
-  wlogout
-  ytermusic-bin
-)
-NVIM_DIRS=(
-  "$HOME/.config/nvim"
-  "$HOME/.local/share/nvim"
-  "$HOME/.local/state/nvim"
-  "$HOME/.cache/nvim"
-)
-NVM_VERSION="v0.40.3"
-GEANY_DIRS=(
-  "$HOME/.config/geany/colorschemes"
-  "$HOME/.config/geany/plugins"
-)
 
 # Parse arguments
 for arg in "$@"; do
@@ -584,12 +461,12 @@ printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured h
 #
 # execute "Copying sugar-dark theme to SDDM themes directory" "sudo cp -rT $DOTFILES_DIR/usr/share/sddm/themes/sugar-dark /usr/share/sddm/themes/"
 # printf "%s\n\n" "-> Successfully configured SDDM."
-#
-# #Starship
-# printf "%s\n\n" "-> Configuring starship..."
-# execute "Symlinking starship.toml file." "ln -sf $DOTFILES_DIR/home/user/.config/starship.toml $HOME/.config/"
-# printf "%s\n\n" "-> Successfully configured starship."
-#
+
+#Starship
+printf "${BLUE}%s${RESET}\n" "-> Configuring starship @ $(timestamp)"
+execute "Symlinking starship.toml file" "ln -sf $DOTFILES_DIR/home/user/.config/starship.toml $HOME/.config/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured starship @ $(timestamp)"
+
 # #swaylock-effects
 # printf "%s\n\n" "-> Configuring swaylock-effects..."
 # printf "%s\n\n" "-> Checking if swaylock directory exists."
@@ -656,13 +533,13 @@ printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured h
 # execute "Symlinking kitty.desktop file." "ln -sf $DOTFILES_DIR/home/user/.local/share/xfce4/helpers/kitty.desktop $HOME/.local/share/xfce4/helpers/"
 # execute "Symlinking helpers.rc file." "ln -sf $DOTFILES_DIR/home/user/.config/xfce4/helpers.rc $HOME/.config/xfce4/"
 # printf "%s\n\n" "-> Successfully configured thunar."
-#
-# #Tmux
-# printf "%s\n\n" "-> Configuring tmux..."
-# execute "Symlinking .tmux directory." "ln -sfT $DOTFILES_DIR/home/user/.tmux $HOME/"
-# execute "Symlinking .tmux.conf file." "ln -sf $DOTFILES_DIR/home/user/.tmux.conf $HOME/"
-# printf "%s\n\n" "-> Successfully configured tmux."
-#
+
+#Tmux
+printf "${BLUE}%s${RESET}\n" "-> Configuring tmux @ $(timestamp)"
+execute "Symlinking .tmux directory" "ln -sfT $DOTFILES_DIR/home/user/.tmux $HOME/"
+execute "Symlinking .tmux.conf file" "ln -sf $DOTFILES_DIR/home/user/.tmux.conf $HOME/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured tmux @ $(timestamp)"
+
 # #Waybar
 # printf "%s\n\n" "-> Configuring waybar..."
 # printf "%s\n\n" "-> Checking if waybar directory exists."

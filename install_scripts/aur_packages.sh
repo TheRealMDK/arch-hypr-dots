@@ -1,0 +1,12 @@
+YAY_PACKAGES=(
+  ani-cli
+  ani-skip-git
+  bluetooth-support
+  google-chrome
+  lobster-git
+  plymouth-theme-arch-darwin
+  swaylock-effects
+  wallust
+  wlogout
+  ytermusic-bin
+)
