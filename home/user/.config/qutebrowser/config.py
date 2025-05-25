@@ -1,23 +1,23 @@
 config.load_autoconfig()
 
-c.fonts.hints = 'bold 25px default_family'
+c.fonts.hints = "bold 25px default_family"
 
-config.bind('zi', 'zoom-in')
-config.bind('zo', 'zoom-out')
-config.bind('zz', 'zoom 100%')
-config.bind('t', 'open -t')
-config.bind('q', 'q')
-config.bind('<Ctrl-m>', 'config-source')
+config.bind("zi", "zoom-in")
+config.bind("zo", "zoom-out")
+config.bind("zz", "zoom 100%")
+config.bind("t", "open -t")
+config.bind("q", "q")
+config.bind("<Ctrl-m>", "config-source")
 
-c.url.default_page = 'https://www.google.co.za/'
-c.url.start_pages = 'https://www.google.co.za/'
+c.url.default_page = "https://www.google.co.za/"
+c.url.start_pages = "https://www.google.co.za/"
 c.url.searchengines = {
-    'DEFAULT': 'https://www.google.com/search?q={}',
-    'ddg': 'https://duckduckgo.com/?q={}',
+    "DEFAULT": "https://www.google.com/search?q={}",
+    "ddg": "https://duckduckgo.com/?q={}",
 }
 
 c.auto_save.session = True
 
-c.colors.webpage.darkmode.enabled = True
+# c.colors.webpage.darkmode.enabled = True
 
-config.source('themes/onedark.py')
+config.source("themes/onedark.py")

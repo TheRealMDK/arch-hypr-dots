@@ -214,7 +214,7 @@ printf "${BLUE}%s${RESET}\n" "-> Configuring ani-cli @ $(timestamp)"
 printf "${BLUE}%s${RESET}\n" "-> Checking if ani-cli directory exists @ $(timestamp)"
 
 if [ -d "$HOME/.local/state/ani-cli" ]; then
-  # Directory existsWOD ():
+  # Directory exists
   printf "${BLUE}%s${RESET}\n" "-> Found ani-cli directory @ $(timestamp)"
   printf "${BLUE}%s${RESET}\n" "-> Checking if ani-hist file exists @ $(timestamp)"
   if [ -e "$HOME/.local/state/ani-cli/ani-hist" ]; then
@@ -231,12 +231,12 @@ else
 fi
 
 execute "Symlinking ani-hist file" "ln -sf $DOTFILES_DIR/home/user/.local/state/ani-cli/ani-hist $HOME/.local/state/ani-cli/"
-execute "Symlinking anicli-continue script" "ln -sf $DOTFILES_DIR/home/user/anicli-continue.sh $HOME/"
-execute "Symlinking anicli-watch script" "ln -sf $DOTFILES_DIR/home/user/anicli-watch.sh $HOME/"
+execute "Symlinking anicli-continue.sh script" "ln -sf $DOTFILES_DIR/home/user/anicli-continue.sh $HOME/"
+execute "Symlinking anicli-watch.sh script" "ln -sf $DOTFILES_DIR/home/user/anicli-watch.sh $HOME/"
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured ani-cli @ $(timestamp)"
 
 #Fastfetch
-printf "${BLUE}%s${RESET}\n" "-> Configuring Fastfetch @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Configuring fastfetch @ $(timestamp)"
 printf "${BLUE}%s${RESET}\n" "-> Checking if fastfetch directory exists @ $(timestamp)"
 
 if [ -d "$HOME/.config/fastfetch" ]; then
@@ -249,10 +249,10 @@ else
 fi
 
 execute "Symlinking fastfetch directory" "ln -sfT $DOTFILES_DIR/home/user/.config/fastfetch $HOME/.config/"
-printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured Fastfetch @ $(timestamp)"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured fastfetch @ $(timestamp)"
 
 #Feather
-printf "${BLUE}%s${RESET}\n" "-> Configuring Feather @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Configuring feather @ $(timestamp)"
 printf "${BLUE}%s${RESET}\n" "-> Checking if Feather directory exists @ $(timestamp)"
 
 if [ -d "$HOME/.config/Feather" ]; then
@@ -265,8 +265,8 @@ else
 fi
 
 execute "Symlinking Feather directory" "ln -sfT $DOTFILES_DIR/home/user/.config/Feather $HOME/.config/"
-execute "Symlinking Feather script" "ln -sf $DOTFILES_DIR/home/user/feather.sh $HOME/"
-printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured Feather @ $(timestamp)"
+execute "Symlinking feather.sh script" "ln -sf $DOTFILES_DIR/home/user/feather.sh $HOME/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured feather @ $(timestamp)"
 
 #Geany
 printf "${BLUE}%s${RESET}\n" "-> Configuring geany @ $(timestamp)"
@@ -348,314 +348,356 @@ execute "Symlinking kitty.desktop file" "ln -sf $DOTFILES_DIR/home/user/.local/s
 execute "Updating desktop database" "update-desktop-database /home/$USER/.local/share/applications"
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured kitty @ $(timestamp)"
 
-##Mpv
-#printf "${BLUE}%s${RESET}\n" "-> Configuring mpv @ $(timestamp)"
-#printf "${BLUE}%s${RESET}\n" "-> Checking if mpv directory exists @ $(timestamp)"
-#
-#if [ -d "$HOME/.config/mpv" ]; then
-#  # Directory exists
-#  printf "${BLUE}%s${RESET}\n" "-> Found mpv directory @ $(timestamp)"
-#  printf "${BLUE}%s${RESET}\n" "-> Checking if mpv.conf exists @ $(timestamp)"
-#  if [ -e "$HOME/.config/mpv/mpv.conf" ]; then
-#    # File exists
-#    printf "${YELLOW}%s${RESET}\n" "-> Found mpv.conf file @ $(timestamp)"
-#    execute "Removing default mpv.conf file" "rm -rf \"$HOME/.config/mpv/mpv.conf\""
-#  else
-#    printf "${BLUE}%s${RESET}\n" "-> Could not find mpv.conf file @ $(timestamp)"
-#  fi
-#else
-#  # Directory does not exist
-#  printf "${YELLOW}%s${RESET}\n" "-> Could not find mpv directory @ $(timestamp)"
-#  execute "Creating mpv directory" "mkdir -p \"$HOME/.config/mpv\""
-#fi
-#
-#execute "Symlinking mpv.conf file" "ln -sf $DOTFILES_DIR/home/user/.config/mpv/mpv.conf $HOME/.config/mpv/"
-#printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured mpv @ $(timestamp)"
-#
-##Plymouth
-#printf "${BLUE}%s${RESET}\n" "-> Configuring plymouth @ $(timestamp)"
-#printf "${BLUE}%s${RESET}\n" "-> Checking if cmdline.d directory exists @ $(timestamp)"
-#
-#if [ -d "/etc/cmdline.d" ]; then
-#  # Directory exists
-#  printf "${BLUE}%s${RESET}\n" "-> Found cmdline.d directory @ $(timestamp)"
-#  printf "${BLUE}%s${RESET}\n" "-> Checking if arch.conf exists @ $(timestamp)"
-#  if [ -e "/etc/cmdline.d/arch.conf" ]; then
-#    # File exists
-#    printf "${YELLOW}%s${RESET}\n" "-> Found arch.conf file @ $(timestamp)"
-#    execute "Removing default arch.conf file" "sudo rm -rf \"/etc/cmdline.d/arch.conf\""
-#  else
-#    printf "${BLUE}%s${RESET}\n" "-> Could not find arch.conf file @ $(timestamp)"
-#  fi
-#else
-#  # Directory does not exist
-#  printf "${BLUE}%s${RESET}\n" "-> Could not find cmdline.d directory @ $(timestamp)"
-#  execute "Creating cmdline.d directory" "sudo mkdir -p \"/etc/cmdline.d\""
-#fi
-#
-#execute "Creating blank arch.conf file" "sudo touch /etc/cmdline.d/arch.conf"
-#execute "Setting kernel parameters for Plymouth" "printf 'options $(cat /etc/kernel/cmdline) quiet splash' | sudo tee /etc/cmdline.d/arch.conf"
-#execute "Setting Plymouth theme to arch-darwin" "sudo plymouth-set-default-theme -R arch-darwin"
-#printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured plymouth @ $(timestamp)"
-#
-##Qutebrowser
-#printf "${BLUE}%s${RESET}\n" "-> Configuring qutebrowser @ $(timestamp)"
-#printf "${BLUE}%s${RESET}\n" "-> Checking if qutebrowser directory exists @ $(timestamp)"
-#
-#if [ -d "$HOME/.config/qutebrowser" ]; then
-#  # Directory exists
-#  printf "${BLUE}%s${RESET}\n" "-> Found qutebrowser directory @ $(timestamp)"
-#  printf "${BLUE}%s${RESET}\n" "-> Checking if config.py exists @ $(timestamp)"
-#  if [ -e "$HOME/.config/qutebrowser/config.py" ]; then
-#    # File exists
-#    printf "${YELLOW}%s${RESET}\n" "-> Found config.py file @ $(timestamp)"
-#    execute "Removing default config.py file" "rm -rf \"$HOME/.config/qutebrowser/config.py\""
-#  else
-#    printf "${BLUE}%s${RESET}\n" "-> Could not find config.py file @ $(timestamp)"
-#  fi
-#else
-#  # Directory does not exist
-#  printf "${YELLOW}%s${RESET}\n" "-> Could not find qutebrowser directory @ $(timestamp)"
-#  execute "Creating qutebrowser directory" "mkdir -p \"$HOME/.config/qutebrowser\""
-#fi
-#
-#execute "Symlinking config.py file" "ln -sf $DOTFILES_DIR/home/user/.config/qutebrowser/config.py $HOME/.config/qutebrowser/"
-#
-#printf "${BLUE}%s${RESET}\n" "-> Checking if qutebrowser themes directory exists @ $(timestamp)"
-#
-#if [ -d "$HOME/.config/qutebrowser/themes" ]; then
-#  # Directory exists
-#  printf "${BLUE}%s${RESET}\n" "-> Found qutebrowser themes directory @ $(timestamp)"
-#  execute "Copying onedark.py" "cp $DOTFILES_DIR/home/user/.config/qutebrowser/themes/onedark.py $HOME/.config/qutebrowser/themes/"
-#else
-#  # Directory does not exist
-#  printf "${BLUE}%s${RESET}\n" "-> Could not find qutebrowser themes directory @ $(timestamp)"
-#  execute "Copying themes directory" "cp -rT $DOTFILES_DIR/home/user/.config/qutebrowser/themes $HOME/.config/qutebrowser/"
-#fi
-#printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured qutebrowser @ $(timestamp)"
-#
-##SDDM
-#printf "%s\n\n" "-> Configuring SDDM..."
-#printf "%s\n\n" "-> Checking if sddm.conf.d directory exists."
-#
-#if [ -d "/etc/sddm.conf.d" ]; then
-#  # Directory exists
-#  printf "%s\n\n" "-> Directory exists."
-#  printf "%s\n\n" "-> Checking if sddm.conf exists."
-#  if [ -e "/etc/sddm.conf.d/sddm.conf" ]; then
-#    # File exists
-#    printf "%s\n\n" "-> File exists."
-#    execute "Removing default sddm.conf file." "sudo rm -rf \"/etc/sddm.conf.d/sddm.conf\""
-#  fi
-#else
-#  # Directory does not exist
-#  printf "%s\n\n" "-> Directory does not exist."
-#  execute "Creating sddm.conf.d directory." "sudo mkdir -p \"/etc/sddm.conf.d\""
-#fi
-#
-#execute "Creating blank sddm.conf file." "sudo touch /etc/sddm.conf.d/sddm.conf"
-#execute "Writing SDDM configuration" "printf '[General]\nNumlock=on\n\n[Theme]\nCurrent=sugar-dark' | sudo tee /etc/sddm.conf.d/sddm.conf"
-#
-#printf "%s\n\n" "-> Checking if sddm directory exists."
-#
-#if [ -d "/usr/share/sddm" ]; then
-#  # Directory exists
-#  printf "%s\n\n" "-> sddm directory exists."
-#else
-#  # Directory does not exist
-#  printf "%s\n\n" "-> Directory does not exist."
-#  execute "Creating sddm directory." "sudo mkdir -p \"/usr/share/sddm/\""
-#fi
-#
-#printf "%s\n\n" "-> Checking if sddm themes directory exists."
-#
-#if [ -d "/usr/share/sddm/themes" ]; then
-#  # Directory exists
-#  printf "%s\n\n" "-> Directory exists."
-#else
-#  # Directory does not exist
-#  printf "%s\n\n" "-> Directory does not exist."
-#  execute "Creating sddm themes directory." "sudo mkdir -p \"/usr/share/sddm/themes\""
-#fi
-#
-#execute "Copying sugar-dark theme to SDDM themes directory" "sudo cp -rT $DOTFILES_DIR/usr/share/sddm/themes/sugar-dark /usr/share/sddm/themes/"
-#printf "%s\n\n" "-> Successfully configured SDDM."
-#
-##Starship
-#printf "${BLUE}%s${RESET}\n" "-> Configuring starship @ $(timestamp)"
-#printf "${BLUE}%s${RESET}\n" "-> Checking if starship.toml file exists @ $(timestamp)"
-#
-#if [ -e "$HOME/.config/starship.toml" ]; then
-#  # File exists
-#  printf "${YELLOW}%s${RESET}\n" "-> Found starship.toml file @ $(timestamp)"
-#  execute "Removing default starship.toml file" "rm -rf \"$HOME/.config/starship.toml\""
-#else
-#  # File does not exist
-#  printf "${BLUE}%s${RESET}\n" "-> starship.toml file does not exist @ $(timestamp)"
-#fi
-#
-#execute "Symlinking starship.toml file" "ln -sf $DOTFILES_DIR/home/user/.config/starship.toml $HOME/.config/"
-#printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured starship @ $(timestamp)"
-#
-##swaylock-effects
-#printf "%s\n\n" "-> Configuring swaylock-effects..."
-#printf "%s\n\n" "-> Checking if swaylock directory exists."
-#
-#if [ -d "$HOME/.config/swaylock" ]; then
-#  # Directory exists
-#  printf "%s\n\n" "-> Directory exists."
-#  execute "Removing default swaylock directory." "rm -rf \"$HOME/.config/swaylock\""
-#else
-#  # Directory does not exist
-#  printf "%s\n\n" "-> Directory does not exist."
-#fi
-#
-#execute "Symlinking swaylock directory." "ln -sfT $DOTFILES_DIR/home/user/.config/swaylock $HOME/.config/"
-#printf "%s\n\n" "-> Successfully configured swaylock-effects."
-#
-##Thunar
-#printf "%s\n\n" "-> Configuring thunar..."
-#printf "%s\n\n" "-> Checking if xfce4 directory exists in '~/.config/'."
-#
-#if [ -d "$HOME/.config/xfce4" ]; then
-#  # Directory exists
-#  printf "%s\n\n" "-> Directory exists."
-#  printf "%s\n\n" "-> Checking if helpers.rc exists."
-#  if [ -e "$HOME/.config/xfce4/helpers.rc" ]; then
-#    # File exists
-#    printf "%s\n\n" "-> File exists."
-#    execute "Removing default helpers.rc file." "rm -rf \"$HOME/.config/xfce4/helpers.rc\""
-#  fi
-#else
-#  # Directory does not exist
-#  printf "%s\n\n" "-> Directory does not exist."
-#  execute "Creating xfce4 directory in \"~/.config/\"." "mkdir -p \"$HOME/.config/xfce4\""
-#fi
-#
-#printf "%s\n\n" "-> Checking if xfce4 directory exists in '~/.local/share/'."
-#
-#if [ -d "$HOME/.local/share/xfce4" ]; then
-#  # Directory exists
-#  printf "%s\n\n" "-> xfce4 directory exists."
-#else
-#  # Directory does not exist
-#  printf "%s\n\n" "-> Directory does not exist."
-#  execute "Creating xfce4 directory in \"~/.local/share/\"." "mkdir -p \"$HOME/.local/share/xfce4\""
-#fi
-#
-#printf "%s\n\n" "-> Checking if helpers directory exists in '~/.local/share/xfce4/'."
-#
-#if [ -d "$HOME/.local/share/xfce4/helpers" ]; then
-#  # Directory exists
-#  printf "%s\n\n" "-> Directory exists."
-#  printf "%s\n\n" "-> Checking if kitty.desktop exists."
-#  if [ -e "$HOME/.local/share/xfce4/helpers/kitty.desktop" ]; then
-#    # File exists
-#    printf "%s\n\n" "-> File exists."
-#    execute "Removing default kitty.desktop file." "rm -rf \"$HOME/.local/share/xfce4/helpers/kitty.desktop\""
-#  fi
-#else
-#  # Directory does not exist
-#  printf "%s\n\n" "-> Directory does not exist."
-#  execute "Creating helpers directory." "mkdir -p \"$HOME/.local/share/xfce4/helpers\""
-#fi
-#
-#execute "Symlinking kitty.desktop file." "ln -sf $DOTFILES_DIR/home/user/.local/share/xfce4/helpers/kitty.desktop $HOME/.local/share/xfce4/helpers/"
-#execute "Symlinking helpers.rc file." "ln -sf $DOTFILES_DIR/home/user/.config/xfce4/helpers.rc $HOME/.config/xfce4/"
-#printf "%s\n\n" "-> Successfully configured thunar."
-#
-##Tmux
-#printf "${BLUE}%s${RESET}\n" "-> Configuring tmux @ $(timestamp)"
-#printf "${BLUE}%s${RESET}\n" "-> Checking if tmux directory exists @ $(timestamp)"
-#
-#if [ -d "$HOME/.tmux" ]; then
-#  # Directory exists
-#  printf "${YELLOW}%s${RESET}\n" "-> Found tmux directory @ $(timestamp)"
-#  execute "Removing default tmux directory" "rm -rf \"$HOME/.tmux\""
-#else
-#  # Directory does not exist
-#  printf "${BLUE}%s${RESET}\n" "-> tmux directory does not exist @ $(timestamp)"
-#fi
-#
-#execute "Symlinking .tmux directory" "ln -sfT $DOTFILES_DIR/home/user/.tmux $HOME/"
-#
-#printf "${BLUE}%s${RESET}\n" "-> Checking if .tmux.conf file exists @ $(timestamp)"
-#
-#if [ -e "$HOME/.tmux.conf" ]; then
-#  # File exists
-#  printf "${YELLOW}%s${RESET}\n" "-> Found .tmux.conf file @ $(timestamp)"
-#  execute "Removing default .tmux.conf file" "rm -rf \"$HOME/.tmux.conf\""
-#else
-#  # File does not exist
-#  printf "${BLUE}%s${RESET}\n" "-> .tmux.conf file does not exist @ $(timestamp)"
-#fi
-#
-#execute "Symlinking .tmux.conf file" "ln -sf $DOTFILES_DIR/home/user/.tmux.conf $HOME/"
-#printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured tmux @ $(timestamp)"
-#
-##Waybar
-#printf "%s\n\n" "-> Configuring waybar..."
-#printf "%s\n\n" "-> Checking if waybar directory exists."
-#
-#if [ -d "$HOME/.config/waybar" ]; then
-#  # Directory exists
-#  printf "%s\n\n" "-> Directory exists."
-#  execute "Removing default waybar directory." "rm -rf \"$HOME/.config/waybar\""
-#else
-#  # Directory does not exist
-#  printf "%s\n\n" "-> Directory does not exist."
-#fi
-#
-#execute "Symlinking waybar directory." "ln -sfT $DOTFILES_DIR/home/user/.config/waybar $HOME/.config/"
-#printf "%s\n\n" "-> Successfully configured waybar."
-#
-##Wlogout
-#
-#printf "%s\n\n" "-> Configuring wlogout..."
-#printf "%s\n\n" "-> Checking if wlogout directory exists in '/usr/share/'."
-#
-#if [ -d "/usr/share/wlogout" ]; then
-#  # Directory exists
-#  printf "%s\n\n" "-> Directory exists."
-#else
-#  # Directory does not exist
-#  printf "%s\n\n" "-> Directory does not exist."
-#  execute "Creating wlogout directory in \"/usr/share/\"." "sudo mkdir -p \"/usr/share/wlogout\""
-#fi
-#
-#execute "Copying icons to '/usr/share/wlogout/" "sudo cp -rT $DOTFILES_DIR/usr/share/wlogout/icons /usr/share/wlogout/"
-#
-#printf "%s\n\n" "-> Checking if wlogout directory exists in '~/.config/'."
-#
-#if [ -d "$HOME/.config/wlogout" ]; then
-#  # Directory exists
-#  printf "%s\n\n" "-> wlogout directory exists."
-#  execute "Removing default wlogout directory." "rm -rf \"$HOME/.config/wlogout\""
-#else
-#  # Directory does not exist
-#  printf "%s\n\n" "-> Directory does not exist."
-#fi
-#
-#execute "Symlinking wlogout directory." "ln -sfT $DOTFILES_DIR/home/user/.config/wlogout $HOME/.config/"
-#printf "%s\n\n" "-> Successfully configured wlogout."
-#
-##Wpaperd
-#printf "%s\n\n" "-> Configuring wpaperd..."
-#printf "%s\n\n" "-> Checking if wpaperd directory exists."
-#
-#if [ -d "$HOME/.config/wpaperd" ]; then
-#  # Directory exists
-#  printf "%s\n\n" "-> Directory exists."
-#  execute "Removing default wpaperd directory." "rm -rf \"$HOME/.config/wpaperd\""
-#else
-#  # Directory does not exist
-#  printf "%s\n\n" "-> Directory does not exist."
-#fi
-#
-#execute "Symlinking wpaperd directory." "ln -sfT $DOTFILES_DIR/home/user/.config/wpaperd $HOME/.config/"
-#execute "Symlinking wallpapers directory." "ln -sfT $DOTFILES_DIR/home/user/wallpapers $HOME/"
-#printf "%s\n\n" "-> Successfully configured wpaperd."
-#printf "%s\n\n" "-> Completed package configurations."
-#
-## Step 11: Final message
-#printf "\n Setup complete. Please complete the 'Manual intervention' section on from the README.md, then reboot your system to apply all changes."
+#Mpv
+printf "${BLUE}%s${RESET}\n" "-> Configuring mpv @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if mpv directory exists @ $(timestamp)"
+
+if [ -d "$HOME/.config/mpv" ]; then
+  # Directory exists
+  printf "${BLUE}%s${RESET}\n" "-> Found mpv directory @ $(timestamp)"
+  printf "${BLUE}%s${RESET}\n" "-> Checking if mpv.conf exists @ $(timestamp)"
+  if [ -e "$HOME/.config/mpv/mpv.conf" ]; then
+    # File exists
+    printf "${YELLOW}%s${RESET}\n" "-> Found mpv.conf file @ $(timestamp)"
+    execute "Removing default mpv.conf file" "rm -rf \"$HOME/.config/mpv/mpv.conf\""
+  else
+    printf "${BLUE}%s${RESET}\n" "-> Could not find mpv.conf file @ $(timestamp)"
+  fi
+else
+  # Directory does not exist
+  printf "${YELLOW}%s${RESET}\n" "-> Could not find mpv directory @ $(timestamp)"
+  execute "Creating mpv directory" "mkdir -p \"$HOME/.config/mpv\""
+fi
+
+execute "Symlinking mpv.conf file" "ln -sf $DOTFILES_DIR/home/user/.config/mpv/mpv.conf $HOME/.config/mpv/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured mpv @ $(timestamp)"
+
+#Plymouth
+printf "${BLUE}%s${RESET}\n" "-> Configuring plymouth @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if cmdline.d directory exists @ $(timestamp)"
+
+if [ -d "/etc/cmdline.d" ]; then
+  # Directory exists
+  printf "${BLUE}%s${RESET}\n" "-> Found cmdline.d directory @ $(timestamp)"
+  printf "${BLUE}%s${RESET}\n" "-> Checking if arch.conf exists @ $(timestamp)"
+  if [ -e "/etc/cmdline.d/arch.conf" ]; then
+    # File exists
+    printf "${YELLOW}%s${RESET}\n" "-> Found arch.conf file @ $(timestamp)"
+    execute "Removing default arch.conf file" "sudo rm -rf \"/etc/cmdline.d/arch.conf\""
+  else
+    printf "${BLUE}%s${RESET}\n" "-> Could not find arch.conf file @ $(timestamp)"
+  fi
+else
+  # Directory does not exist
+  printf "${YELLOW}%s${RESET}\n" "-> Could not find cmdline.d directory @ $(timestamp)"
+  execute "Creating cmdline.d directory" "sudo mkdir -p \"/etc/cmdline.d\""
+fi
+
+execute "Creating blank arch.conf file" "sudo touch /etc/cmdline.d/arch.conf"
+execute "Writing arch.conf file to set kernel parameters for Plymouth" "printf 'options $(cat /etc/kernel/cmdline) quiet splash' | sudo tee /etc/cmdline.d/arch.conf"
+execute "Setting Plymouth theme to arch-darwin" "sudo plymouth-set-default-theme -R arch-darwin"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured plymouth @ $(timestamp)"
+
+#Qutebrowser
+printf "${BLUE}%s${RESET}\n" "-> Configuring qutebrowser @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if qutebrowser directory exists @ $(timestamp)"
+
+if [ -d "$HOME/.config/qutebrowser" ]; then
+  # Directory exists
+  printf "${BLUE}%s${RESET}\n" "-> Found qutebrowser directory @ $(timestamp)"
+  printf "${BLUE}%s${RESET}\n" "-> Checking if config.py exists @ $(timestamp)"
+  if [ -e "$HOME/.config/qutebrowser/config.py" ]; then
+    # File exists
+    printf "${YELLOW}%s${RESET}\n" "-> Found config.py file @ $(timestamp)"
+    execute "Removing default config.py file" "rm -rf \"$HOME/.config/qutebrowser/config.py\""
+  else
+    printf "${BLUE}%s${RESET}\n" "-> Could not find config.py file @ $(timestamp)"
+  fi
+  printf "${BLUE}%s${RESET}\n" "-> Checking if qutebrowser themes directory exists @ $(timestamp)"
+  if [ -d "$HOME/.config/qutebrowser/themes" ]; then
+    # Directory exists
+    printf "${BLUE}%s${RESET}\n" "-> Found qutebrowser themes directory @ $(timestamp)"
+    printf "${BLUE}%s${RESET}\n" "-> Checking if onedark.py file exists @ $(timestamp)"
+    if [ -e "$HOME/.config/qutebrowser/themes/onedark.py" ]; then
+      # File exists
+      printf "${YELLOW}%s${RESET}\n" "-> Found onedark.py file @ $(timestamp)"
+      execute "Removing default onedark.py file" "rm -rf \"$HOME/.config/qutebrowser/themes/onedark.py\""
+    else
+      printf "${BLUE}%s${RESET}\n" "-> Could not find onedark.py file @ $(timestamp)"
+    fi
+  else
+    # Directory does not exist
+    printf "${YELLOW}%s${RESET}\n" "-> Could not find qutebrowser themes directory @ $(timestamp)"
+    execute "Creating qutebrowser themes directory" "mkdir -p \"$HOME/.config/qutebrowser/themes\""
+  fi
+else
+  # Directory does not exist
+  printf "${YELLOW}%s${RESET}\n" "-> Could not find qutebrowser directory @ $(timestamp)"
+  execute "Creating qutebrowser directory" "mkdir -p \"$HOME/.config/qutebrowser\""
+  execute "Creating qutebrowser themes directory" "mkdir -p \"$HOME/.config/qutebrowser/themes\""
+fi
+
+execute "Symlinking config.py file" "ln -sf $DOTFILES_DIR/home/user/.config/qutebrowser/config.py $HOME/.config/qutebrowser/"
+execute "Copying onedark.py" "cp $DOTFILES_DIR/home/user/.config/qutebrowser/themes/onedark.py $HOME/.config/qutebrowser/themes/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured qutebrowser @ $(timestamp)"
+
+#SDDM
+printf "${BLUE}%s${RESET}\n" "-> Configuring SDDM @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Configuring SDDM settings @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if sddm.conf.d directory exists @ $(timestamp)"
+
+if [ -d "/etc/sddm.conf.d" ]; then
+  # Directory exists
+  printf "${BLUE}%s${RESET}\n" "-> Found sddm.conf.d directory @ $(timestamp)"
+  printf "${BLUE}%s${RESET}\n" "-> Checking if sddm.conf file exists @ $(timestamp)"
+  if [ -e "/etc/sddm.conf.d/sddm.conf" ]; then
+    # File exists
+    printf "${YELLOW}%s${RESET}\n" "-> Found sddm.conf file @ $(timestamp)"
+    execute "Removing default sddm.conf file" "sudo rm -rf \"/etc/sddm.conf.d/sddm.conf\""
+  else
+    printf "${BLUE}%s${RESET}\n" "-> Could not find sddm.conf file @ $(timestamp)"
+  fi
+else
+  # Directory does not exist
+  printf "${YELLOW}%s${RESET}\n" "-> Could not find sddm.conf.d directory @ $(timestamp)"
+  execute "Creating sddm.conf.d directory" "sudo mkdir -p \"/etc/sddm.conf.d\""
+fi
+
+execute "Creating blank sddm.conf file" "sudo touch /etc/sddm.conf.d/sddm.conf"
+execute "Writing SDDM configuration" "printf '[General]\nNumlock=on\n\n[Theme]\nCurrent=sugar-dark' | sudo tee /etc/sddm.conf.d/sddm.conf"
+printf "${DIM_GREEN}%s${RESET}\n" "-> Successfully configured SDDM settings @ $(timestamp)"
+
+printf "${BLUE}%s${RESET}\n" "-> Configuring SDDM theme @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if sddm directory exists @ $(timestamp)"
+
+if [ -d "/usr/share/sddm" ]; then
+  # Directory exists
+  printf "${BLUE}%s${RESET}\n" "-> Found sddm directory @ $(timestamp)"
+  printf "${BLUE}%s${RESET}\n" "-> Checking if SDDM themes directory exists @ $(timestamp)"
+  if [ -d "/usr/share/sddm/themes" ]; then
+    # Directory exists
+    printf "${BLUE}%s${RESET}\n" "-> Found SDDM themes directory @ $(timestamp)"
+    printf "${BLUE}%s${RESET}\n" "-> Checking if sugar-dark theme directory exists @ $(timestamp)"
+    if [ -d "/usr/share/sddm/themes/sugar-dark" ]; then
+      printf "${YELLOW}%s${RESET}\n" "-> Found sugar-dark theme directory @ $(timestamp)"
+      execute "Removing default sugar-dark theme directory" "sudo rm -rf \"/usr/share/sddm/themes/sugar-dark\""
+    else
+      printf "${BLUE}%s${RESET}\n" "-> Could not find sugar-dark theme directory @ $(timestamp)"
+    fi
+  else
+    # Directory does not exist
+    printf "${YELLOW}%s${RESET}\n" "-> Coud not find SDDM themes directory @ $(timestamp)"
+    execute "Creating sddm themes directory" "sudo mkdir -p \"/usr/share/sddm/themes\""
+  fi
+else
+  # Directory does not exist
+  printf "${YELLOW}%s${RESET}\n" "-> Could not find sddm directory @ $(timestamp)"
+  execute "Creating sddm directory" "sudo mkdir -p \"/usr/share/sddm/\""
+  execute "Creating SDDM themes directory" "sudo mkdir -p \"/usr/share/sddm/themes\""
+fi
+
+execute "Copying sugar-dark theme to SDDM themes directory" "sudo cp -rT $DOTFILES_DIR/usr/share/sddm/themes/sugar-dark /usr/share/sddm/themes/"
+printf "${DIM_GREEN}%s${RESET}\n" "-> Successfully configured SDDM theme @ $(timestamp)"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured SDDM @ $(timestamp)"
+
+#Starship
+printf "${BLUE}%s${RESET}\n" "-> Configuring starship @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if starship.toml file exists @ $(timestamp)"
+
+if [ -e "$HOME/.config/starship.toml" ]; then
+  # File exists
+  printf "${YELLOW}%s${RESET}\n" "-> Found starship.toml file @ $(timestamp)"
+  execute "Removing default starship.toml file" "rm -rf \"$HOME/.config/starship.toml\""
+else
+  # File does not exist
+  printf "${BLUE}%s${RESET}\n" "-> Could not find starship.toml file @ $(timestamp)"
+fi
+
+execute "Symlinking starship.toml file" "ln -sf $DOTFILES_DIR/home/user/.config/starship.toml $HOME/.config/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured starship @ $(timestamp)"
+
+#swaylock-effects
+printf "${BLUE}%s${RESET}\n" "-> Configuring swaylock-effects @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if swaylock directory exists @ $(timestamp)"
+
+if [ -d "$HOME/.config/swaylock" ]; then
+  # Directory exists
+  printf "${YELLOW}%s${RESET}\n" "-> Found swaylock directory @ $(timestamp)"
+  execute "Removing default swaylock directory" "rm -rf \"$HOME/.config/swaylock\""
+else
+  # Directory does not exist
+  printf "${BLUE}%s${RESET}\n" "-> Could not find swyalock directory @ $(timestamp)"
+fi
+
+execute "Symlinking swaylock directory" "ln -sfT $DOTFILES_DIR/home/user/.config/swaylock $HOME/.config/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured swaylock-effects @ $(timestamp)"
+
+#Thunar
+printf "${BLUE}%s${RESET}\n" "-> Configuring thunar @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if xfce4 directory exists in '~/.config/' @ $(timestamp)"
+
+if [ -d "$HOME/.config/xfce4" ]; then
+  # Directory exists
+  printf "${BLUE}%s${RESET}\n" "-> Found xfce directory in '~/.config/' @ $(timestamp)"
+  printf "${BLUE}%s${RESET}\n" "-> Checking if helpers.rc exists in '~/.config/xfce/' @ $(timestamp)"
+  if [ -e "$HOME/.config/xfce4/helpers.rc" ]; then
+    # File exists
+    printf "${YELLOW}%s${RESET}\n" "-> Found helpers.rc file @ $(timestamp)"
+    execute "Removing default helpers.rc file" "rm -rf \"$HOME/.config/xfce4/helpers.rc\""
+  else
+    printf "${BLUE}%s${RESET}\n" "-> Could not find helpers.rc file @ $(timestamp)"
+  fi
+else
+  # Directory does not exist
+  printf "${YELLOW}%s${RESET}\n" "-> Could not find xfce4 directory in '~/.config/' @ $(timestamp)"
+  execute "Creating xfce4 directory in \"~/.config/\"" "mkdir -p \"$HOME/.config/xfce4\""
+fi
+
+execute "Symlinking helpers.rc file" "ln -sf $DOTFILES_DIR/home/user/.config/xfce4/helpers.rc $HOME/.config/xfce4/"
+
+printf "${BLUE}%s${RESET}\n" "-> Checking if xfce4 directory exists in '~/.local/share/' @ $(timestamp)"
+
+if [ -d "$HOME/.local/share/xfce4" ]; then
+  # Directory exists
+  printf "${BLUE}%s${RESET}\n" "-> Found xfce4 directory in '~/.local/share/' @ $(timestamp)"
+  printf "${BLUE}%s${RESET}\n" "-> Checking if helpers directory exists in '~/.local/share/xfce4/' @ $(timestamp)"
+  if [ -d "$HOME/.local/share/xfce4/helpers" ]; then
+    # Directory exists
+    printf "${BLUE}%s${RESET}\n" "-> Found helpers directory in '~/.local/share/xfce4/' @ $(timestamp)"
+    printf "${BLUE}%s${RESET}\n" "-> Checking if kitty.desktop file exists in '~/.local/share/xfce4/helpers/' @ $(timestamp)"
+    if [ -e "$HOME/.local/share/xfce4/helpers/kitty.desktop" ]; then
+      # File exists
+      printf "${YELLOW}%s${RESET}\n" "-> Found kitty.desktop file in '~/.local/share/xfce4/helpers/' @ $(timestamp)"
+      execute "Removing default kitty.desktop file" "rm -rf \"$HOME/.local/share/xfce4/helpers/kitty.desktop\""
+    else
+      printf "${BLUE}%s${RESET}\n" "-> Could not find kitty.desktop file in '~/.local/share/xfce4/helpers/' @ $(timestamp)"
+    fi
+  else
+    # Directory does not exist
+    printf "${YELLOW}%s${RESET}\n" "-> Could not find helpers directory in '~/.local/share/xfce4/' @ $(timestamp)"
+    execute "Creating helpers directory" "mkdir -p \"$HOME/.local/share/xfce4/helpers\""
+  fi
+else
+  # Directory does not exist
+  printf "${YELLOW}%s${RESET}\n" "-> Could not find xfce4 directory in '~/.local/share/' @ $(timestamp)"
+  execute "Creating xfce4 directory in '~/.local/share/'" "mkdir -p \"$HOME/.local/share/xfce4\""
+  execute "Creating helpers directory" "mkdir -p \"$HOME/.local/share/xfce4/helpers\""
+fi
+
+execute "Symlinking kitty.desktop file" "ln -sf $DOTFILES_DIR/home/user/.local/share/xfce4/helpers/kitty.desktop $HOME/.local/share/xfce4/helpers/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured thunar @ $(timestamp)"
+
+#Tmux
+printf "${BLUE}%s${RESET}\n" "-> Configuring tmux @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if tmux directory exists @ $(timestamp)"
+
+if [ -d "$HOME/.tmux" ]; then
+  # Directory exists
+  printf "${YELLOW}%s${RESET}\n" "-> Found tmux directory @ $(timestamp)"
+  execute "Removing default tmux directory" "rm -rf \"$HOME/.tmux\""
+else
+  # Directory does not exist
+  printf "${BLUE}%s${RESET}\n" "-> tmux directory does not exist @ $(timestamp)"
+fi
+
+execute "Symlinking .tmux directory" "ln -sfT $DOTFILES_DIR/home/user/.tmux $HOME/"
+
+printf "${BLUE}%s${RESET}\n" "-> Checking if .tmux.conf file exists @ $(timestamp)"
+
+if [ -e "$HOME/.tmux.conf" ]; then
+  # File exists
+  printf "${YELLOW}%s${RESET}\n" "-> Found .tmux.conf file @ $(timestamp)"
+  execute "Removing default .tmux.conf file" "rm -rf \"$HOME/.tmux.conf\""
+else
+  # File does not exist
+  printf "${BLUE}%s${RESET}\n" "-> .tmux.conf file does not exist @ $(timestamp)"
+fi
+
+execute "Symlinking .tmux.conf file" "ln -sf $DOTFILES_DIR/home/user/.tmux.conf $HOME/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured tmux @ $(timestamp)"
+
+#Waybar
+printf "${BLUE}%s${RESET}\n" "-> Configuring waybar @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if waybar directory exists @ $(timestamp)"
+
+if [ -d "$HOME/.config/waybar" ]; then
+  # Directory exists
+  printf "${YELLOW}%s${RESET}\n" "-> Found waybar directory @ $(timestamp)"
+  execute "Removing default waybar directory" "rm -rf \"$HOME/.config/waybar\""
+else
+  # Directory does not exist
+  printf "${BLUE}%s${RESET}\n" "-> Could not find waybar directory @ $(timestamp)"
+fi
+
+execute "Symlinking waybar directory" "ln -sfT $DOTFILES_DIR/home/user/.config/waybar $HOME/.config/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured waybar @ $(timestamp)"
+
+#Wlogout
+
+printf "${BLUE}%s${RESET}\n" "-> Configuring wlogout @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if wlogout directory exists in '/usr/share/' @ $(timestamp)"
+
+if [ -d "/usr/share/wlogout" ]; then
+  # Directory exists
+  printf "${BLUE}%s${RESET}\n" "-> Found wlogout directory in '/usr/share/' @ $(timestamp)"
+  printf "${BLUE}%s${RESET}\n" "-> Checking if icons directory exists in '/usr/share/wlogout/' @ $(timestamp)"
+  if [ -d "/usr/share/wlogout/icons" ]; then
+    printf "${YELLOW}%s${RESET}\n" "-> Found icons directory in '/usr/share/wlogout/' @ $(timestamp)"
+    execute "Removing default icons directory in '/usr/share/wlogout/'" "rm -rf \"/usr/share/wlogout\""
+  else
+    printf "${BLUE}%s${RESET}\n" "-> Could not find icons directory in '/usr/share/wlogout/' @ $(timestamp)"
+  fi
+else
+  # Directory does not exist
+  printf "${BLUE}%s${RESET}\n" "-> Could not find wlogout directory in '/usr/share/ @ $(timestamp)"
+  execute "Creating wlogout directory in '/usr/share/'" "sudo mkdir -p \"/usr/share/wlogout\""
+fi
+
+execute "Copying icons to '/usr/share/wlogout/" "sudo cp -rT $DOTFILES_DIR/usr/share/wlogout/icons /usr/share/wlogout/"
+
+printf "${BLUE}%s${RESET}\n" "-> Checking if wlogout directory exists in '~/.config/' @ $(timestamp)"
+
+if [ -d "$HOME/.config/wlogout" ]; then
+  # Directory exists
+  printf "${YELLOW}%s${RESET}\n" "-> Found wlogout directory in '~/.config/' @ $(timestamp)"
+  execute "Removing default wlogout directory in '~/.config/'" "rm -rf \"$HOME/.config/wlogout\""
+else
+  # Directory does not exist
+  printf "${BLUE}%s${RESET}\n" "-> Could not find wlogout directory in '~/.config/' @ $(timestamp)"
+fi
+
+execute "Symlinking wlogout directory to '~/.config/'" "ln -sfT $DOTFILES_DIR/home/user/.config/wlogout $HOME/.config/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured wlogout @ $(timestamp)"
+
+#Wpaperd
+printf "${BLUE}%s${RESET}\n" "-> Configuring wpaperd @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if wpaperd directory exists @ $(timestamp)"
+
+if [ -d "$HOME/.config/wpaperd" ]; then
+  # Directory exists
+  printf "${YELLOW}%s${RESET}\n" "-> Found wpaperd directory @ $(timestamp)"
+  execute "Removing default wpaperd directory" "rm -rf \"$HOME/.config/wpaperd\""
+else
+  # Directory does not exist
+  printf "${BLUE}%s${RESET}\n" "-> Could not find wpaperd directory @ $(timestamp)"
+fi
+
+execute "Symlinking wpaperd directory" "ln -sfT $DOTFILES_DIR/home/user/.config/wpaperd $HOME/.config/"
+
+printf "${BLUE}%s${RESET}\n" "-> Checking if wallpapers directory exists @ $(timestamp)"
+
+if [ -d "$HOME/wallpapers" ]; then
+  # Directory exists
+  printf "${YELLOW}%s${RESET}\n" "-> Found wallpapers directory @ $(timestamp)"
+  execute "Removing default wallpapers directory" "rm -rf \"$HOME/wallpapers\""
+else
+  # Directory does not exist
+  printf "${BLUE}%s${RESET}\n" "-> Could not find wallpapers directory @ $(timestamp)"
+fi
+execute "Symlinking wallpapers directory" "ln -sfT $DOTFILES_DIR/home/user/wallpapers $HOME/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured wpaperd @ $(timestamp)"
+
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully completed package configurations @ $(timestamp)"
+
+# Step 11: Final message
+printf "${BOLD_GREEN}%s %s${RESET}\n\n${YELLOW}%s\n\n%s\n%s${RESET}\n" "$CHECKMARK" " Setup complete" "-> Note:" "   Please complete the 'Manual intervention' section on from the README.md," "   then reboot your system to apply all changes."
