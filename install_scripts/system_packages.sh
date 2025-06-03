@@ -88,6 +88,8 @@ PACMAN_PACKAGES=(
   yad
   yazi
   yt-dlp
+  zathura
+  zathura-pdf-poppler
   zoxide
   7zip
 )
