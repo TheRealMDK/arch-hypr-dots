@@ -699,5 +699,21 @@ printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured w
 
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully completed package configurations @ $(timestamp)"
 
+#Yazi
+printf "${BLUE}%s${RESET}\n" "-> Configuring yazi @ $(timestamp)"
+printf "${BLUE}%s${RESET}\n" "-> Checking if yazi directory exists @ $(timestamp)"
+
+if [ -d "$HOME/.config/yazi" ]; then
+  # Directory exists
+  printf "${YELLOW}%s${RESET}\n" "-> Found yazi directory @ $(timestamp)"
+  execute "Removing default yazi directory" "rm -rf \"$HOME/.config/yazi\""
+else
+  # Directory does not exist
+  printf "${BLUE}%s${RESET}\n" "-> Could not find yazi directory @ $(timestamp)"
+fi
+
+execute "Symlinking yazi directory" "ln -sfT $DOTFILES_DIR/home/user/.config/yazi $HOME/.config/"
+printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured yazi @ $(timestamp)"
+
 # Step 11: Final message
-printf "${BOLD_GREEN}%s %s${RESET}\n\n${YELLOW}%s\n\n%s\n%s${RESET}\n" "$CHECKMARK" " Setup complete" "-> Note:" "   Please complete the 'Manual intervention' section on from the README.md," "   then reboot your system to apply all changes."
+printf "${BOLD_GREEN}%s %s${RESET}\n\n${YELLOW}%s\n\n%s\n%s${RESET}\n" "$CHECKMARK" " Setup complete" "-> Note:" "   Please complete the 'Manual intervention' section from the README.md," "   then reboot your system to apply all changes."

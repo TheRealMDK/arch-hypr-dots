@@ -28,7 +28,9 @@ PACMAN_PACKAGES=(
   htop
   hwinfo
   hyprpicker
+  imagemagick
   inkscape
+  jq
   lazygit
   less
   linux-zen-headers
@@ -45,6 +47,7 @@ PACMAN_PACKAGES=(
   pipewire-alsa
   pipewire-pulse
   plymouth
+  poppler
   pulsemixer
   pv
   python-pipx
@@ -83,5 +86,8 @@ PACMAN_PACKAGES=(
   wpaperd
   xorg-xcursorgen
   yad
+  yazi
   yt-dlp
+  zoxide
+  7zip
 )

@@ -5,6 +5,7 @@ YAY_PACKAGES=(
   google-chrome
   lobster-git
   plymouth-theme-arch-darwin
+  resvg
   swaylock-effects
   wallust
   wlogout
