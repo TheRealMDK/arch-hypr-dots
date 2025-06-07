@@ -27,6 +27,7 @@ PACMAN_PACKAGES=(
   gvfs
   htop
   hwinfo
+  hunspell-en_us
   hyprpicker
   imagemagick
   inkscape
@@ -72,6 +73,7 @@ PACMAN_PACKAGES=(
   termusic
   thunar
   thunar-volman
+  thunderbird
   tldr
   tmux
   tree

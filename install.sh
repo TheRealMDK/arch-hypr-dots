@@ -143,7 +143,7 @@ done
 execute "Cloning LazyVim starter" "git clone https://github.com/LazyVim/starter \"$HOME/.config/nvim\""
 execute "Removing default LazyVim config directory" "rm -rf \"$HOME/.config/nvim/lua\""
 execute "Removing .git directory" "rm -rf \"$HOME/.config/nvim/.git\""
-execute "Symlinking custom Neovim configuration" "ln -sfT $DOTFILES_DIR/home/user/.config/nvim/lua $HOME/.config/nvim/"
+execute "Symlinking custom Neovim configuration" "ln -sfT $DOTFILES_DIR/home/user/.config/nvim/lua $HOME/.config/nvim/lua"
 
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured Neovim @ $(timestamp)"
 
@@ -179,8 +179,8 @@ else
   execute "Creating icons directory" "mkdir -p \"$HOME/.icons\""
 fi
 
-execute "Symlinking Material Black Cherry icon theme" "ln -sfT $DOTFILES_DIR/home/user/.icons/Material_Black_Cherry $HOME/.icons/"
-execute "Symlinking Oreo Red cursor theme" "ln -sfT $DOTFILES_DIR/home/user/.icons/oreo_red_cursor $HOME/.icons/"
+execute "Symlinking Material Black Cherry icon theme" "ln -sfT $DOTFILES_DIR/home/user/.icons/Material_Black_Cherry $HOME/.icons/Material_Black_Cherry"
+execute "Symlinking Oreo Red cursor theme" "ln -sfT $DOTFILES_DIR/home/user/.icons/oreo_red_cursor $HOME/.icons/oreo_red_cursor"
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed icons @ $(timestamp)"
 
 #Themes
@@ -196,7 +196,7 @@ else
   execute "Creating themes directory" "mkdir -p \"$HOME/.themes\""
 fi
 
-execute "Symlinking Material Black Cherry GTK theme" "ln -sfT $DOTFILES_DIR/home/user/.themes/Material_Black_Cherry $HOME/.themes/"
+execute "Symlinking Material Black Cherry GTK theme" "ln -sfT $DOTFILES_DIR/home/user/.themes/Material_Black_Cherry $HOME/.themes/Material_Black_Cherry"
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed themes @ $(timestamp)"
 
 # Step 10: Symlink configurations
@@ -206,7 +206,7 @@ printf "${BLUE}%s${RESET}\n" "-> Starting package configurations @ $(timestamp)"
 printf "${BLUE}%s${RESET}\n" "-> Starting bash configuration @ $(timestamp)"
 execute "Removing default .bashrc file" "rm -rf \"$HOME/.bashrc\""
 execute "Symlinking new .bashrc file" "ln -sf $DOTFILES_DIR/home/user/.bashrc $HOME/.bashrc"
-execute "Symlinking scripts directory" "ln -sfT $DOTFILES_DIR/home/user/scripts $HOME/"
+execute "Symlinking scripts directory" "ln -sfT $DOTFILES_DIR/home/user/scripts $HOME/scripts"
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured bash @ $(timestamp)"
 
 #Ani-cli
@@ -248,7 +248,7 @@ else
   printf "${BLUE}%s${RESET}\n" "-> Could not find fastfetch directory @ $(timestamp)"
 fi
 
-execute "Symlinking fastfetch directory" "ln -sfT $DOTFILES_DIR/home/user/.config/fastfetch $HOME/.config/"
+execute "Symlinking fastfetch directory" "ln -sfT $DOTFILES_DIR/home/user/.config/fastfetch $HOME/.config/fastfetch"
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured fastfetch @ $(timestamp)"
 
 #Feather
@@ -264,7 +264,7 @@ else
   printf "${BLUE}%s${RESET}\n" "-> Could not find Feather directory @ $(timestamp)"
 fi
 
-execute "Symlinking Feather directory" "ln -sfT $DOTFILES_DIR/home/user/.config/Feather $HOME/.config/"
+execute "Symlinking Feather directory" "ln -sfT $DOTFILES_DIR/home/user/.config/Feather $HOME/.config/Feather"
 execute "Symlinking feather.sh script" "ln -sf $DOTFILES_DIR/home/user/feather.sh $HOME/"
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured feather @ $(timestamp)"
 
@@ -300,8 +300,8 @@ else
 fi
 
 execute "Symlinking geany.conf file" "ln -sf $DOTFILES_DIR/home/user/.config/geany/geany.conf $HOME/.config/geany/"
-execute "Symlinking colorschemes directory" "ln -sfT $DOTFILES_DIR/home/user/.config/geany/colorschemes $HOME/.config/geany/"
-execute "Symlinking plugins directory" "ln -sfT $DOTFILES_DIR/home/user/.config/geany/plugins $HOME/.config/geany/"
+execute "Symlinking colorschemes directory" "ln -sfT $DOTFILES_DIR/home/user/.config/geany/colorschemes $HOME/.config/geany/colorschemes"
+execute "Symlinking plugins directory" "ln -sfT $DOTFILES_DIR/home/user/.config/geany/plugins $HOME/.config/geany/plugins"
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured geany @ $(timestamp)"
 
 #Hyprland
@@ -323,7 +323,7 @@ else
   printf "${BLUE}%s${RESET}\n" "-> Could not find kitty directory @ $(timestamp)"
 fi
 
-execute "Symlinking kitty directory" "ln -sfT $DOTFILES_DIR/home/user/.config/kitty $HOME/.config/"
+execute "Symlinking kitty directory" "ln -sfT $DOTFILES_DIR/home/user/.config/kitty $HOME/.config/kitty"
 
 printf "${BLUE}%s${RESET}\n" "-> Checking if applications directory exists @ $(timestamp)"
 
@@ -529,7 +529,7 @@ else
   printf "${BLUE}%s${RESET}\n" "-> Could not find swyalock directory @ $(timestamp)"
 fi
 
-execute "Symlinking swaylock directory" "ln -sfT $DOTFILES_DIR/home/user/.config/swaylock $HOME/.config/"
+execute "Symlinking swaylock directory" "ln -sfT $DOTFILES_DIR/home/user/.config/swaylock $HOME/.config/swaylock"
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured swaylock-effects @ $(timestamp)"
 
 #Thunar
@@ -600,7 +600,7 @@ else
   printf "${BLUE}%s${RESET}\n" "-> tmux directory does not exist @ $(timestamp)"
 fi
 
-execute "Symlinking .tmux directory" "ln -sfT $DOTFILES_DIR/home/user/.tmux $HOME/"
+execute "Symlinking .tmux directory" "ln -sfT $DOTFILES_DIR/home/user/.tmux $HOME/.tmux"
 
 printf "${BLUE}%s${RESET}\n" "-> Checking if .tmux.conf file exists @ $(timestamp)"
 
@@ -629,7 +629,7 @@ else
   printf "${BLUE}%s${RESET}\n" "-> Could not find waybar directory @ $(timestamp)"
 fi
 
-execute "Symlinking waybar directory" "ln -sfT $DOTFILES_DIR/home/user/.config/waybar $HOME/.config/"
+execute "Symlinking waybar directory" "ln -sfT $DOTFILES_DIR/home/user/.config/waybar $HOME/.config/waybar"
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured waybar @ $(timestamp)"
 
 #Wlogout
@@ -666,7 +666,7 @@ else
   printf "${BLUE}%s${RESET}\n" "-> Could not find wlogout directory in '~/.config/' @ $(timestamp)"
 fi
 
-execute "Symlinking wlogout directory to '~/.config/'" "ln -sfT $DOTFILES_DIR/home/user/.config/wlogout $HOME/.config/"
+execute "Symlinking wlogout directory to '~/.config/'" "ln -sfT $DOTFILES_DIR/home/user/.config/wlogout $HOME/.config/wlogout"
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured wlogout @ $(timestamp)"
 
 #Wpaperd
@@ -682,7 +682,7 @@ else
   printf "${BLUE}%s${RESET}\n" "-> Could not find wpaperd directory @ $(timestamp)"
 fi
 
-execute "Symlinking wpaperd directory" "ln -sfT $DOTFILES_DIR/home/user/.config/wpaperd $HOME/.config/"
+execute "Symlinking wpaperd directory" "ln -sfT $DOTFILES_DIR/home/user/.config/wpaperd $HOME/.config/wpaperd"
 
 printf "${BLUE}%s${RESET}\n" "-> Checking if wallpapers directory exists @ $(timestamp)"
 
@@ -694,7 +694,7 @@ else
   # Directory does not exist
   printf "${BLUE}%s${RESET}\n" "-> Could not find wallpapers directory @ $(timestamp)"
 fi
-execute "Symlinking wallpapers directory" "ln -sfT $DOTFILES_DIR/home/user/wallpapers $HOME/"
+execute "Symlinking wallpapers directory" "ln -sfT $DOTFILES_DIR/home/user/wallpapers $HOME/wallpapers"
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured wpaperd @ $(timestamp)"
 
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully completed package configurations @ $(timestamp)"
@@ -712,7 +712,7 @@ else
   printf "${BLUE}%s${RESET}\n" "-> Could not find yazi directory @ $(timestamp)"
 fi
 
-execute "Symlinking yazi directory" "ln -sfT $DOTFILES_DIR/home/user/.config/yazi $HOME/.config/"
+execute "Symlinking yazi directory" "ln -sfT $DOTFILES_DIR/home/user/.config/yazi $HOME/.config/yazi"
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured yazi @ $(timestamp)"
 
 # Step 11: Final message
