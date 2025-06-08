@@ -15,7 +15,7 @@ sudo -v
 # Keep sudo alive until script ends
 while true; do
   sudo -n true
-  sleep 300
+  sleep 6000
   kill -0 "$$" || exit
 done 2>/dev/null &
 
@@ -160,7 +160,7 @@ else
   execute "Creating fonts directory" "mkdir -p \"$HOME/.local/share/fonts\""
 fi
 
-execute "Copying JetBrainsMono Nerd Font" "cp -rT $DOTFILES_DIR/home/user/.local/share/fonts/JetBrainsMonoNerdFont $HOME/.local/share/fonts/"
+execute "Copying JetBrainsMono Nerd Font" "cp -r $DOTFILES_DIR/home/user/.local/share/fonts/JetBrainsMonoNerdFont $HOME/.local/share/fonts/"
 execute "Refreshing font cache" "fc-cache -f -v"
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully installed fonts @ $(timestamp)"
 
@@ -496,7 +496,7 @@ else
   execute "Creating SDDM themes directory" "sudo mkdir -p \"/usr/share/sddm/themes\""
 fi
 
-execute "Copying sugar-dark theme to SDDM themes directory" "sudo cp -rT $DOTFILES_DIR/usr/share/sddm/themes/sugar-dark /usr/share/sddm/themes/"
+execute "Copying sugar-dark theme to SDDM themes directory" "sudo cp -r $DOTFILES_DIR/usr/share/sddm/themes/sugar-dark /usr/share/sddm/themes/"
 printf "${DIM_GREEN}%s${RESET}\n" "-> Successfully configured SDDM theme @ $(timestamp)"
 printf "${BOLD_GREEN}%s %s${RESET}\n\n" "$CHECKMARK" " Successfully configured SDDM @ $(timestamp)"
 
@@ -643,7 +643,7 @@ if [ -d "/usr/share/wlogout" ]; then
   printf "${BLUE}%s${RESET}\n" "-> Checking if icons directory exists in '/usr/share/wlogout/' @ $(timestamp)"
   if [ -d "/usr/share/wlogout/icons" ]; then
     printf "${YELLOW}%s${RESET}\n" "-> Found icons directory in '/usr/share/wlogout/' @ $(timestamp)"
-    execute "Removing default icons directory in '/usr/share/wlogout/'" "rm -rf \"/usr/share/wlogout\""
+    execute "Removing default icons directory in '/usr/share/wlogout/'" "sudo rm -rf \"/usr/share/wlogout\""
   else
     printf "${BLUE}%s${RESET}\n" "-> Could not find icons directory in '/usr/share/wlogout/' @ $(timestamp)"
   fi
@@ -653,7 +653,7 @@ else
   execute "Creating wlogout directory in '/usr/share/'" "sudo mkdir -p \"/usr/share/wlogout\""
 fi
 
-execute "Copying icons to '/usr/share/wlogout/" "sudo cp -rT $DOTFILES_DIR/usr/share/wlogout/icons /usr/share/wlogout/"
+execute "Copying icons to '/usr/share/wlogout/" "sudo cp -r $DOTFILES_DIR/usr/share/wlogout/icons /usr/share/wlogout/"
 
 printf "${BLUE}%s${RESET}\n" "-> Checking if wlogout directory exists in '~/.config/' @ $(timestamp)"
 
