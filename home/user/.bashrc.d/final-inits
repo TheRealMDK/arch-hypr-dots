@@ -1,3 +1,2 @@
 eval "$(register-python-argcomplete pipx)"
 eval "$(starship init bash)"
-fastfetch
